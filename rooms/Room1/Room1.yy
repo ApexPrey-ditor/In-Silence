@@ -13,8 +13,8 @@
   ],
   "name":"Room1",
   "parent":{
-    "name":"In Silence",
-    "path":"In Silence.yyp",
+    "name":"Rooms",
+    "path":"folders/Rooms.yy",
   },
   "parentRoom":null,
   "physicsSettings":{
