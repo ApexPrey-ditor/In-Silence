@@ -1,4 +1,5 @@
 grav = 0
+#macro baseIntensity 0.5
 gravIntensity = 0.5
 gravLimit = 25
 
@@ -6,8 +7,9 @@ gravLimit = 25
 #macro cayoteFrameLimit 10
 cayoteFrames = cayoteFrameLimit
 
+#macro airControlFactor 10
 walkSpeed = 5
-sprintSpeed = 12
+sprintSpeed = 15
 
 canMove = true
 isSlamming = false

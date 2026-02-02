@@ -3,15 +3,29 @@ grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
 var _velocityCap = 0
 var movement = false
 
-if (scr_keyboard_check_keys(keybinds.left) and canMove) {
-	xVelocity -= walkSpeed
+if (!place_meeting(x, y + 1, solids)) {
 	_velocityCap = walkSpeed
-	movement = true
+	
+	if (scr_keyboard_check_keys(keybinds.left) and canMove) {
+		xVelocity -= walkSpeed / airControlFactor
+		movement = true
+	}
+	if (scr_keyboard_check_keys(keybinds.right) and canMove) {
+		xVelocity += walkSpeed / airControlFactor
+		movement = true
+	}
 }
-if (scr_keyboard_check_keys(keybinds.right) and canMove) {
-	xVelocity += walkSpeed
-	_velocityCap = walkSpeed
-	movement = true
+else {
+	if (scr_keyboard_check_keys(keybinds.left) and canMove) {
+		xVelocity -= walkSpeed
+		_velocityCap = walkSpeed
+		movement = true
+	}
+	if (scr_keyboard_check_keys(keybinds.right) and canMove) {
+		xVelocity += walkSpeed
+		_velocityCap = walkSpeed
+		movement = true
+	}
 }
 if (scr_keyboard_check_keys(keybinds.sprint)) {
 	_velocityCap = sprintSpeed
@@ -22,6 +36,7 @@ if (place_meeting(x, y + 1, solids)) {
 	
 	if (isDiving) {
 		isDiving = false
+		gravIntensity = baseIntensity
 		canMove = true
 	}
 	if (isSlamming) {
@@ -33,9 +48,10 @@ else {
 	cayoteFrames -= 1
 	
 	if (scr_keyboard_check_keys(keybinds.slam) and canMove and !scr_keyboard_check_keys(keybinds.jump)) {
-		if (movement) {
+		if (xVelocity >= sprintSpeed and movement) {
 			isDiving = true
 			grav = abs(xVelocity)
+			gravIntensity = 0
 			canMove = false
 		}
 		else {
