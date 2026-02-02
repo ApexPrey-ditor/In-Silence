@@ -1,1 +1,1 @@
-room_goto(rm_test)
+room_goto(rm_prelude_1_intro)

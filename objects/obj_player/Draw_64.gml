@@ -1,1 +1,1 @@
-draw_text(10, 10, x)
+draw_text(10, 10, xVelocity)

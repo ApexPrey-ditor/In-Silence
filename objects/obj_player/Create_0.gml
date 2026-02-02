@@ -3,6 +3,8 @@ grav = 0
 gravIntensity = 0.5
 gravLimit = 25
 
+jumpHeight = 17
+
 // macros are constants
 #macro cayoteFrameLimit 10
 cayoteFrames = cayoteFrameLimit

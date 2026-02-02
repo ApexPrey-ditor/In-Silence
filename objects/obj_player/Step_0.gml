@@ -48,10 +48,9 @@ else {
 	cayoteFrames -= 1
 	
 	if (scr_keyboard_check_keys(keybinds.slam) and canMove and !scr_keyboard_check_keys(keybinds.jump)) {
-		if (xVelocity >= sprintSpeed and movement) {
+		if (movement and abs(xVelocity) >= walkSpeed) {
 			isDiving = true
-			grav = abs(xVelocity)
-			gravIntensity = 0
+			grav = gravLimit
 			canMove = false
 		}
 		else {
@@ -65,7 +64,7 @@ else {
 
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0) {
 	cayoteFrames = 0
-	grav = -20
+	grav = -jumpHeight
 }
 
 xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids)
