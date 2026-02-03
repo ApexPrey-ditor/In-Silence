@@ -1,6 +1,6 @@
 {
   "$GMSequence":"v1",
-  "%Name":"sq_prelude_sprinting_2_door_close",
+  "%Name":"sq_prelude_2_sprinting_door_close",
   "autoRecord":true,
   "backdropHeight":1088,
   "backdropImageOpacity":0.5,
@@ -14,10 +14,7 @@
     "resourceType":"KeyframeStore<MessageEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "eventStubScript":{
-    "name":"sq_prelude_sprinting_2_door_close_Events6",
-    "path":"scripts/sq_prelude_sprinting_2_door_close_Events6/sq_prelude_sprinting_2_door_close_Events6.yy",
-  },
+  "eventStubScript":null,
   "eventToFunction":{},
   "length":600.0,
   "lockOrigin":false,
@@ -26,14 +23,14 @@
     "Keyframes":[
       {"$Keyframe<MomentsEventKeyframe>":"","Channels":{
           "0":{"$MomentsEventKeyframe":"","Events":[
-              "resetSpeed",
+              "moment_reset_speed",
             ],"resourceType":"MomentsEventKeyframe","resourceVersion":"2.0",},
-        },"Disabled":false,"id":"1fa85cf1-f0fc-48d9-8a98-da70b174e115","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
+        },"Disabled":false,"id":"df306658-56fa-40e9-905e-1a6987e0287b","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<MomentsEventKeyframe>","resourceVersion":"2.0","Stretch":false,},
     ],
     "resourceType":"KeyframeStore<MomentsEventKeyframe>",
     "resourceVersion":"2.0",
   },
-  "name":"sq_prelude_sprinting_2_door_close",
+  "name":"sq_prelude_2_sprinting_door_close",
   "parent":{
     "name":"Prelude 1-1",
     "path":"folders/Sequences/Prelude 1-1.yy",

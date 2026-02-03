@@ -1,3 +1,5 @@
+scr_shove_out(solids)
+
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
 
 var _velocityCap = 0
@@ -36,7 +38,6 @@ if (place_meeting(x, y + 1, solids)) {
 	
 	if (isDiving) {
 		isDiving = false
-		gravIntensity = baseIntensity
 		canMove = true
 	}
 	if (isSlamming) {
@@ -72,12 +73,13 @@ if (place_meeting(x, y, hurtboxes)) {
 }
 
 if (place_meeting(x, y, obj_ladder)) {
-	if (scr_keyboard_check_keys_pressed(keybinds.up) and !climbing) {
+	if (scr_keyboard_check_keys(keybinds.up) and !climbing) {
 		scr_mount_ladder()
 	}
 	else {
 		if (scr_keyboard_check_keys_pressed(keybinds.jump) and climbing) {
 			scr_dismount_ladder()
+			grav = -jumpHeight
 		}
 	}
 	if (climbing) {
@@ -89,6 +91,8 @@ if (place_meeting(x, y, obj_ladder)) {
 		if (scr_keyboard_check_keys(keybinds.slam)) yMagnitude += ladderSpeed
 		if (scr_keyboard_check_keys(keybinds.left)) xMagnitude -= ladderSpeed
 		if (scr_keyboard_check_keys(keybinds.right)) xMagnitude += ladderSpeed
+		
+		scr_place_move(xMagnitude, yMagnitude, solids)
 	}
 }
 else {

@@ -1,7 +1,7 @@
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity
-gravLimit = 25
+gravLimit = 35
 
 jumpHeight = 17
 
@@ -19,9 +19,10 @@ canMove = true
 isSlamming = false
 isDiving = false
 
-#macro ladderSpeed 3
+#macro ladderSpeed 7
 climbing = false
 
+#macro airResistance 0.97
 xVelocity = 0
 
 spawnPointID = 0
