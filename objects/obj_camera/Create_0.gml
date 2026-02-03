@@ -9,7 +9,7 @@ enum roomSize {
 	height
 }
 
-function camera_apply_borders() {
+function scr_camera_apply_borders() {
 	// Set camera borders so it doesnt go offscreen
 	cameraX = x - viewWidth / 2
 	cameraY = y - viewHieght / 2
@@ -18,7 +18,7 @@ function camera_apply_borders() {
 	cameraY = max(0, min(cameraY, scr_get_room_size()[roomSize.height] - viewHieght))
 }
 
-camera_apply_borders()
+scr_camera_apply_borders()
 camera = camera_create_view(cameraX, cameraY, viewWidth, viewHieght)
 view_camera[0] = camera
 view_visible[0] = true
