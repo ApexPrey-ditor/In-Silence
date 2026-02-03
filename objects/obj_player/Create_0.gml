@@ -19,6 +19,23 @@ isDiving = false
 
 xVelocity = 0
 
+spawnPointID = 0
+spawnPointOffset = 0.5
+
+function scr_find_spawn_point(spawnID) {
+	var numberOfEntryPoints = instance_number(obj_roomEntryPoint)
+	var entryID = noone
+	
+	for (var i = 0; i < numberOfEntryPoints; i++) {
+		entryID = instance_find(obj_roomEntryPoint, i)
+		if (entryID.ID == spawnID) {
+			return entryID
+		}
+	}
+	
+	return entryId
+}
+
 solids = [obj_solid_hitbox]
 hurtboxes = [obj_hurtbox]
 
