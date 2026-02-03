@@ -1,11 +1,11 @@
 {
   "$GMObject":"",
-  "%Name":"obj_roomTransition",
+  "%Name":"obj_room_transition",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_roomTransition",
+  "name":"obj_room_transition",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",

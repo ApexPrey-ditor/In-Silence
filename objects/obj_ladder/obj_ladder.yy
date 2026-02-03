@@ -1,9 +1,9 @@
 {
   "$GMObject":"",
-  "%Name":"obj_roomEntryPoint",
+  "%Name":"obj_ladder",
   "eventList":[],
   "managed":true,
-  "name":"obj_roomEntryPoint",
+  "name":"obj_ladder",
   "overriddenProperties":[],
   "parent":{
     "name":"Objects",
@@ -23,15 +23,13 @@
   "physicsShape":1,
   "physicsShapePoints":[],
   "physicsStartAwake":true,
-  "properties":[
-    {"$GMObjectProperty":"v2","%Name":"ID","filters":[],"listItems":[],"multiselect":false,"name":"ID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":0,},
-  ],
+  "properties":[],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_roomEntryPoint",
-    "path":"sprites/spr_roomEntryPoint/spr_roomEntryPoint.yy",
+    "name":"spr_ladder",
+    "path":"sprites/spr_ladder/spr_ladder.yy",
   },
   "spriteMaskId":null,
   "visible":true,

@@ -67,8 +67,34 @@ if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0) {
 	grav = -jumpHeight
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids)
-
 if (place_meeting(x, y, hurtboxes)) {
 	room_restart()
 }
+
+if (place_meeting(x, y, obj_ladder)) {
+	if (scr_keyboard_check_keys_pressed(keybinds.up) and !climbing) {
+		scr_mount_ladder()
+	}
+	else {
+		if (scr_keyboard_check_keys_pressed(keybinds.jump) and climbing) {
+			scr_dismount_ladder()
+		}
+	}
+	if (climbing) {
+		var xMagnitude = 0
+		var yMagnitude = 0
+		_velocityCap = 0
+		
+		if (scr_keyboard_check_keys(keybinds.up)) yMagnitude -= ladderSpeed
+		if (scr_keyboard_check_keys(keybinds.slam)) yMagnitude += ladderSpeed
+		if (scr_keyboard_check_keys(keybinds.left)) xMagnitude -= ladderSpeed
+		if (scr_keyboard_check_keys(keybinds.right)) xMagnitude += ladderSpeed
+	}
+}
+else {
+	if (climbing) {
+		scr_dismount_ladder()
+	}
+}
+
+xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids)
