@@ -1,7 +1,7 @@
 switch (triggerType) {
 	case "Touching":
 		if (place_meeting(x, y, obj_player)) {
-			scr_apply_action()
+			apply_with_delay()
 		}
 		break;
 }

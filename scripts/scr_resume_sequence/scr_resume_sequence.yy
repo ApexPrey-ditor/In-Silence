@@ -1,12 +1,12 @@
 {
   "$GMScript":"v1",
-  "%Name":"moment_reset_speed",
+  "%Name":"scr_resume_sequence",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"moment_reset_speed",
+  "name":"scr_resume_sequence",
   "parent":{
-    "name":"Moments",
-    "path":"folders/Sequences/Moments.yy",
+    "name":"Scripts",
+    "path":"folders/Scripts.yy",
   },
   "resourceType":"GMScript",
   "resourceVersion":"2.0",

@@ -1,3 +1,8 @@
+enum coordinate {
+	xPosition,
+	yPosition
+}
+
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity

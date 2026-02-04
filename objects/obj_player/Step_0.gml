@@ -1,4 +1,6 @@
-scr_shove_out(solids)
+var pushedVelocity = scr_shove_out(solids)
+xVelocity += pushedVelocity[coordinate.xPosition]
+grav += pushedVelocity[coordinate.yPosition]
 
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
 
@@ -19,18 +21,24 @@ if (!place_meeting(x, y + 1, solids)) {
 }
 else {
 	if (scr_keyboard_check_keys(keybinds.left) and canMove) {
-		xVelocity -= walkSpeed
+		if (xVelocity > -sprintSpeed) {
+			xVelocity -= walkSpeed
+			xVelocity = max(xVelocity, -sprintSpeed)
+		}
 		_velocityCap = walkSpeed
 		movement = true
 	}
 	if (scr_keyboard_check_keys(keybinds.right) and canMove) {
-		xVelocity += walkSpeed
+		if (xVelocity < sprintSpeed) {
+			xVelocity += walkSpeed
+			xVelocity = min(xVelocity, sprintSpeed)
+		}
 		_velocityCap = walkSpeed
 		movement = true
 	}
 }
 if (scr_keyboard_check_keys(keybinds.sprint)) {
-	_velocityCap = sprintSpeed
+	_velocityCap = infinity
 }
 
 if (place_meeting(x, y + 1, solids)) {
@@ -101,4 +109,4 @@ else {
 	}
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids)
+xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving)
