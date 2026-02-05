@@ -1,6 +1,6 @@
-var pushedVelocity = scr_shove_out(solids)
+/*var pushedVelocity = scr_shove_out(solids)
 xVelocity += pushedVelocity[coordinate.xPosition]
-grav += pushedVelocity[coordinate.yPosition]
+grav += pushedVelocity[coordinate.yPosition]*/
 
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
 
@@ -10,35 +10,29 @@ var movement = false
 if (!place_meeting(x, y + 1, solids)) {
 	_velocityCap = walkSpeed
 	
-	if (scr_keyboard_check_keys(keybinds.left) and canMove) {
+	if (scr_keyboard_check_keys(keybinds.left) and canWalk) {
 		xVelocity -= walkSpeed / airControlFactor
 		movement = true
 	}
-	if (scr_keyboard_check_keys(keybinds.right) and canMove) {
+	if (scr_keyboard_check_keys(keybinds.right) and canWalk) {
 		xVelocity += walkSpeed / airControlFactor
 		movement = true
 	}
 }
 else {
-	if (scr_keyboard_check_keys(keybinds.left) and canMove) {
-		if (xVelocity > -sprintSpeed) {
-			xVelocity -= walkSpeed
-			xVelocity = max(xVelocity, -sprintSpeed)
-		}
+	if (scr_keyboard_check_keys(keybinds.left) and canWalk) {
+		xVelocity -= walkSpeed
 		_velocityCap = walkSpeed
 		movement = true
 	}
-	if (scr_keyboard_check_keys(keybinds.right) and canMove) {
-		if (xVelocity < sprintSpeed) {
-			xVelocity += walkSpeed
-			xVelocity = min(xVelocity, sprintSpeed)
-		}
+	if (scr_keyboard_check_keys(keybinds.right) and canWalk) {
+		xVelocity += walkSpeed
 		_velocityCap = walkSpeed
 		movement = true
 	}
 }
 if (scr_keyboard_check_keys(keybinds.sprint)) {
-	_velocityCap = infinity
+	_velocityCap = sprintSpeed
 }
 
 if (place_meeting(x, y + 1, solids)) {
@@ -46,27 +40,45 @@ if (place_meeting(x, y + 1, solids)) {
 	
 	if (isDiving) {
 		isDiving = false
-		canMove = true
+		canWalk = true
 	}
 	if (isSlamming) {
 		isSlamming = false
-		canMove = true
+		if (!isSliding) {
+			canWalk = true
+		}
+	}
+	if (scr_keyboard_check_keys(keybinds.slam) and abs(xVelocity) > 1) {
+		canWalk = false
+		isSliding = true
+		_velocityCap = infinity
+		sprite_index = spr_jimBob_sliding
+	}
+	else if (isSliding) {
+		isSliding = false
+		canWalk = true
+		sprite_index = spr_jimBob
 	}
 }
 else {
 	cayoteFrames -= 1
 	
-	if (scr_keyboard_check_keys(keybinds.slam) and canMove and !scr_keyboard_check_keys(keybinds.jump)) {
+	if (isSliding and !isDiving) {
+		isDiving = true
+		grav = gravLimit
+	}
+
+	if (scr_keyboard_check_keys_pressed(keybinds.slam) and canWalk and !scr_keyboard_check_keys(keybinds.jump)) {
 		if (movement and abs(xVelocity) >= walkSpeed) {
 			isDiving = true
 			grav = gravLimit
-			canMove = false
+			canWalk = false
 		}
 		else {
 			isSlamming = true
 			grav = gravLimit
 			xVelocity = 0
-			canMove = false
+			canWalk = false
 		}
 	}
 }
@@ -74,6 +86,12 @@ else {
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0) {
 	cayoteFrames = 0
 	grav = -jumpHeight
+	
+	if (isSliding) {
+		isSliding = false
+		canWalk = true
+		sprite_index = spr_jimBob
+	}
 }
 
 if (place_meeting(x, y, hurtboxes)) {

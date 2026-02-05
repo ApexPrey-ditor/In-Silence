@@ -11,7 +11,7 @@ gravLimit = 35
 jumpHeight = 17
 
 // macros are constants
-#macro cayoteFrameLimit 10
+#macro cayoteFrameLimit 6
 cayoteFrames = cayoteFrameLimit
 
 #macro airControlFactor 10
@@ -20,9 +20,10 @@ walkSpeed = baseWalkSpeed
 #macro baseSprintSpeed 15
 sprintSpeed = baseSprintSpeed
 
-canMove = true
+canWalk = true
 isSlamming = false
 isDiving = false
+isSliding = false
 
 #macro ladderSpeed 7
 climbing = false
@@ -66,4 +67,4 @@ keybinds = {left : [ord("A")],
 			up : [ord("W")],
 			jump : [vk_space],
 			sprint : [vk_shift],
-			slam : [ord("S")]}
+			slam : [ord("S"), vk_control]}

@@ -1,10 +1,12 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false) {
-	if (abs(xvel) > velocityCap) {
-		xvel = velocityCap * sign(xvel)
+	if (place_meeting(x, y + 1, solids)) {
+		if (abs(xvel) > velocityCap) {
+			xvel = velocityCap * sign(xvel)
+		}
 	}
-	if (!place_meeting(x, y + 1, solids) and not diving) {
+	else if (!diving) {
 		xvel = xvel * airResistance
 	}
 	

@@ -70,6 +70,7 @@
     {"id":{"name":"spr_hurt","path":"sprites/spr_hurt/spr_hurt.yy",},},
     {"id":{"name":"spr_jimBob_hitbox_horizontal","path":"sprites/spr_jimBob_hitbox_horizontal/spr_jimBob_hitbox_horizontal.yy",},},
     {"id":{"name":"spr_jimBob_hitbox_vertical","path":"sprites/spr_jimBob_hitbox_vertical/spr_jimBob_hitbox_vertical.yy",},},
+    {"id":{"name":"spr_jimBob_sliding","path":"sprites/spr_jimBob_sliding/spr_jimBob_sliding.yy",},},
     {"id":{"name":"spr_jimBob","path":"sprites/spr_jimBob/spr_jimBob.yy",},},
     {"id":{"name":"spr_ladder","path":"sprites/spr_ladder/spr_ladder.yy",},},
     {"id":{"name":"spr_roomEntryPoint","path":"sprites/spr_roomEntryPoint/spr_roomEntryPoint.yy",},},
