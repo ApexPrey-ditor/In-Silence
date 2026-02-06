@@ -10,10 +10,13 @@ function scr_shove_out(solids, nonpassable=noone){
 	var prebboxTop = bbox_top + 1
 	var prebboxBottom = bbox_bottom - 1
 	
+	var preXScale = image_xscale
+	var preYScale = image_yscale
+	
 	var movementAmountX = 0
 	var movementAmountY = 0
 	
-	mask_index = spr_jimBob_hitbox_horizontal
+	image_xscale = 0
 	
 	if (place_meeting(prebboxLeft, y, solids)) {
 		while (place_meeting(prebboxLeft, y, solids)) {
@@ -30,10 +33,10 @@ function scr_shove_out(solids, nonpassable=noone){
 		}
 	}
 	
-	mask_index = spr_jimBob_hitbox_vertical
+	image_xscale = preXScale
+	image_yscale = 0
 	
 	if (position_meeting(x, prebboxBottom, solids)) {
-		show_debug_message("screw ts")
 		while (place_meeting(x, prebboxBottom, solids)) {
 			y -= 1
 			prebboxBottom -= 1
@@ -48,7 +51,7 @@ function scr_shove_out(solids, nonpassable=noone){
 		}
 	}
 	
-	mask_index = sprite_index
+	image_yscale = preYScale
 	
 	return [movementAmountX, movementAmountY]
 }

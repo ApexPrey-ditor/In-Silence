@@ -45,7 +45,7 @@
   "showBackdrop":true,
   "showBackdropImage":false,
   "spriteId":null,
-  "timeUnits":0,
+  "timeUnits":1,
   "tracks":[
     {"$GMInstanceTrack":"","%Name":"obj_solid_hitbox","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<AssetInstanceKeyframe>":"","Keyframes":[
           {"$Keyframe<AssetInstanceKeyframe>":"","Channels":{

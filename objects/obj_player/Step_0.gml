@@ -1,6 +1,6 @@
-/*var pushedVelocity = scr_shove_out(solids)
+var pushedVelocity = scr_shove_out(solids)
 xVelocity += pushedVelocity[coordinate.xPosition]
-grav += pushedVelocity[coordinate.yPosition]*/
+grav += pushedVelocity[coordinate.yPosition]
 
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
 
