@@ -35,6 +35,12 @@ function scr_apply_action() {
 			}
 			scr_resume_sequence(targetSequence)
 			break;
+		case "GoToRoom":
+			if (instance_exists(obj_player)) {
+				obj_player.spawnPointID = assetID
+				obj_player.spawnPointOffset = 1
+			}
+			room_goto(objectID)
 	}
 }
 

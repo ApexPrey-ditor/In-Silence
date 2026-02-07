@@ -12,5 +12,11 @@ function scr_get_room_size(_room=room) {
 			return [2752, 1088]
 		case rm_prelude_5_finale:
 			return [2304, 1888]
+		case rm_scraps_1_intro:
+			return [2752, 1088]
+		case rm_scraps_2_entrance:
+			return [2752, 1088]
+		case rm_scraps_3_shack:
+			return [960, 480]
 	}
 }

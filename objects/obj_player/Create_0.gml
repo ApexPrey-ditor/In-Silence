@@ -32,7 +32,7 @@ climbing = false
 xVelocity = 0
 
 spawnPointID = 0
-spawnPointOffset = 0.5
+spawnPointOffset = 1
 
 function scr_find_spawn_point(spawnID) {
 	var numberOfEntryPoints = instance_number(obj_room_entry_point)

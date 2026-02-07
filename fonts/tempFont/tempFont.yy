@@ -1,6 +1,6 @@
 {
   "$GMFont":"",
-  "%Name":"Font1",
+  "%Name":"tempFont",
   "AntiAlias":1,
   "applyKerning":0,
   "ascender":14,
@@ -189,10 +189,10 @@
   "last":0,
   "lineHeight":18,
   "maintainGms1Font":false,
-  "name":"Font1",
+  "name":"tempFont",
   "parent":{
-    "name":"Prelude 1-1",
-    "path":"folders/Rooms/Prelude 1-1.yy",
+    "name":"Fonts",
+    "path":"folders/Fonts.yy",
   },
   "pointRounding":0,
   "ranges":[
