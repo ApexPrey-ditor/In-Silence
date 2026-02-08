@@ -3,38 +3,15 @@ directionPointing = 0
 canAttack = true
 attacking = false
 
-parryables = [obj_enemy_parent, obj_destructable]
-
-damage = {
-	stabilizer : 5
-}
-
-enum weaponAlarms {
-	notAttacking,
-	takeOffCooldown
-}
-
-enum attackDurations {
-	stabilizer = 10
-}
-
-enum attackCooldowns {
-	stabilizer = 20
-}
-
-enum recoil {
-	stabilizer = 10
-}
-
-enum weaponDistance {
-	stabilizer = 24
-}
+shootables = [obj_enemy_parent, obj_destructable, obj_solid_hitbox, obj_target]
 
 function scr_update_weapon() {
+	canAttack = false
+	
 	switch (weaponSelected) {
-		case "stabilizer":
-			sprite_index = spr_stabilizer
-			distanceFromPlayer = weaponDistance.stabilizer
-			break
+		case "revolver":
+			sprite_index = spr_revolver
+			distanceFromPlayer = weaponDistance.revolver
+			alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.stabilizer
 	}
 }

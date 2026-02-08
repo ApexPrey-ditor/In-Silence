@@ -1,0 +1,2 @@
+canWalk = true
+invincibility = false

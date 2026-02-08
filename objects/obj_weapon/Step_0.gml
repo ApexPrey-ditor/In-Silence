@@ -2,6 +2,8 @@ if (instance_exists(obj_player)) {
 	if (!attacking) {
 		directionPointing = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		image_angle = directionPointing
+		
+		image_yscale = scr_find_angle_x_direction(directionPointing)
 	}
 	
 	x = obj_player.x + (dcos(directionPointing) * distanceFromPlayer)
@@ -12,36 +14,41 @@ if (instance_exists(obj_player)) {
 		attacking = true
 		
 		switch weaponSelected {
-			case "stabilizer":
+			case "revolver":
 				alarm[weaponAlarms.notAttacking] = attackDurations.stabilizer
 				alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.stabilizer
 				
-				var attackReach = 32
-				distanceFromPlayer = weaponDistance.stabilizer + attackReach
-				x = obj_player.x + (dcos(directionPointing) * distanceFromPlayer)
-				y = obj_player.y - (dsin(directionPointing) * distanceFromPlayer)
+				var hitX = x
+				var hitY = y
 				
-				var targets = ds_list_create()
-				instance_place_list(x, y, parryables, targets, false)
+				var xIncrease = dcos(directionPointing)
+				var yIncrease = -dsin(directionPointing)
 				
-				if (ds_list_size(targets) > 0) {
-					for (var i = 0; i < ds_list_size(targets); i++) {
-						var targetedObject = ds_list_find_value(targets, i)
-						
-						if (instance_exists(targetedObject)) {
-							if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-								targetedObject.hitpoints -= damage.stabilizer
-							}
-							if (targetedObject.object_index == obj_destructable) {
-								instance_destroy(targetedObject)
-							}
-							
-							/* recoil for parrying solid objects
-							obj_player.xVelocity -= recoil.stabilizer * dcos(directionPointing)
-							obj_player.grav += recoil.stabilizer * dsin(directionPointing)*/
+				while (!position_meeting(hitX, hitY, shootables) and
+						hitX > 0 and hitX < scr_get_room_size()[coordinate.xPosition] and
+						hitY > 0 and hitY < scr_get_room_size()[coordinate.yPosition]) {
+					hitX += xIncrease
+					hitY += yIncrease
+				}
+				
+				var targetedObject = instance_position(hitX, hitY, shootables)
+				
+				if (instance_exists(targetedObject)) {
+					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
+						targetedObject.hitpoints -= global.weaponDamage.revolver
+					}
+					else if (targetedObject.object_index == obj_destructable) {
+						instance_destroy(targetedObject)
+					}
+					else if (targetedObject.object_index == obj_target) {
+						with (targetedObject) {
+							scr_trigger_target()
 						}
 					}
 				}
+				
+				instance_create_layer(x, y, "Weapons", obj_visual_projectile, {endX : hitX, endY : hitY})
+				
 				break
 		}
 	}
