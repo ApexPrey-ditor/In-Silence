@@ -32,7 +32,7 @@ climbing = false
 xVelocity = 0
 
 spawnPointID = 0
-spawnPointOffset = 0.5
+spawnPointOffset = 1
 
 function scr_find_spawn_point(spawnID) {
 	var numberOfEntryPoints = instance_number(obj_room_entry_point)
@@ -59,7 +59,7 @@ function scr_dismount_ladder() {
 	gravIntensity = baseIntensity
 }
 
-solids = [obj_solid_hitbox]
+solids = [obj_solid_hitbox, obj_destructable]
 hurtboxes = [obj_hurtbox]
 
 keybinds = {left : [ord("A")],
@@ -67,4 +67,5 @@ keybinds = {left : [ord("A")],
 			up : [ord("W")],
 			jump : [vk_space],
 			sprint : [vk_shift],
-			slam : [ord("S"), vk_control]}
+			slam : [ord("S"), vk_control],
+			shoot : mb_left}
