@@ -6,4 +6,6 @@ terminalVelocity = 35
 xVelocity = 0
 topXSpeed = 0
 
+bounceHeight = 10
+
 solids = [obj_solid_hitbox, obj_destructable]

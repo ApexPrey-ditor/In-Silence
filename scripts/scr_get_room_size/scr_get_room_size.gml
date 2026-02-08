@@ -18,5 +18,7 @@ function scr_get_room_size(_room=room) {
 			return [2240, 1088]
 		case rm_scraps_3_shack:
 			return [960, 480]
+		case rm_scraps_4_drone:
+			return [2240, 1088]
 	}
 }

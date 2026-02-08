@@ -6,7 +6,8 @@ room_goto(rm_scraps_2_entrance)
 global.weaponsObtained = []
 
 removeFromRoom = {rm_scraps_2_entrance : [],
-				rm_scraps_3_shack : []}
+				rm_scraps_3_shack : [],
+				rm_scraps_4_drone : []}
 
 enum roomSize {
 	width,

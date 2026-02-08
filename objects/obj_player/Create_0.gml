@@ -3,6 +3,10 @@ enum coordinate {
 	yPosition
 }
 
+enum playerAlarms {
+	hit
+}
+
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity
@@ -31,6 +35,9 @@ climbing = false
 #macro airResistance 0.97
 xVelocity = 0
 
+hitpoints = 5
+invincibility = false
+
 spawnPointID = 0
 spawnPointOffset = 1
 
@@ -57,6 +64,18 @@ function scr_mount_ladder() {
 function scr_dismount_ladder() {
 	climbing = false
 	gravIntensity = baseIntensity
+}
+
+function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
+	xVelocity = impact * angle
+	grav = -impact
+	if (!invincibility) {
+		hitpoints -= damage
+		invincibility = true
+		
+		canWalk = false
+		alarm[playerAlarms.hit] = recovery
+	}
 }
 
 solids = [obj_solid_hitbox, obj_destructable]

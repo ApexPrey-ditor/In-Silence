@@ -31,6 +31,7 @@ if (instance_exists(obj_player)) {
 						if (instance_exists(targetedObject)) {
 							if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
 								targetedObject.hitpoints -= damage.stabilizer
+								obj_player.grav = recoil.stabilizer * dsin(directionPointing)
 							}
 							if (targetedObject.object_index == obj_destructable) {
 								instance_destroy(targetedObject)
