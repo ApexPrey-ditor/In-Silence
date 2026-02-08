@@ -12,8 +12,8 @@
   "name":"obj_trigger",
   "overriddenProperties":[],
   "parent":{
-    "name":"Objects",
-    "path":"folders/Objects.yy",
+    "name":"Room Hitboxes",
+    "path":"folders/Objects/Room Hitboxes.yy",
   },
   "parentObjectId":null,
   "persistent":false,
