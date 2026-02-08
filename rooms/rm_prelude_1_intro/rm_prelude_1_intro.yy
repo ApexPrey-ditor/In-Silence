@@ -6,9 +6,9 @@
   "inheritCreationOrder":false,
   "inheritLayers":false,
   "instanceCreationOrder":[
+    {"name":"inst_595BC7FC","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
     {"name":"inst_6B4A0656","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
     {"name":"inst_E850D82","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
-    {"name":"inst_595BC7FC","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
     {"name":"inst_7602A77A","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
     {"name":"inst_48127E0A","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
     {"name":"inst_343B1F3E","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},
