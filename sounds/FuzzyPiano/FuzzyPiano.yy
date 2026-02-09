@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"FuzzyPiano",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":81.68635,
+  "exportDir":"",
+  "name":"FuzzyPiano",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"FuzzyPiano.mp3",
+  "volume":1.0,
+}

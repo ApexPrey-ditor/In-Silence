@@ -12,21 +12,27 @@ function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassab
 	y += currentGravity
 	
 	// dont apply gravity if on the ground
-	if (place_meeting(x, y + 1, collider) or place_meeting(x, y - 1, collider)) {
+	if (place_meeting(x, y + 1, collider) or place_meeting(x, y, collider)) {
 		if (currentGravity >= 0) {
-			// if gravity is going down and going into a wall, decrease gravity until 1 pixel above solid
-			while (place_meeting(x, y, collider)) {
-				y -= 1
+			if (!place_meeting(x, y - currentGravity, collider)) {
+				// if gravity is going down and going into a wall, decrease gravity until 1 pixel above solid
+				while (place_meeting(x, y, collider)) {
+					y -= 1
+				}
+			
+				return 0
 			}
 		}
 		else {
 			// if gravity is going up and going into a wall, increase gravity until 1 pixel below solid
-			while (place_meeting(x, y - 1, nonpassable)) {
+			while (place_meeting(x, y, nonpassable)) {
 				y += 1
 			}
 		}
 		
-		return 0
+		if (place_meeting(x, y + 1, nonpassable) or place_meeting(x, y - 1, nonpassable)) {
+			return 0
+		}
 	}
 	
 	currentGravity += intensity
