@@ -14,7 +14,22 @@ function scr_get_room_size(_room=room) {
 			return [2304, 1888]
 		case rm_scraps_1_intro:
 			return [2752, 1088]
+<<<<<<< Updated upstream
 		case rm_scraps_3_firstEncounter:
 			return [2112, 1088]
+=======
+		case rm_scraps_2_entrance:
+			return [2240, 1088]
+		case rm_scraps_3_shack:
+			return [960, 480]
+		case rm_scraps_4_drone:
+			return [2240, 1088]
+		case rm_scraps_5_wire:
+			return [2752, 1088]
+		case rm_scraps_6_basement:
+			return [960, 480]
+		case rm_mountainside_1_intro:
+			return [2368, 1088]
+>>>>>>> Stashed changes
 	}
 }
