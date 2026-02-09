@@ -10,28 +10,32 @@ var movement = false
 if (!place_meeting(x, y + 1, solids)) {
 	_velocityCap = walkSpeed
 	
-	if (scr_keyboard_check_keys(keybinds.left) and canWalk) {
-		xVelocity -= walkSpeed / airControlFactor
-		movement = true
-	}
-	if (scr_keyboard_check_keys(keybinds.right) and canWalk) {
-		xVelocity += walkSpeed / airControlFactor
-		movement = true
+	if (canWalk and canMove) {
+		if (scr_keyboard_check_keys(keybinds.left)) {
+			xVelocity -= walkSpeed / airControlFactor
+			movement = true
+		}
+		if (scr_keyboard_check_keys(keybinds.right)) {
+			xVelocity += walkSpeed / airControlFactor
+			movement = true
+		}
 	}
 }
 else {
-	if (scr_keyboard_check_keys(keybinds.left) and canWalk) {
-		xVelocity -= walkSpeed
-		_velocityCap = walkSpeed
-		movement = true
-	}
-	if (scr_keyboard_check_keys(keybinds.right) and canWalk) {
-		xVelocity += walkSpeed
-		_velocityCap = walkSpeed
-		movement = true
+	if (canWalk and canMove) {
+		if (scr_keyboard_check_keys(keybinds.left)) {
+			xVelocity -= walkSpeed
+			_velocityCap = walkSpeed
+			movement = true
+		}
+		if (scr_keyboard_check_keys(keybinds.right)) {
+			xVelocity += walkSpeed
+			_velocityCap = walkSpeed
+			movement = true
+		}
 	}
 }
-if (scr_keyboard_check_keys(keybinds.sprint)) {
+if (scr_keyboard_check_keys(keybinds.sprint) and canMove) {
 	_velocityCap = sprintSpeed
 }
 
@@ -50,7 +54,7 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 			canWalk = true
 		}
 	}
-	if (scr_keyboard_check_keys(keybinds.slam) and abs(xVelocity) > walkSpeed) {
+	if (scr_keyboard_check_keys(keybinds.slam) and abs(xVelocity) > walkSpeed and canMove) {
 		canWalk = false
 		isSliding = true
 		_velocityCap = infinity
@@ -76,7 +80,7 @@ else {
 		grav = gravLimit
 	}
 
-	if (scr_keyboard_check_keys_pressed(keybinds.slam) and canWalk and !scr_keyboard_check_keys(keybinds.jump)) {
+	if (scr_keyboard_check_keys_pressed(keybinds.slam) and !scr_keyboard_check_keys(keybinds.jump) and canWalk and canMove) {
 		if (movement and abs(xVelocity) >= walkSpeed) {
 			isDiving = true
 			grav = gravLimit
@@ -92,7 +96,7 @@ else {
 }
 image_yscale = 1
 
-if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0) {
+if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
 	grav = -jumpHeight
 	
@@ -108,7 +112,7 @@ if (place_meeting(x, y, hurtboxes)) {
 }
 
 if (place_meeting(x, y, obj_ladder)) {
-	if (scr_keyboard_check_keys(keybinds.up) and !climbing) {
+	if (scr_keyboard_check_keys(keybinds.up) and !climbing and canMove) {
 		scr_mount_ladder()
 	}
 	else {

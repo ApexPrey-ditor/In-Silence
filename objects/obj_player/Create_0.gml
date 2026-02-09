@@ -25,6 +25,7 @@ walkSpeed = baseWalkSpeed
 sprintSpeed = baseSprintSpeed
 
 canWalk = true
+canMove = true
 isSlamming = false
 isDiving = false
 isSliding = false
@@ -70,11 +71,16 @@ function scr_dismount_ladder() {
 function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
 	xVelocity = impact * angle
 	grav = -impact
+	
+	if (climbing) {
+		scr_dismount_ladder()
+	}
+	
 	if (!invincibility) {
 		hitpoints -= damage
 		invincibility = true
 		
-		canWalk = false
+		canMove = false
 		alarm[playerAlarms.hit] = recovery
 	}
 }

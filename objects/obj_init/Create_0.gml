@@ -1,12 +1,13 @@
-room_goto(rm_scraps_7_balcony)
-//room_goto(rm_prelude_0_init)
+//room_goto(rm_scraps_7_balcony)
+room_goto(rm_prelude_0_init)
 
-//audio_group_load(Music)
+audio_group_load(Music)
 
 //game_set_speed(6, gamespeed_fps)
-
-global.weaponsObtained = ["revolver"]
-global.stabilizerObtained = true
+/*global.weaponsObtained = ["revolver"]
+global.stabilizerObtained = true*/
+global.weaponsObtained = []
+global.stabilizerObtained = false
 
 removeFromRoom = {rm_scraps_2_entrance : [],
 				rm_scraps_3_shack : [],
@@ -56,4 +57,4 @@ if (global.stabilizerObtained) {
 	instance_create_layer(0, 0, "Weapons", obj_stabilizer)
 }
 
-//window_set_fullscreen(true)
+window_set_fullscreen(true)
