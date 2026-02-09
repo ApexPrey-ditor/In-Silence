@@ -54,6 +54,12 @@ function scr_apply_action() {
 		case "StopSong":
 			audio_stop_sound(objectID)
 			break
+		case "PauseSong":
+			audio_pause_sound(objectID)
+			break
+		case "ResumeSong":
+			audio_resume_sound(objectID)
+			break
 	}
 	
 	if (oncePerRoom) {

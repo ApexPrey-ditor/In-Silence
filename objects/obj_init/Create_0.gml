@@ -1,4 +1,4 @@
-room_goto(rm_scraps_7_balcony)
+room_goto(rm_scraps_1_intro)
 //room_goto(rm_prelude_1_intro)
 
 audio_group_load(Music)
