@@ -13,13 +13,20 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false) {
 	x += xvel
 	
 	if (place_meeting(x + sign(xvel), y, solids)) {
-		x = floor(x)
-		
-		while (place_meeting(x, y, solids)) {
-			x -= sign(xvel)
+		if (!place_meeting(x + sign(xvel), y - stepUpHeight, solids) and place_meeting(x, y - 1, solids)) {
+			while (place_meeting(x + sign(xvel), y, solids)) {
+				y -= 1
+			}
 		}
+		else {
+			x = floor(x)
 		
-		return 0
+			while (place_meeting(x, y, solids)) {
+				x -= sign(xvel)
+			}
+		
+			return 0
+		}
 	}
 	
 	return xvel

@@ -21,7 +21,7 @@ switch (action) {
 // apply to target
 function scr_apply_action() {
 	with (nextTrigger) {
-		apply_with_delay()
+		scr_apply_with_delay()
 	}
 	
 	switch (action) {
@@ -45,7 +45,7 @@ function scr_apply_action() {
 }
 
 // aplies including delay
-function apply_with_delay() {
+function scr_apply_with_delay() {
 	if (delay > 0) {
 		alarm[0] = delay
 	}

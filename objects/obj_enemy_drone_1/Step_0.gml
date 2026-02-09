@@ -2,7 +2,7 @@ event_inherited()
 
 xVelocity = topXSpeed * xDirection
 
-if (place_meeting(x + xVelocity, y, solids) or !position_meeting(x + (sprite_width / 2 * xDirection) + xVelocity, bbox_bottom + 1, solids)) {
+if (place_meeting(x + xDirection, y, solids) or !position_meeting(x + (sprite_width / 2 * xDirection) + xDirection, bbox_bottom + stepUpHeight + 1, solids)) {
 	xDirection = -xDirection
 }
 
@@ -11,6 +11,9 @@ if (instance_exists(obj_player)) {
 	image_yscale = 1 / sprite_height
 	if (place_meeting(x, prebbox_top, obj_player) and obj_player.grav > 0) {
 		obj_player.grav = -bounceHeight
+		obj_player.isSlamming = false
+		obj_player.isDiving = false
+		obj_player.canWalk = true
 		instance_destroy()
 		exit
 	}

@@ -33,6 +33,7 @@ isSliding = false
 climbing = false
 
 #macro airResistance 0.97
+#macro stepUpHeight 32
 xVelocity = 0
 
 hitpoints = 5
@@ -87,4 +88,5 @@ keybinds = {left : [ord("A")],
 			jump : [vk_space],
 			sprint : [vk_shift],
 			slam : [ord("S"), vk_control],
-			shoot : mb_left}
+			shoot : mb_left,
+			quickStabilizer : mb_right}
