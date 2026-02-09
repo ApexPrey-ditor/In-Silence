@@ -4,7 +4,7 @@ room_goto(rm_prelude_1_intro)
 //game_set_speed(6, gamespeed_fps)
 
 global.weaponsObtained = []
-global.stabilizerObtained = true
+global.stabilizerObtained = false
 
 removeFromRoom = {rm_scraps_2_entrance : [],
 				rm_scraps_3_shack : [],
