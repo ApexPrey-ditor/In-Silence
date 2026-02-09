@@ -11,5 +11,3 @@ for (var i = 0; i < array_length(structKeysList); i++) {
 		exit
 	}
 }
-
-alarm[0] = 1
