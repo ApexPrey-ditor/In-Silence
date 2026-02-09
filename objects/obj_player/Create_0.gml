@@ -53,7 +53,7 @@ function scr_find_spawn_point(spawnID) {
 		}
 	}
 	
-	return entryId
+	return entryID
 }
 
 function scr_mount_ladder() {
@@ -79,7 +79,8 @@ function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
 	}
 }
 
-solids = [obj_solid_hitbox, obj_destructable]
+solids = [obj_solid_hitbox, obj_destructable, obj_passable]
+nonpassable = [obj_solid_hitbox, obj_destructable]
 hurtboxes = [obj_hurtbox]
 
 keybinds = {left : [ord("A")],

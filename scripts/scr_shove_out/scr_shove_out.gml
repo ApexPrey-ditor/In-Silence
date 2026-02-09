@@ -16,7 +16,9 @@ function scr_shove_out(solids, nonpassable=noone){
 	var movementAmountX = 0
 	var movementAmountY = 0
 	
-	image_xscale = 0
+	
+	image_xscale = 1 / sprite_width
+	image_yscale = (sprite_height - 2) / sprite_height
 	
 	if (place_meeting(prebboxLeft, y, solids)) {
 		while (place_meeting(prebboxLeft, y, solids)) {
@@ -33,17 +35,17 @@ function scr_shove_out(solids, nonpassable=noone){
 		}
 	}
 	
-	image_xscale = preXScale
-	image_yscale = 0
+	image_xscale = (sprite_width - 2) / sprite_width
+	image_yscale = 1 / sprite_height
 	
-	if (position_meeting(x, prebboxBottom, solids)) {
+	if (place_meeting(x + 1, prebboxBottom, solids)) {
 		while (place_meeting(x, prebboxBottom, solids)) {
 			y -= 1
 			prebboxBottom -= 1
 			movementAmountY -= 1
 		}
 	}
-	if (place_meeting(x, prebboxTop, nonpassable)) {
+	if (place_meeting(x + 1, prebboxTop, nonpassable)) {
 		while (place_meeting(x, prebboxTop, nonpassable)) {
 			y += 1
 			prebboxTop += 1
@@ -52,6 +54,7 @@ function scr_shove_out(solids, nonpassable=noone){
 	}
 	
 	image_yscale = preYScale
+	image_xscale = preXScale
 	
 	return [movementAmountX, movementAmountY]
 }
