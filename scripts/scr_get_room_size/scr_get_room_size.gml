@@ -30,6 +30,9 @@ function scr_get_room_size(_room=room) {
 			return [960, 480]
 		case rm_mountainside_1_intro:
 			return [2368, 1088]
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
 	}
 }

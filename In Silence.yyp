@@ -107,6 +107,9 @@
     {"roomId":{"name":"rm_scraps_5_wire","path":"rooms/rm_scraps_5_wire/rm_scraps_5_wire.yy",},},
     {"roomId":{"name":"rm_scraps_6_basement","path":"rooms/rm_scraps_6_basement/rm_scraps_6_basement.yy",},},
     {"roomId":{"name":"rm_mountainside_1_intro","path":"rooms/rm_mountainside_1_intro/rm_mountainside_1_intro.yy",},},
+<<<<<<< Updated upstream
+>>>>>>> Stashed changes
+=======
 >>>>>>> Stashed changes
   ],
   "templateType":"game",
