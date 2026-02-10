@@ -75,7 +75,7 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 else {
 	cayoteFrames -= 1
 	
-	if (isSliding and !isDiving) {
+	if (isSliding and !isDiving and canMove) {
 		isDiving = true
 		grav = gravLimit
 	}
@@ -108,6 +108,7 @@ if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canM
 }
 
 if (place_meeting(x, y, hurtboxes)) {
+	scr_hit(0, 0, 1)
 	room_restart()
 }
 

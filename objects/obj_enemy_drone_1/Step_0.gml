@@ -2,7 +2,7 @@ event_inherited()
 
 xVelocity = topXSpeed * xDirection
 
-if (place_meeting(x + xDirection, y, solids) or !position_meeting(x + (sprite_width / 2 * xDirection) + xDirection, bbox_bottom + stepUpHeight + 1, solids)) {
+if (place_meeting(x + xDirection, y, solids) or !position_meeting(x + (sprite_width / 2 * xDirection) + xDirection, bbox_bottom + stepUpHeight + 1, solids) or bbox_left + xVelocity < 0 or bbox_right + xVelocity > scr_get_room_size()[coordinate.xPosition]) {
 	xDirection = -xDirection
 }
 

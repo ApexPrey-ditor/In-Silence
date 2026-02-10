@@ -12,24 +12,31 @@ function scr_get_room_size(_room=room) {
 			return [2752, 1088]
 		case rm_prelude_5_finale:
 			return [2304, 1888]
-		case rm_scraps_1_intro:
+		case rm_scraps_01_intro:
 			return [2752, 1088]
-		case rm_scraps_2_entrance:
+		case rm_scraps_02_entrance:
 			return [2240, 1088]
-		case rm_scraps_3_shack:
+		case rm_scraps_03_shack:
 			return [960, 480]
-		case rm_scraps_4_drone:
+		case rm_scraps_04_drone:
 			return [2240, 1088]
-		case rm_scraps_4_secret_1:
+		case rm_scraps_04_secret_1:
 			return [960, 480]
-		case rm_scraps_5_wire:
+		case rm_scraps_05_wire:
 			return [2752, 1088]
-		case rm_scraps_6_basement:
+		case rm_scraps_06_basement:
 			return [960, 480]
-		case rm_scraps_7_balcony:
+		case rm_scraps_07_balcony:
 			return [2752, 1088]
-		case rm_scraps_7_secret_2:
+		case rm_scraps_07_secret_2:
 			return [960, 480]
-		
+		case rm_scraps_08_indoors:
+			return [2752, 1088]
+		case rm_scraps_09_ladder:
+			return [2752, 1248]
+		case rm_scraps_10_rooftops:
+			return [2752, 1248]
+		case rm_scraps_11_exit:
+			return [2240, 1088]
 	}
 }

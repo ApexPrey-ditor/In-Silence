@@ -1,24 +1,28 @@
-room_goto(rm_scraps_1_intro)
-//room_goto(rm_prelude_1_intro)
+//room_goto(rm_scraps_07_balcony)
+room_goto(rm_prelude_1_intro)
 
 audio_group_load(Music)
 
-//game_set_speed(6, gamespeed_fps)
+audio_sound_loop_end(TheBeginningOfTheEnd, 69.0667)
+audio_sound_loop_end(FuzzyPiano, 78.9333)
+
+//game_set_speed(1, gamespeed_fps)
 
 global.weaponsObtained = []
 global.stabilizerObtained = false
 
-global.weaponsObtained = ["revolver"]
-global.stabilizerObtained = true
-
 removeFromRoom = {rm_prelude_1_intro : [],
-				rm_scraps_1_intro : [],
-				rm_scraps_2_entrance : [],
-				rm_scraps_3_shack : [],
-				rm_scraps_4_drone : [],
-				rm_scraps_5_wire : [],
-				rm_scraps_6_basement : [],
-				rm_scraps_7_balcony : []}
+				rm_scraps_01_intro : [],
+				rm_scraps_02_entrance : [],
+				rm_scraps_03_shack : [],
+				rm_scraps_04_drone : [],
+				rm_scraps_05_wire : [],
+				rm_scraps_06_basement : [],
+				rm_scraps_07_balcony : [],
+				rm_scraps_08_indoors : [],
+				rm_scraps_09_ladder : [],
+				rm_scraps_10_rooftops : [],
+				rm_scraps_11_exit : []}
 
 global.weaponDamage = {
 	stabilizer : 5,

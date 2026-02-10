@@ -59,18 +59,24 @@ function scr_find_spawn_point(spawnID) {
 
 function scr_mount_ladder() {
 	climbing = true
+	canWalk = false
 	gravIntensity = 0
 	grav = 0
+	xVelocity = 0
 }
 
 function scr_dismount_ladder() {
 	climbing = false
+	canWalk = true
 	gravIntensity = baseIntensity
 }
 
 function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
 	xVelocity = impact * angle
 	grav = -impact
+	canWalk = true
+	
+	alarm[playerAlarms.hit] = recovery
 	
 	if (climbing) {
 		scr_dismount_ladder()
