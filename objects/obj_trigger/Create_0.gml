@@ -34,13 +34,36 @@ function scr_apply_action() {
 				layer_sequence_headdir(targetSequence, seqdir_right)
 			}
 			scr_resume_sequence(targetSequence)
-			break;
+			break
 		case "GoToRoom":
 			if (instance_exists(obj_player)) {
 				obj_player.spawnPointID = assetID
 				obj_player.spawnPointOffset = 1
 			}
 			room_goto(objectID)
+			break
+		case "PlaySong":
+			audio_play_sound(objectID, 0, true)
+			break
+		case "SetSongVolume":
+			audio_sound_gain(objectID, value, assetID)
+			break
+		case "StopSongs":
+			audio_group_stop_all(Music)
+			break
+		case "StopSong":
+			audio_stop_sound(objectID)
+			break
+		case "PauseSong":
+			audio_pause_sound(objectID)
+			break
+		case "ResumeSong":
+			audio_resume_sound(objectID)
+			break
+	}
+	
+	if (oncePerRoom) {
+		instance_destroy()
 	}
 }
 
