@@ -3,9 +3,6 @@ room_goto(rm_prelude_1_intro)
 
 audio_group_load(Music)
 
-audio_sound_loop_end(TheBeginningOfTheEnd, 69.0667)
-audio_sound_loop_end(FuzzyPiano, 78.9333)
-
 //game_set_speed(1, gamespeed_fps)
 
 global.weaponsObtained = []
