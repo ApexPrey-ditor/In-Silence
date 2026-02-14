@@ -1,6 +1,6 @@
 var pushedVelocity = scr_shove_out(nonpassable)
-xVelocity += pushedVelocity[coordinate.xPosition]
-grav += pushedVelocity[coordinate.yPosition]
+//xVelocity += pushedVelocity[coordinate.xPosition]
+//grav += pushedVelocity[coordinate.yPosition]
 
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, nonpassable)
 
@@ -13,10 +13,12 @@ if (!place_meeting(x, y + 1, solids)) {
 	if (canWalk and canMove) {
 		if (scr_keyboard_check_keys(keybinds.left)) {
 			xVelocity -= walkSpeed / airControlFactor
+			image_xscale = -1
 			movement = true
 		}
 		if (scr_keyboard_check_keys(keybinds.right)) {
 			xVelocity += walkSpeed / airControlFactor
+			image_xscale = 1
 			movement = true
 		}
 	}
@@ -26,11 +28,13 @@ else {
 		if (scr_keyboard_check_keys(keybinds.left)) {
 			xVelocity -= walkSpeed
 			_velocityCap = walkSpeed
+			image_xscale = -1
 			movement = true
 		}
 		if (scr_keyboard_check_keys(keybinds.right)) {
 			xVelocity += walkSpeed
 			_velocityCap = walkSpeed
+			image_xscale = 1
 			movement = true
 		}
 	}
@@ -54,7 +58,11 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 			canWalk = true
 		}
 	}
-	if (scr_keyboard_check_keys(keybinds.slam) and abs(xVelocity) > walkSpeed and canMove) {
+	if (scr_keyboard_check_keys(keybinds.slam) and canMove) {
+		if (abs(xVelocity) < walkSpeed) {
+			xVelocity = walkSpeed * scr_plus_minus(image_xscale)
+		}
+		
 		canWalk = false
 		isSliding = true
 		_velocityCap = infinity
@@ -108,7 +116,7 @@ if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canM
 }
 
 if (place_meeting(x, y, hurtboxes)) {
-	scr_hit(0, 0, 1)
+	scr_hit(0, 0, 15)
 	room_restart()
 }
 

@@ -47,11 +47,25 @@
     {"name":"inst_35C57646","path":"rooms/rm_scraps_04_drone/rm_scraps_04_drone.yy",},
     {"name":"inst_6D0CA0C","path":"rooms/rm_scraps_04_drone/rm_scraps_04_drone.yy",},
     {"name":"inst_39DB30B7","path":"rooms/rm_scraps_04_drone/rm_scraps_04_drone.yy",},
+    {"name":"Scrpas4ProximityFadeSongFuzzyPiano","path":"rooms/rm_scraps_04_drone/rm_scraps_04_drone.yy",},
+    {"name":"Scraps4StopSongItsTurtle","path":"rooms/rm_scraps_04_drone/rm_scraps_04_drone.yy",},
   ],
   "isDnd":false,
   "layers":[
     {"$GMRInstanceLayer":"","%Name":"Managers","depth":0,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_595BC7FC2_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_595BC7FC2_1_2","objectId":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":0.0,"y":-32.0,},
+        {"$GMRInstance":"v4","%Name":"Scrpas4ProximityFadeSongFuzzyPiano","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scrpas4ProximityFadeSongFuzzyPiano","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"targetID","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resource":{"name":"FuzzyPiano","path":"sounds/FuzzyPiano/FuzzyPiano.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"FuzzyPiano",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"minDistance","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"16",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"maxDistance","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"64",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"minValue","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"maxValue","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":864.0,"y":1024.0,},
+        {"$GMRInstance":"v4","%Name":"Scraps4StopSongItsTurtle","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps4StopSongItsTurtle","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"StopSong",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"oncePerRoom","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"ItsTurtle","path":"sounds/ItsTurtle/ItsTurtle.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ItsTurtle",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":832.0,"y":928.0,},
       ],"layers":[],"name":"Managers","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Weapons","depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Weapons","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":200,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Player","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
@@ -117,8 +131,8 @@
   ],
   "name":"rm_scraps_04_drone",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

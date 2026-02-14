@@ -48,12 +48,12 @@
     {"name":"inst_6B2F62F1","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_578D9E1F","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_2F4F59D7","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
-    {"name":"ScrapsEnterBasement5","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
+    {"name":"Scraps5EnterBasement","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_63A3A39C","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_49665B","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_53C5D807","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_6E7BCA79","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
-    {"name":"inst_1FAE72DC","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
+    {"name":"Scraps5OpenDoorTriggered","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
     {"name":"inst_2AF4DC02","path":"rooms/rm_scraps_05_wire/rm_scraps_05_wire.yy",},
   ],
   "isDnd":false,
@@ -124,7 +124,7 @@
         {"$GMRInstance":"v4","%Name":"inst_63A3A39C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_63A3A39C","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"propertyId":{"name":"ID","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":1568.0,"y":928.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsEnterBasement5","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsEnterBasement5","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps5EnterBasement","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps5EnterBasement","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"GoToRoom",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"triggerType","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Interact",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"rm_scraps_06_basement","path":"rooms/rm_scraps_06_basement/rm_scraps_06_basement.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_scraps_06_basement",},
@@ -134,18 +134,19 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_target","path":"objects/obj_target/obj_target.yy",},"propertyId":{"name":"destroy","path":"objects/obj_target/obj_target.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":2272.0,"y":512.0,},
         {"$GMRInstance":"v4","%Name":"inst_6E7BCA79","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6E7BCA79","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":28.0,"x":2496.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"inst_1FAE72DC","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1FAE72DC","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps5OpenDoorTriggered","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps5OpenDoorTriggered","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"triggerID","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"value","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"assetID","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"triggerType","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":3040.0,"y":512.0,},
       ],"layers":[],"name":"Interactables","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4280501426,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_scraps_05_wire",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -15,7 +15,7 @@
     {"name":"inst_3DEBF538","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
     {"name":"inst_15EBF1EA","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
     {"name":"inst_6FE5152","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
-    {"name":"ScrapsEnterHouse2","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
+    {"name":"Scraps2EnterHouse","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
     {"name":"inst_1C9C2A6C","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
     {"name":"inst_4219EA46","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
     {"name":"inst_4559D905","path":"rooms/rm_scraps_02_entrance/rm_scraps_02_entrance.yy",},
@@ -54,7 +54,7 @@
         {"$GMRInstance":"v4","%Name":"inst_1C9C2A6C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1C9C2A6C","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"propertyId":{"name":"ID","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"2",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":544.0,"y":896.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsEnterHouse2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsEnterHouse2","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps2EnterHouse","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps2EnterHouse","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"GoToRoom",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"triggerType","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"Interact",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"rm_scraps_03_shack","path":"rooms/rm_scraps_03_shack/rm_scraps_03_shack.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_scraps_03_shack",},
@@ -69,8 +69,8 @@
   ],
   "name":"rm_scraps_02_entrance",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

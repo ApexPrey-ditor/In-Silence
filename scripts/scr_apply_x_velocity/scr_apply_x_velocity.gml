@@ -26,7 +26,7 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 			x = floor(x)
 		
 			while (place_meeting(x, y, nonPassable)) {
-				x -= sign(xvel)
+				x -= scr_plus_minus(xvel)
 			}
 		
 			return 0
