@@ -33,6 +33,14 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickStabilizer) and canAttac
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)
 				}
+				else if (targetedObject.object_index == obj_enemy_projectile) {
+					targetedObject.direction += 180
+					targetedObject.speed *= 3
+					targetedObject.creator = obj_player
+					
+					obj_init.alarm[initAlarms.unpauseAll] = 15
+					scr_pause_objects(all)
+				}
 							
 				/* recoil for parrying solid objects
 				obj_player.xVelocity -= recoil.stabilizer * dcos(directionPointing)

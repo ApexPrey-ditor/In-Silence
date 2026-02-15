@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassable=noone) {
+function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassable=noone, xvelFrictionless=0) {
 	if (nonPassable == noone) {
 		nonPassable = solids
 	}
@@ -13,6 +13,9 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 	else if (!diving) {
 		xvel = xvel * airResistance
 	}
+	
+	var returnedXvel = xvel
+	xvel += xvelFrictionless
 	
 	x += xvel
 	
@@ -33,5 +36,5 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 		}
 	}
 	
-	return xvel
+	return returnedXvel
 }

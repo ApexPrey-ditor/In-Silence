@@ -149,4 +149,4 @@ else {
 	}
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving, nonpassable)
+xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving, nonpassable, xVelocityFrictionless)

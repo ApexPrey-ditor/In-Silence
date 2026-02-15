@@ -46,5 +46,9 @@ function scr_get_room_size(_room=room) {
 			return [3328, 2784]
 		case rm_mountainside_04_side:
 			return [2240, 1344]
+		case rm_mountainside_05_climb:
+			return [2368, 1344]
+		case rm_mountainside_06_steep:
+			return [2240, 2208]
 	}
 }

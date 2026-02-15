@@ -4,7 +4,8 @@ enum coordinate {
 }
 
 enum playerAlarms {
-	hit
+	hit,
+	removeFrictionlessXVelocity
 }
 
 grav = 0
@@ -36,6 +37,7 @@ climbing = false
 #macro airResistance 0.97
 #macro stepUpHeight 32
 xVelocity = 0
+xVelocityFrictionless = 0
 
 hitpoints = 5
 invincibility = false
@@ -74,6 +76,7 @@ function scr_dismount_ladder() {
 function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
 	xVelocity = impact * angle
 	grav = -impact
+	xVelocityFrictionless = 0
 	canWalk = true
 	
 	alarm[playerAlarms.hit] = recovery
