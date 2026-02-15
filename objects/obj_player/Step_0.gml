@@ -41,6 +41,10 @@ else {
 }
 if (scr_keyboard_check_keys(keybinds.sprint) and canMove) {
 	_velocityCap = sprintSpeed
+	ladderSpeed = baseLadderSpeed * 2
+}
+else {
+	ladderSpeed = baseLadderSpeed
 }
 
 var prebbox_bottom = bbox_bottom

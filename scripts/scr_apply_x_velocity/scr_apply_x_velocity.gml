@@ -20,7 +20,7 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 	x += xvel
 	
 	if (place_meeting(x + sign(xvel), y, nonPassable)) {
-		if (!place_meeting(x + sign(xvel), y - stepUpHeight, nonPassable) and place_meeting(x - xvel, y + 1, nonPassable)) {
+		if (!place_meeting(x + sign(xvel), y - stepUpHeight, nonPassable) and place_meeting(x - xvel, y + stepUpHeight, nonPassable)) {
 			while (place_meeting(x + sign(xvel), y, solids)) {
 				y -= 1
 			}

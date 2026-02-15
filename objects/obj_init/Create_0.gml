@@ -1,12 +1,12 @@
-//room_goto(rm_prelude_1_intro)
-room_goto(rm_mountainside_01_intro)
+room_goto(rm_prelude_1_intro)
+//room_goto(rm_mountainside_01_intro)
 
 audio_group_load(Music)
 
 //game_set_speed(60, gamespeed_fps)
 
-global.weaponsObtained = ["revolver"]
-global.stabilizerObtained = true
+global.weaponsObtained = []
+global.stabilizerObtained = false
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
@@ -25,7 +25,10 @@ removeFromRoom = {rm_prelude_1_intro : [],
 				rm_mountainside_03_big : [],
 				rm_mountainside_04_side : [],
 				rm_mountainside_05_climb : [],
-				rm_mountainside_06_steep : []}
+				rm_mountainside_06_steep : [],
+				rm_mountainside_07_vertical : [],
+				rm_mountainside_08_summit : [],
+				rm_mountainside_09_exit : []}
 				
 pausedObjects = []
 
@@ -74,4 +77,4 @@ if (global.stabilizerObtained) {
 	instance_create_layer(0, 0, "Weapons", obj_stabilizer)
 }
 
-//window_set_fullscreen(true)
+window_set_fullscreen(true)

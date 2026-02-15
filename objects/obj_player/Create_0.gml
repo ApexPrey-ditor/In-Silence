@@ -31,7 +31,8 @@ isSlamming = false
 isDiving = false
 isSliding = false
 
-#macro ladderSpeed 7
+#macro baseLadderSpeed 5
+ladderSpeed = baseLadderSpeed
 climbing = false
 
 #macro airResistance 0.97

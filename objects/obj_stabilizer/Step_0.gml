@@ -25,7 +25,6 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickStabilizer) and canAttac
 			if (instance_exists(targetedObject)) {
 				if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
 					targetedObject.hitpoints -= global.weaponDamage.stabilizer
-					obj_player.grav = recoil.stabilizer * dsin(image_angle)
 					obj_player.isSlamming = false
 					obj_player.isDiving = false
 					obj_player.canWalk = true
