@@ -1,12 +1,12 @@
-//room_goto(rm_scraps_07_balcony)
 room_goto(rm_prelude_1_intro)
+//room_goto(rm_mountainside_09_exit)
 
 audio_group_load(Music)
 
-//game_set_speed(1, gamespeed_fps)
+//game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = []
-global.stabilizerObtained = false
+global.weaponsObtained = ["revolver"]
+global.stabilizerObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
@@ -19,7 +19,18 @@ removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_08_indoors : [],
 				rm_scraps_09_ladder : [],
 				rm_scraps_10_rooftops : [],
-				rm_scraps_11_exit : []}
+				rm_scraps_11_exit : [],
+				rm_mountainside_01_intro : [],
+				rm_mountainside_02_forest : [],
+				rm_mountainside_03_big : [],
+				rm_mountainside_04_side : [],
+				rm_mountainside_05_climb : [],
+				rm_mountainside_06_steep : [],
+				rm_mountainside_07_vertical : [],
+				rm_mountainside_08_summit : [],
+				rm_mountainside_09_exit : []}
+				
+pausedObjects = []
 
 global.weaponDamage = {
 	stabilizer : 5,
@@ -53,6 +64,10 @@ enum recoil {
 enum weaponDistance {
 	stabilizer = 48,
 	revolver = 32
+}
+
+enum initAlarms {
+	unpauseAll
 }
 
 if (array_length(global.weaponsObtained) > 0) {

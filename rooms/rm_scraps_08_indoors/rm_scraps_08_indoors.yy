@@ -109,8 +109,8 @@
   ],
   "name":"rm_scraps_08_indoors",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

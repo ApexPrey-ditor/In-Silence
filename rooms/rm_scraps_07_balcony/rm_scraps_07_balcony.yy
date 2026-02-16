@@ -46,10 +46,10 @@
     {"name":"inst_47C4D1EF","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
     {"name":"inst_11E97D3B","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
     {"name":"inst_5769E05F","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
-    {"name":"ScrapsStopSong7","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
-    {"name":"ScrapsResumeSong7","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
+    {"name":"Scraps7StopSongDog","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
+    {"name":"Scraps7ResumeSongFuzzyPiano","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
     {"name":"ScrapsFadeSong7","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
-    {"name":"ScrapsPauseSong7","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
+    {"name":"Scraps7PauseSongFuzzyPiano","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
     {"name":"inst_6DB7E74E","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
     {"name":"inst_64150DF3","path":"rooms/rm_scraps_07_balcony/rm_scraps_07_balcony.yy",},
   ],
@@ -118,13 +118,13 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":2624.0,"y":960.0,},
         {"$GMRInstance":"v4","%Name":"inst_724AD15E","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_724AD15E","objectId":{"name":"obj_invisible","path":"objects/obj_invisible/obj_invisible.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":13.0,"x":2624.0,"y":672.0,},
         {"$GMRInstance":"v4","%Name":"inst_11E97D3B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_11E97D3B","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":6.0,"scaleY":2.0,"x":2560.0,"y":1088.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsStopSong7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsStopSong7","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps7StopSongDog","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps7StopSongDog","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"StopSong",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"oncePerRoom","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"nextTriggerID","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"SinisterDogTheme","path":"sounds/SinisterDogTheme/SinisterDogTheme.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SinisterDogTheme",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":2624.0,"y":896.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsResumeSong7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsResumeSong7","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps7ResumeSongFuzzyPiano","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps7ResumeSongFuzzyPiano","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"triggerID","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"ResumeSong",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"FuzzyPiano","path":"sounds/FuzzyPiano/FuzzyPiano.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"FuzzyPiano",},
@@ -137,7 +137,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"maxValue","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_proximity_trigger","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"propertyId":{"name":"maxDistance","path":"objects/obj_proximity_trigger/obj_proximity_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"96",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":1184.0,"y":768.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsPauseSong7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsPauseSong7","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Scraps7PauseSongFuzzyPiano","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Scraps7PauseSongFuzzyPiano","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"PauseSong",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"FuzzyPiano","path":"sounds/FuzzyPiano/FuzzyPiano.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"FuzzyPiano",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":1.0,"x":1152.0,"y":800.0,},
@@ -146,8 +146,8 @@
   ],
   "name":"rm_scraps_07_balcony",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

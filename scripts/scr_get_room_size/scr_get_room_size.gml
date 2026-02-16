@@ -38,5 +38,23 @@ function scr_get_room_size(_room=room) {
 			return [2752, 1248]
 		case rm_scraps_11_exit:
 			return [2240, 1088]
+		case rm_mountainside_01_intro:
+			return [1920, 1088]
+		case rm_mountainside_02_forest:
+			return [2240, 2208]
+		case rm_mountainside_03_big:
+			return [3328, 2784]
+		case rm_mountainside_04_side:
+			return [2240, 1344]
+		case rm_mountainside_05_climb:
+			return [2368, 1344]
+		case rm_mountainside_06_steep:
+			return [2240, 2208]
+		case rm_mountainside_07_vertical:
+			return [2240, 2208]
+		case rm_mountainside_08_summit:
+			return [2240, 1344]
+		case rm_mountainside_09_exit:
+			return [1920, 1088]
 	}
 }

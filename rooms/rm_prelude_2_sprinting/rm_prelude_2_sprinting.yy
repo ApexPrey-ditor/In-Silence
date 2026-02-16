@@ -12,7 +12,7 @@
     {"name":"inst_2158633C","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
     {"name":"inst_2D416ABE","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
     {"name":"inst_44D1A6DD","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
-    {"name":"OpenDoorPrelude2","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
+    {"name":"Prelude2OpenDoor","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
     {"name":"inst_3433270C","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
     {"name":"inst_4A38B7D5","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
     {"name":"inst_74D72C21","path":"rooms/rm_prelude_2_sprinting/rm_prelude_2_sprinting.yy",},
@@ -39,7 +39,7 @@
         {"$GMRInstance":"v4","%Name":"inst_44D1A6DD","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_44D1A6DD","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"propertyId":{"name":"ID","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":32.0,"x":2752.0,"y":0.0,},
-        {"$GMRInstance":"v4","%Name":"OpenDoorPrelude2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"OpenDoorPrelude2","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"Prelude2OpenDoor","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"Prelude2OpenDoor","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"value","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"-10",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":32.0,"x":352.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_3433270C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3433270C","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":34.0,"x":2912.0,"y":0.0,},
@@ -50,8 +50,8 @@
   ],
   "name":"rm_prelude_2_sprinting",
   "parent":{
-    "name":"Prelude 1-1",
-    "path":"folders/Rooms/Prelude 1-1.yy",
+    "name":"1-1 Prelude",
+    "path":"folders/Rooms/1-1 Prelude.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

@@ -79,8 +79,8 @@
   ],
   "name":"rm_prelude_3_platforming",
   "parent":{
-    "name":"Prelude 1-1",
-    "path":"folders/Rooms/Prelude 1-1.yy",
+    "name":"1-1 Prelude",
+    "path":"folders/Rooms/1-1 Prelude.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

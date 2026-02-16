@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassable=noone) {
+function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassable=noone, xvelFrictionless=0) {
 	if (nonPassable == noone) {
 		nonPassable = solids
 	}
@@ -14,10 +14,13 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 		xvel = xvel * airResistance
 	}
 	
+	var returnedXvel = xvel
+	xvel += xvelFrictionless
+	
 	x += xvel
 	
 	if (place_meeting(x + sign(xvel), y, nonPassable)) {
-		if (!place_meeting(x + sign(xvel), y - stepUpHeight, nonPassable) and place_meeting(x - xvel, y + 1, nonPassable)) {
+		if (!place_meeting(x + sign(xvel), y - stepUpHeight, nonPassable) and place_meeting(x - xvel, y + stepUpHeight, nonPassable)) {
 			while (place_meeting(x + sign(xvel), y, solids)) {
 				y -= 1
 			}
@@ -26,12 +29,12 @@ function scr_apply_x_velocity(xvel, velocityCap, solids, diving=false, nonPassab
 			x = floor(x)
 		
 			while (place_meeting(x, y, nonPassable)) {
-				x -= sign(xvel)
+				x -= scr_plus_minus(xvel)
 			}
 		
 			return 0
 		}
 	}
 	
-	return xvel
+	return returnedXvel
 }

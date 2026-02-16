@@ -51,7 +51,9 @@
         {"$GMRInstance":"v4","%Name":"inst_2E78C1A4","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2E78C1A4","objectId":{"name":"obj_enemy_drone_1","path":"objects/obj_enemy_drone_1/obj_enemy_drone_1.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":704.0,"y":992.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Interactables","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
-        {"$GMRInstance":"v4","%Name":"inst_1DCFEC12_2_1_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1DCFEC12_2_1_1_2","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":21.0,"x":2240.0,"y":0.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1DCFEC12_2_1_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1DCFEC12_2_1_1_2","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"roomGoto","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_mountainside_01_intro","path":"rooms/rm_mountainside_01_intro/rm_mountainside_01_intro.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_mountainside_01_intro",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":21.0,"x":2240.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_3DEBF538_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3DEBF538_1_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":74.0,"scaleY":2.0,"x":0.0,"y":-64.0,},
         {"$GMRInstance":"v4","%Name":"inst_15EBF1EA1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_15EBF1EA1_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":36.0,"x":-128.0,"y":-64.0,},
         {"$GMRInstance":"v4","%Name":"inst_6FE5152_1_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6FE5152_1_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":36.0,"x":2368.0,"y":-64.0,},
@@ -80,8 +82,8 @@
   ],
   "name":"rm_scraps_11_exit",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

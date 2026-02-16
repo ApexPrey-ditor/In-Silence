@@ -17,7 +17,7 @@
     {"name":"inst_4C3E5AFE1","path":"rooms/rm_scraps_07_secret_2/rm_scraps_07_secret_2.yy",},
     {"name":"inst_234A6E72_1","path":"rooms/rm_scraps_07_secret_2/rm_scraps_07_secret_2.yy",},
     {"name":"inst_2134395F1","path":"rooms/rm_scraps_07_secret_2/rm_scraps_07_secret_2.yy",},
-    {"name":"ScrapsSecretPlaySong7","path":"rooms/rm_scraps_07_secret_2/rm_scraps_07_secret_2.yy",},
+    {"name":"ScrapsSecret7PlaySongDog","path":"rooms/rm_scraps_07_secret_2/rm_scraps_07_secret_2.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -45,7 +45,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":64.0,"y":-128.0,},
         {"$GMRInstance":"v4","%Name":"inst_234A6E72_1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_234A6E72_1","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":6.0,"x":128.0,"y":-192.0,},
         {"$GMRInstance":"v4","%Name":"inst_2134395F1","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2134395F1","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":64.0,"y":-192.0,},
-        {"$GMRInstance":"v4","%Name":"ScrapsSecretPlaySong7","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsSecretPlaySong7","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
+        {"$GMRInstance":"v4","%Name":"ScrapsSecret7PlaySongDog","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"ScrapsSecret7PlaySongDog","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"objectID","path":"objects/obj_trigger/obj_trigger.yy",},"resource":{"name":"SinisterDogTheme","path":"sounds/SinisterDogTheme/SinisterDogTheme.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"SinisterDogTheme",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"action","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"PlaySong",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},"propertyId":{"name":"oncePerRoom","path":"objects/obj_trigger/obj_trigger.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"True",},
@@ -55,8 +55,8 @@
   ],
   "name":"rm_scraps_07_secret_2",
   "parent":{
-    "name":"Scraps 1-2",
-    "path":"folders/Rooms/Scraps 1-2.yy",
+    "name":"1-2 Scraps",
+    "path":"folders/Rooms/1-2 Scraps.yy",
   },
   "parentRoom":null,
   "physicsSettings":{

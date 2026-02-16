@@ -25,13 +25,20 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickStabilizer) and canAttac
 			if (instance_exists(targetedObject)) {
 				if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
 					targetedObject.hitpoints -= global.weaponDamage.stabilizer
-					obj_player.grav = recoil.stabilizer * dsin(image_angle)
 					obj_player.isSlamming = false
 					obj_player.isDiving = false
 					obj_player.canWalk = true
 				}
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)
+				}
+				else if (targetedObject.object_index == obj_enemy_projectile) {
+					targetedObject.direction += 180
+					targetedObject.speed *= 3
+					targetedObject.creator = obj_player
+					
+					obj_init.alarm[initAlarms.unpauseAll] = 15
+					scr_pause_objects(all)
 				}
 							
 				/* recoil for parrying solid objects
