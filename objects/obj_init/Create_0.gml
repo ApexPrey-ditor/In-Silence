@@ -1,12 +1,12 @@
 room_goto(rm_prelude_1_intro)
-//room_goto(rm_mountainside_01_intro)
+//room_goto(rm_mountainside_09_exit)
 
 audio_group_load(Music)
 
-//game_set_speed(60, gamespeed_fps)
+//game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = []
-global.stabilizerObtained = false
+global.weaponsObtained = ["revolver"]
+global.stabilizerObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
