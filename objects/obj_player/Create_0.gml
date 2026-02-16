@@ -3,6 +3,10 @@ enum coordinate {
 	yPosition
 }
 
+enum playerAlarms {
+	hit
+}
+
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity
@@ -21,6 +25,7 @@ walkSpeed = baseWalkSpeed
 sprintSpeed = baseSprintSpeed
 
 canWalk = true
+canMove = true
 isSlamming = false
 isDiving = false
 isSliding = false
@@ -29,10 +34,14 @@ isSliding = false
 climbing = false
 
 #macro airResistance 0.97
+#macro stepUpHeight 32
 xVelocity = 0
 
+hitpoints = 5
+invincibility = false
+
 spawnPointID = 0
-spawnPointOffset = 0.5
+spawnPointOffset = 1
 
 function scr_find_spawn_point(spawnID) {
 	var numberOfEntryPoints = instance_number(obj_room_entry_point)
@@ -45,21 +54,45 @@ function scr_find_spawn_point(spawnID) {
 		}
 	}
 	
-	return entryId
+	return entryID
 }
 
 function scr_mount_ladder() {
 	climbing = true
+	canWalk = false
 	gravIntensity = 0
 	grav = 0
+	xVelocity = 0
 }
 
 function scr_dismount_ladder() {
 	climbing = false
+	canWalk = true
 	gravIntensity = baseIntensity
 }
 
-solids = [obj_solid_hitbox]
+function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
+	xVelocity = impact * angle
+	grav = -impact
+	canWalk = true
+	
+	alarm[playerAlarms.hit] = recovery
+	
+	if (climbing) {
+		scr_dismount_ladder()
+	}
+	
+	if (!invincibility) {
+		hitpoints -= damage
+		invincibility = true
+		
+		canMove = false
+		alarm[playerAlarms.hit] = recovery
+	}
+}
+
+solids = [obj_solid_hitbox, obj_destructable, obj_passable]
+nonpassable = [obj_solid_hitbox, obj_destructable]
 hurtboxes = [obj_hurtbox]
 
 keybinds = {left : [ord("A")],
@@ -67,4 +100,6 @@ keybinds = {left : [ord("A")],
 			up : [ord("W")],
 			jump : [vk_space],
 			sprint : [vk_shift],
-			slam : [ord("S"), vk_control]}
+			slam : [ord("S"), vk_control],
+			shoot : mb_left,
+			quickStabilizer : mb_right}
