@@ -20,10 +20,15 @@ jumpHeight = 17
 cayoteFrames = cayoteFrameLimit
 
 #macro airControlFactor 10
-#macro baseWalkSpeed 5
+#macro baseWalkSpeed 8
 walkSpeed = baseWalkSpeed
-#macro baseSprintSpeed 15
-sprintSpeed = baseSprintSpeed
+#macro baseSlideSpeed 15
+
+#macro baseDashSpeed 20
+#macro baseDashDuration 12
+#macro maxStamina 3
+#macro staminaRegenDuration 60
+stamina = 3
 
 canWalk = true
 canMove = true
@@ -31,7 +36,7 @@ isSlamming = false
 isDiving = false
 isSliding = false
 
-#macro baseLadderSpeed 5
+#macro baseLadderSpeed 7
 ladderSpeed = baseLadderSpeed
 climbing = false
 
@@ -102,8 +107,8 @@ hurtboxes = [obj_hurtbox]
 keybinds = {left : [ord("A")],
 			right : [ord("D")],
 			up : [ord("W")],
-			jump : [vk_space],
-			sprint : [vk_shift],
+			jump : [vk_space, ord("W")],
+			dash : [vk_shift],
 			slam : [ord("S"), vk_control],
 			shoot : mb_left,
 			quickStabilizer : mb_right}

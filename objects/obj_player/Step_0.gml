@@ -11,12 +11,12 @@ if (!place_meeting(x, y + 1, solids)) {
 	_velocityCap = walkSpeed
 	
 	if (canWalk and canMove) {
-		if (scr_keyboard_check_keys(keybinds.left)) {
+		if (scr_keyboard_check_keys(keybinds.left) and xVelocity > -walkSpeed) {
 			xVelocity -= walkSpeed / airControlFactor
 			image_xscale = -1
 			movement = true
 		}
-		if (scr_keyboard_check_keys(keybinds.right)) {
+		if (scr_keyboard_check_keys(keybinds.right) and xVelocity < walkSpeed) {
 			xVelocity += walkSpeed / airControlFactor
 			image_xscale = 1
 			movement = true
@@ -39,12 +39,11 @@ else {
 		}
 	}
 }
-if (scr_keyboard_check_keys(keybinds.sprint) and canMove) {
-	_velocityCap = sprintSpeed
-	ladderSpeed = baseLadderSpeed * 2
-}
-else {
-	ladderSpeed = baseLadderSpeed
+if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1) {
+	xVelocityFrictionless = sign(image_xscale) * baseDashSpeed
+	alarm[playerAlarms.removeFrictionlessXVelocity] = baseDashDuration
+	xVelocity = 0
+	stamina -= 1
 }
 
 var prebbox_bottom = bbox_bottom
@@ -63,8 +62,8 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 		}
 	}
 	if (scr_keyboard_check_keys(keybinds.slam) and canMove) {
-		if (abs(xVelocity) < walkSpeed) {
-			xVelocity = walkSpeed * scr_plus_minus(image_xscale)
+		if (abs(xVelocity) < baseSlideSpeed) {
+			xVelocity = baseSlideSpeed * scr_plus_minus(image_xscale)
 		}
 		
 		canWalk = false
@@ -153,4 +152,8 @@ else {
 	}
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving, nonpassable, xVelocityFrictionless)
+if (stamina < maxStamina) {
+	stamina += 1 / staminaRegenDuration
+}
+
+xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving, nonpassable, xVelocityFrictionless, movement)
