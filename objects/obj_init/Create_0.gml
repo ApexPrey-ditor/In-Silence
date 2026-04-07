@@ -1,7 +1,7 @@
 room_goto(rm_prelude_1_intro)
 //room_goto(rm_mountainside_09_exit)
 
-audio_group_load(Music)
+//audio_group_load(Music)
 
 //game_set_speed(6, gamespeed_fps)
 
