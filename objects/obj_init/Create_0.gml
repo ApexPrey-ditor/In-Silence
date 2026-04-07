@@ -77,4 +77,4 @@ if (global.stabilizerObtained) {
 	instance_create_layer(0, 0, "Weapons", obj_stabilizer)
 }
 
-window_set_fullscreen(true)
+// window_set_fullscreen(true)

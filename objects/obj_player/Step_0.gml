@@ -11,15 +11,16 @@ if (!place_meeting(x, y + 1, solids)) {
 	_velocityCap = walkSpeed
 	
 	if (canWalk and canMove) {
+		if (scr_keyboard_check_keys(array_union(keybinds.left, keybinds.right))) {
+			movement = true
+		}
 		if (scr_keyboard_check_keys(keybinds.left) and xVelocity > -walkSpeed) {
 			xVelocity -= walkSpeed / airControlFactor
 			image_xscale = -1
-			movement = true
 		}
 		if (scr_keyboard_check_keys(keybinds.right) and xVelocity < walkSpeed) {
 			xVelocity += walkSpeed / airControlFactor
 			image_xscale = 1
-			movement = true
 		}
 	}
 }
@@ -39,11 +40,18 @@ else {
 		}
 	}
 }
+
 if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1) {
-	xVelocityFrictionless = sign(image_xscale) * baseDashSpeed
-	alarm[playerAlarms.removeFrictionlessXVelocity] = baseDashDuration
-	xVelocity = 0
+	alarm[playerAlarms.cancelDash] = baseDashDuration
+	xVelocity = sign(image_xscale) * baseDashSpeed
+	isDashing = true
+	grav = 0
+	gravIntensity = 0
 	stamina -= 1
+}
+if (isDashing) {
+	movement = true
+	_velocityCap = 20
 }
 
 var prebbox_bottom = bbox_bottom
@@ -66,6 +74,11 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 			xVelocity = baseSlideSpeed * scr_plus_minus(image_xscale)
 		}
 		
+		if (isDashing) {
+			alarm[playerAlarms.cancelDash] = -1
+			isDashing = false
+			gravIntensity = baseIntensity
+		}
 		canWalk = false
 		isSliding = true
 		_velocityCap = infinity
@@ -111,6 +124,11 @@ if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canM
 	cayoteFrames = 0
 	grav = -jumpHeight
 	
+	if (isDashing) {
+		alarm[playerAlarms.cancelDash] = -1
+		isDashing = false
+		gravIntensity = baseIntensity
+	}
 	if (isSliding) {
 		isSliding = false
 		canWalk = true

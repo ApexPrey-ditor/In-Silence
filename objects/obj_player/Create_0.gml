@@ -5,7 +5,8 @@ enum coordinate {
 
 enum playerAlarms {
 	hit,
-	removeFrictionlessXVelocity
+	removeFrictionlessXVelocity,
+	cancelDash
 }
 
 grav = 0
@@ -29,6 +30,7 @@ walkSpeed = baseWalkSpeed
 #macro maxStamina 3
 #macro staminaRegenDuration 60
 stamina = 3
+isDashing = false
 
 canWalk = true
 canMove = true
