@@ -5,7 +5,6 @@ var pushedVelocity = scr_shove_out(nonpassable)
 // does gravity
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, nonpassable)
 
-var _velocityCap = 0
 var movement = false
 
 // directional movement
@@ -91,11 +90,6 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 	
 	// sliding
 	if (scr_keyboard_check_keys(keybinds.slam) and canMove) {
-		// if slamming and can move
-		if (!isSliding) {
-			// initiated slide gives speed
-			xVelocity += scr_plus_minus(image_xscale) * 5
-		}
 		if (abs(xVelocity) < baseSlideSpeed) {
 			// sets slide to base speed if under
 			xVelocity = baseSlideSpeed * scr_plus_minus(image_xscale)
@@ -105,13 +99,12 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 			// cancels dash if dashing
 			alarm[playerAlarms.cancelDash] = -1
 			isDashing = false
-			canWalk = true
 			gravIntensity = baseIntensity
 		}
 		
 		canWalk = false
 		isSliding = true
-		_velocityCap = infinity
+		movement = true
 		sprite_index = spr_jimBob_sliding
 	}
 	else if (isSliding) {
@@ -164,12 +157,16 @@ if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canM
 	if (isDashing) {
 		alarm[playerAlarms.cancelDash] = -1
 		isDashing = false
+		canWalk = true
 		gravIntensity = baseIntensity
 	}
 	if (isSliding) {
 		isSliding = false
 		canWalk = true
 		sprite_index = spr_jimBob
+
+		// jumping out gives speed
+		xVelocity += scr_plus_minus(image_xscale) * baseSlideBoost
 	}
 }
 
@@ -211,4 +208,4 @@ if (stamina < maxStamina) {
 	stamina += 1 / staminaRegenDuration
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, _velocityCap, solids, isDiving, nonpassable, xVelocityFrictionless, movement)
+xVelocity = scr_apply_x_velocity(xVelocity, solids, isDiving, nonpassable, xVelocityFrictionless, movement)

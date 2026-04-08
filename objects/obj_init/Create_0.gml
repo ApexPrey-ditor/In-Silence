@@ -78,3 +78,4 @@ if (global.stabilizerObtained) {
 }
 
 // window_set_fullscreen(true)
+// game_set_speed(2, gamespeed_fps)

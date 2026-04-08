@@ -24,6 +24,7 @@ cayoteFrames = cayoteFrameLimit
 #macro baseWalkSpeed 8
 walkSpeed = baseWalkSpeed
 #macro baseSlideSpeed 15
+#macro baseSlideBoost 5
 
 #macro baseDashSpeed 20
 #macro baseDashDuration 12
