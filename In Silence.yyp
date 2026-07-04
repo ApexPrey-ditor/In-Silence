@@ -43,7 +43,7 @@
   "isEcma":false,
   "LibraryEmitters":[],
   "MetaData":{
-    "IDEVersion":"2024.14.4.222",
+    "IDEVersion":"2026.0.0.16",
   },
   "name":"In Silence",
   "resources":[
@@ -100,6 +100,7 @@
     {"id":{"name":"rm_scraps_09_ladder","path":"rooms/rm_scraps_09_ladder/rm_scraps_09_ladder.yy",},},
     {"id":{"name":"rm_scraps_10_rooftops","path":"rooms/rm_scraps_10_rooftops/rm_scraps_10_rooftops.yy",},},
     {"id":{"name":"rm_scraps_11_exit","path":"rooms/rm_scraps_11_exit/rm_scraps_11_exit.yy",},},
+    {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"moment_reset_speed","path":"scripts/moment_reset_speed/moment_reset_speed.yy",},},
     {"id":{"name":"scr_apply_gravity","path":"scripts/scr_apply_gravity/scr_apply_gravity.yy",},},
     {"id":{"name":"scr_apply_x_velocity","path":"scripts/scr_apply_x_velocity/scr_apply_x_velocity.yy",},},
@@ -177,6 +178,7 @@
     {"roomId":{"name":"rm_mountainside_07_vertical","path":"rooms/rm_mountainside_07_vertical/rm_mountainside_07_vertical.yy",},},
     {"roomId":{"name":"rm_mountainside_08_summit","path":"rooms/rm_mountainside_08_summit/rm_mountainside_08_summit.yy",},},
     {"roomId":{"name":"rm_mountainside_09_exit","path":"rooms/rm_mountainside_09_exit/rm_mountainside_09_exit.yy",},},
+    {"roomId":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

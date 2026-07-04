@@ -10,6 +10,13 @@ var movement = false
 // directional movement
 if (!place_meeting(x, y + 1, solids)) {
 	// if in the air
+	cayoteFrames -= 1
+	
+	if (isSliding and !isDiving and canMove) {
+		// if sliding, not diving, and can move, initiates a dive
+		isDiving = true
+		grav = gravLimit
+	}
 	
 	if (canWalk and canMove) {
 		// if can walk and move
@@ -27,50 +34,26 @@ if (!place_meeting(x, y + 1, solids)) {
 			image_xscale = 1
 		}
 	}
-}
-else {
-	// if on the ground
-	if (canWalk and canMove) {
-		// if able to move
-		// increases velocity, direction, and did movement
-		if (scr_keyboard_check_keys(keybinds.left)) {
-			xVelocity -= walkSpeed
-			image_xscale = -1
-			movement = true
+	
+	// slamming and diving
+	if (scr_keyboard_check_keys_pressed(keybinds.slam) and !scr_keyboard_check_keys(keybinds.jump) and canWalk and canMove) {
+		if (movement and abs(xVelocity) >= walkSpeed) {
+			// diving
+			isDiving = true
+			grav = gravLimit
+			canWalk = false
 		}
-		if (scr_keyboard_check_keys(keybinds.right)) {
-			xVelocity += walkSpeed
-			image_xscale = 1
-			movement = true
-		}
-		// if over walkspeed, sets back to walkspeed
-		if (abs(xVelocity) > walkSpeed) {
-			xVelocity = walkSpeed * scr_plus_minus(xVelocity)
+		else {
+			// slamming
+			isSlamming = true
+			grav = gravLimit
+			xVelocity = 0
+			canWalk = false
 		}
 	}
 }
-
-// dashing
-if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1) {
-	alarm[playerAlarms.cancelDash] = baseDashDuration
-	isDashing = true
-	stamina -= 1
-	
-	xVelocity = sign(image_xscale) * baseDashSpeed
-	canWalk = false
-	
-	grav = 0
-	gravIntensity = 0
-}
-if (isDashing) {
-	// dashing counts as movement
-	movement = true
-}
-
-// if only on the ground
-var prebbox_bottom = bbox_bottom
-image_yscale = 1 / sprite_height
-if (place_meeting(x, prebbox_bottom + 1, solids)) {
+else {
+	// if on the ground
 	cayoteFrames = cayoteFrameLimit
 	
 	if (isDiving) {
@@ -119,35 +102,43 @@ if (place_meeting(x, prebbox_bottom + 1, solids)) {
 			isSliding = false
 		}
 	}
-}
-else {
-	// if in the air
-	cayoteFrames -= 1
 	
-	if (isSliding and !isDiving and canMove) {
-		// if sliding, not diving, and can move, initiates a dive
-		isDiving = true
-		grav = gravLimit
-	}
-	
-	// sliding and diving
-	if (scr_keyboard_check_keys_pressed(keybinds.slam) and !scr_keyboard_check_keys(keybinds.jump) and canWalk and canMove) {
-		if (movement and abs(xVelocity) >= walkSpeed) {
-			// diving
-			isDiving = true
-			grav = gravLimit
-			canWalk = false
+	if (canWalk and canMove) {
+		// if able to move
+		// increases velocity, direction, and did movement
+		if (scr_keyboard_check_keys(keybinds.left)) {
+			xVelocity -= walkSpeed
+			image_xscale = -1
+			movement = true
 		}
-		else {
-			// sliding
-			isSlamming = true
-			grav = gravLimit
-			xVelocity = 0
-			canWalk = false
+		if (scr_keyboard_check_keys(keybinds.right)) {
+			xVelocity += walkSpeed
+			image_xscale = 1
+			movement = true
+		}
+		// if over walkspeed, sets back to walkspeed
+		if (abs(xVelocity) > walkSpeed) {
+			xVelocity = walkSpeed * scr_plus_minus(xVelocity)
 		}
 	}
 }
-image_yscale = 1
+
+// dashing
+if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1) {
+	alarm[playerAlarms.cancelDash] = baseDashDuration
+	isDashing = true
+	stamina -= 1
+	
+	xVelocity = sign(image_xscale) * baseDashSpeed
+	canWalk = false
+	
+	grav = 0
+	gravIntensity = 0
+}
+if (isDashing) {
+	// dashing counts as movement
+	movement = true
+}
 
 
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canMove) {

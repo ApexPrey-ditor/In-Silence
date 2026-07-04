@@ -2,6 +2,8 @@
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
 function scr_get_room_size(_room=room) {
 	switch (_room) {
+		case rm_test:
+			return [11008, 4352]
 		case rm_prelude_1_intro:
 			return [2752, 1088]
 		case rm_prelude_2_sprinting:
