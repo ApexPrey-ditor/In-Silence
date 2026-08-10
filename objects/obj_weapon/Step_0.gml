@@ -25,8 +25,8 @@ if (instance_exists(obj_player)) {
 				var yIncrease = -dsin(directionPointing)
 				
 				while (!position_meeting(hitX, hitY, shootables) and
-						hitX > 0 and hitX < scr_get_room_size()[coordinate.xPosition] and
-						hitY > 0 and hitY < scr_get_room_size()[coordinate.yPosition]) {
+						hitX > 0 and hitX < room_width and
+						hitY > 0 and hitY < room_height) {
 					hitX += xIncrease
 					hitY += yIncrease
 				}

@@ -1,0 +1,1 @@
+scr_permanant_destroy()

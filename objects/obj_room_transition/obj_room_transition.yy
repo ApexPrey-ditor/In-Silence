@@ -28,7 +28,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"roomGoto","filters":[
         "GMRoom",
-      ],"listItems":[],"multiselect":false,"name":"roomGoto","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"rm_prelude_1_intro","path":"rooms/rm_prelude_1_intro/rm_prelude_1_intro.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_prelude_1_intro","varType":5,},
+      ],"listItems":[],"multiselect":false,"name":"roomGoto","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"rm_prelude_1_intro","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"entryID","filters":[],"listItems":[],"multiselect":false,"name":"entryID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",

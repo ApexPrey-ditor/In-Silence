@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_get_room_size",
+  "%Name":"scr_permanant_destroy",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_get_room_size",
+  "name":"scr_permanant_destroy",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

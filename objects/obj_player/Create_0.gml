@@ -21,13 +21,13 @@ jumpHeight = 17
 cayoteFrames = cayoteFrameLimit
 
 #macro airControlFactor 10
-#macro baseWalkSpeed 8
+#macro baseWalkSpeed 7
 walkSpeed = baseWalkSpeed
-#macro baseSlideSpeed 15
-#macro baseSlideBoost 5
+#macro baseSlideSpeed 13
+#macro baseSlideBoost 4
 
 #macro baseDashSpeed 20
-#macro baseDashDuration 12
+#macro baseDashDuration 15
 #macro maxStamina 3
 #macro staminaRegenDuration 60
 stamina = 3
@@ -44,6 +44,7 @@ ladderSpeed = baseLadderSpeed
 climbing = false
 
 #macro airResistance 0.97
+#macro groundResistance 0.5
 #macro stepUpHeight 32
 xVelocity = 0
 xVelocityFrictionless = 0
@@ -80,6 +81,17 @@ function scr_dismount_ladder() {
 	climbing = false
 	canWalk = true
 	gravIntensity = baseIntensity
+}
+
+function scr_dash_cancel() {
+	isDashing = false
+	canWalk = true
+
+	gravIntensity = baseIntensity
+	if (abs(xVelocity) > baseDashSpeed) {
+		xVelocity = max(abs(xVelocity) / 1.5, baseDashSpeed) * sign(xVelocity)
+	}
+	xVelocity = xVelocity * 1.2
 }
 
 function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {

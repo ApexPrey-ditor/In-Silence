@@ -81,8 +81,7 @@ else {
 		if (isDashing) {
 			// cancels dash if dashing
 			alarm[playerAlarms.cancelDash] = -1
-			isDashing = false
-			gravIntensity = baseIntensity
+			scr_dash_cancel()
 		}
 		
 		canWalk = false
@@ -129,7 +128,13 @@ if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1)
 	isDashing = true
 	stamina -= 1
 	
-	xVelocity = sign(image_xscale) * baseDashSpeed
+	if (abs(xVelocity * 1.5) < abs(baseDashSpeed)) {
+		xVelocity = sign(image_xscale) * baseDashSpeed
+	}
+	else {
+		xVelocity = sign(image_xscale) * abs(xVelocity) * 1.5
+	}
+	
 	canWalk = false
 	
 	grav = 0
@@ -140,16 +145,14 @@ if (isDashing) {
 	movement = true
 }
 
-
+// jumping
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
 	grav = -jumpHeight
 	
 	if (isDashing) {
 		alarm[playerAlarms.cancelDash] = -1
-		isDashing = false
-		canWalk = true
-		gravIntensity = baseIntensity
+		scr_dash_cancel()
 	}
 	if (isSliding) {
 		isSliding = false

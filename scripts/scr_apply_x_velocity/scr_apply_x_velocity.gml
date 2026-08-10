@@ -6,7 +6,7 @@ function scr_apply_x_velocity(xvel, solids, diving=false, nonPassable=noone, xve
 	}
 	
 	if (place_meeting(x, y + 1, solids) and !moving) {
-		xvel = 0
+		xvel = xvel * groundResistance
 	}
 	else if (!diving and !moving) {
 		xvel = xvel * airResistance
