@@ -160,7 +160,7 @@ if (isDashing) {
 // jumping
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
-	grav = -jumpHeight
+	grav = min(grav, 0) - jumpHeight
 	
 	if (isDashing) {
 		alarm[playerAlarms.cancelDash] = -1

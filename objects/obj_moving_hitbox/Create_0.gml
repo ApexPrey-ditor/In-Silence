@@ -22,5 +22,5 @@ function scr_move_to_node(time) {
 	xSpeed = dcos(direction) * _distance / time
 	ySpeed = -dsin(direction) * _distance / time
 	
-	alarm[movingHitboxAlarms.stopMovement] = time
+	alarm[movingHitboxAlarms.stopMovement] = time + 1
 }

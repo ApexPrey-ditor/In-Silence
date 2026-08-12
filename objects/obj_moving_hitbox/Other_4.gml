@@ -9,4 +9,4 @@ for (var i = 0; i < array_length(nodeObjects); i++) {
 	nodes[nodeObjects[i].nodeNumber] = nodeObjects[i]
 }
 
-scr_move_to_node(300)
+scr_move_to_node(60)
