@@ -12,6 +12,6 @@ function scr_update_weapon() {
 		case "revolver":
 			sprite_index = spr_revolver
 			distanceFromPlayer = weaponDistance.revolver
-			alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.stabilizer
+			alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.revolver
 	}
 }

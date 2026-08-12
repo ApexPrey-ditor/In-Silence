@@ -1,7 +1,7 @@
 attacking = false
 
 switch weaponSelected {
-	case "stabilizer":
-		distanceFromPlayer = weaponDistance.stabilizer
+	case "revolver":
+		distanceFromPlayer = weaponDistance.revolver
 		break
 }

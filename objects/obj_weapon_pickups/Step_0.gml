@@ -1,8 +1,8 @@
 if (place_meeting(x, y, obj_player)) {
 	if (weapon == "stabilizer") {
 		global.stabilizerObtained = true
-		if (!instance_exists(obj_stabilizer)) {
-			instance_create_layer(obj_player.x, obj_player.y, "Weapons", obj_stabilizer)
+		if (!instance_exists(obj_shotgun)) {
+			instance_create_layer(obj_player.x, obj_player.y, "Weapons", obj_shotgun)
 		}
 	}
 	else {

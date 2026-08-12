@@ -6,7 +6,7 @@ room_goto(rm_test)
 //game_set_speed(6, gamespeed_fps)
 
 global.weaponsObtained = ["revolver"]
-global.stabilizerObtained = true
+global.shotgunObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
@@ -33,7 +33,7 @@ removeFromRoom = {rm_prelude_1_intro : [],
 pausedObjects = []
 
 global.weaponDamage = {
-	stabilizer : 5,
+	shotgun : 5,
 	revolver : 3
 }
 
@@ -48,21 +48,22 @@ enum weaponAlarms {
 }
 
 enum attackDurations {
-	stabilizer = 10,
+	shotgun = 10,
 	revolver = 10
 }
 
 enum attackCooldowns {
-	stabilizer = 20,
+	shotgun = 30,
 	revolver = 20
 }
 
 enum recoil {
-	stabilizer = 10
+	shotgun = 4,
+	revolver = 2
 }
 
 enum weaponDistance {
-	stabilizer = 48,
+	shotgun = 48,
 	revolver = 32
 }
 
@@ -73,8 +74,8 @@ enum initAlarms {
 if (array_length(global.weaponsObtained) > 0) {
 	instance_create_layer(0, 0, "Weapons", obj_weapon, {weaponSelected : global.weaponsObtained[0]})
 }
-if (global.stabilizerObtained) {
-	instance_create_layer(0, 0, "Weapons", obj_stabilizer)
+if (global.shotgunObtained) {
+	instance_create_layer(0, 0, "Weapons", obj_shotgun)
 }
 
 // window_set_fullscreen(true)

@@ -15,8 +15,12 @@ if (instance_exists(obj_player)) {
 		
 		switch weaponSelected {
 			case "revolver":
-				alarm[weaponAlarms.notAttacking] = attackDurations.stabilizer
-				alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.stabilizer
+				alarm[weaponAlarms.notAttacking] = attackDurations.revolver
+				alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.revolver
+				
+				// recoil
+				obj_player.xVelocity -= recoil.revolver * dcos(directionPointing)
+				obj_player.grav += recoil.revolver * dsin(directionPointing)
 				
 				var hitX = x
 				var hitY = y
