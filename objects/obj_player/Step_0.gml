@@ -1,9 +1,13 @@
-var pushedVelocity = scr_shove_out(nonpassable)
-//xVelocity += pushedVelocity[coordinate.xPosition]
+//var pushedVelocity = scr_shove_out(nonpassable)
+//xVelocity += pushedVelocity[coordinate.xPosition]d a 
 //grav += pushedVelocity[coordinate.yPosition]
 
 // does gravity
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, nonpassable)
+
+if (place_meeting(x, y, solids)) {
+	show_debug_message("Grav Failed")
+}
 
 var movement = false
 
@@ -104,20 +108,28 @@ else {
 	
 	if (canWalk and canMove) {
 		// if able to move
+		if (scr_keyboard_check_keys(array_union(keybinds.left, keybinds.right))) {
+			// pressing keys counts as movement
+			movement = true
+		}
 		// increases velocity, direction, and did movement
-		if (scr_keyboard_check_keys(keybinds.left)) {
+		if (scr_keyboard_check_keys(keybinds.left) and xVelocity > -walkSpeed) {
 			xVelocity -= walkSpeed
+			// if over walkspeed, sets back to walkspeed
+			if (abs(xVelocity) > walkSpeed) {
+				xVelocity = walkSpeed * scr_plus_minus(xVelocity)
+			}
 			image_xscale = -1
 			movement = true
 		}
-		if (scr_keyboard_check_keys(keybinds.right)) {
+		if (scr_keyboard_check_keys(keybinds.right) and xVelocity < walkSpeed) {
 			xVelocity += walkSpeed
+			// if over walkspeed, sets back to walkspeed
+			if (abs(xVelocity) > walkSpeed) {
+				xVelocity = walkSpeed * scr_plus_minus(xVelocity)
+			}
 			image_xscale = 1
 			movement = true
-		}
-		// if over walkspeed, sets back to walkspeed
-		if (abs(xVelocity) > walkSpeed) {
-			xVelocity = walkSpeed * scr_plus_minus(xVelocity)
 		}
 	}
 }
@@ -202,4 +214,8 @@ if (stamina < maxStamina) {
 	stamina += 1 / staminaRegenDuration
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, solids, isDiving, nonpassable, xVelocityFrictionless, movement)
+xVelocity = scr_apply_x_velocity(xVelocity, solids, isDiving, isSliding, nonpassable, xVelocityFrictionless, movement)
+
+if (place_meeting(x, y, solids)) {
+	show_debug_message("x Failed")
+}

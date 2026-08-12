@@ -18,8 +18,6 @@ function scr_shove_out(solids, nonpassable=noone){
 	var movementAmountY = 0
 	
 	if (place_meeting(x, y, solids)) {
-		show_debug_message("----------------------------------")
-		
 		// Push out right
 		while (place_meeting(testX, origY, solids)) {
 			//show_debug_message("Right " + string(currentScore))

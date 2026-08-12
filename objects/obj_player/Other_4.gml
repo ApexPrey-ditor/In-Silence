@@ -8,7 +8,8 @@ if (instance_exists(entryPointID)) {
 	else {
 		y = (entryPointID.bbox_top + ((entryPointID.bbox_bottom - entryPointID.bbox_top) * spawnPointOffset) + (sprite_height * (0.5 - spawnPointOffset))) - sprite_height / 2
 	}
-
+	
+	scr_shove_out(nonpassable)
 	show_debug_message(x)
 	show_debug_message(bbox_bottom)
 }

@@ -44,7 +44,7 @@ ladderSpeed = baseLadderSpeed
 climbing = false
 
 #macro airResistance 0.97
-#macro groundResistance 0.5
+#macro groundResistance 0.7
 #macro stepUpHeight 32
 xVelocity = 0
 xVelocityFrictionless = 0

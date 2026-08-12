@@ -6,27 +6,21 @@ nodeOn = 0
 	
 nodeObjects = [instance_create_layer(x, y, layer, obj_node, {movementId : movementId, nodeNumber : 0})]
 nodes = []
-	
-with (obj_node) {
-	if (movementId == other.movementId) {
-		array_push(other.nodeObjects, id)
-		array_push(nodeObjects, [])
-	}
-}
-	
-for (var i = 0; i < array_length(nodeObjects); i++) {
-	nodes[nodeObjects[i].nodeNumber] = nodeObjects[i]
-}
+
+xSpeed = 0
+ySpeed = 0
+
+wasTouching = false
 
 // add easing later
 function scr_move_to_node(time) {
 	nodeOn =+ 1
-	var nextNode = nodes[nodeOn]
+	var _nextNode = nodes[nodeOn]
 	
-	direction = point_direction(x, y, nextNode.x, nextNode.y)
-	speed = point_distance(x, y, nextNode.x, nextNode.y) / time
+	direction = point_direction(x, y, _nextNode.x, _nextNode.y)
+	var _distance = point_distance(x, y, _nextNode.x, _nextNode.y)
+	xSpeed = dcos(direction) * _distance / time
+	ySpeed = -dsin(direction) * _distance / time
 	
 	alarm[movingHitboxAlarms.stopMovement] = time
 }
-
-scr_move_to_node(300)
