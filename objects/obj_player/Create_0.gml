@@ -115,8 +115,8 @@ function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
 	}
 }
 
-solids = [obj_solid_hitbox, obj_moving_hitbox, obj_destructable, obj_passable]
-nonpassable = [obj_solid_hitbox, obj_moving_hitbox, obj_destructable]
+solids = scr_get_objects_of_tag("solid")
+nonpassable = scr_get_objects_of_tag("nonpassable")
 hurtboxes = [obj_hurtbox]
 
 keybinds = {left : [ord("A")],
@@ -126,4 +126,5 @@ keybinds = {left : [ord("A")],
 			dash : [vk_shift],
 			slam : [ord("S"), vk_control],
 			shoot : mb_left,
-			quickShotgun : mb_right}
+			quickShotgun : mb_right,
+			switchWeapon : [ord("E")]}

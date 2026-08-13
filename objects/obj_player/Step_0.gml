@@ -10,6 +10,7 @@ if (place_meeting(x, y, solids)) {
 }
 
 var movement = false
+var applyFriction = true
 
 // directional movement
 if (!place_meeting(x, y + 1, solids)) {
@@ -152,15 +153,12 @@ if (scr_keyboard_check_keys_pressed(keybinds.dash) and canMove and stamina >= 1)
 	grav = 0
 	gravIntensity = 0
 }
-if (isDashing) {
-	// dashing counts as movement
-	movement = true
-}
 
 // jumping
 if (scr_keyboard_check_keys_pressed(keybinds.jump) and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
 	grav = min(grav, 0) - jumpHeight
+	applyFriction = false
 	
 	if (isDashing) {
 		alarm[playerAlarms.cancelDash] = -1
@@ -181,6 +179,7 @@ if (place_meeting(x, y, hurtboxes)) {
 	room_restart()
 }
 
+// climing
 if (place_meeting(x, y, obj_ladder)) {
 	if (scr_keyboard_check_keys(keybinds.up) and !climbing and canMove) {
 		scr_mount_ladder()
@@ -214,7 +213,11 @@ if (stamina < maxStamina) {
 	stamina += 1 / staminaRegenDuration
 }
 
-xVelocity = scr_apply_x_velocity(xVelocity, solids, isDiving, isSliding, nonpassable, xVelocityFrictionless, movement)
+if (isDiving or isSliding or isDashing) {
+	applyFriction = false
+}
+
+xVelocity = scr_apply_x_velocity(xVelocity, solids, applyFriction, nonpassable, xVelocityFrictionless, movement)
 
 if (place_meeting(x, y, solids)) {
 	show_debug_message("x Failed")

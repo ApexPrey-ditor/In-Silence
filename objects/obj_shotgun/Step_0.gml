@@ -1,5 +1,5 @@
-x = obj_player.x + (dcos(image_angle) * weaponDistance.shotgun)
-y = obj_player.y - (dsin(image_angle) * weaponDistance.shotgun)
+x = obj_player.x + (dcos(image_angle) * global.weaponDistance.shotgun)
+y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
 
 if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 	canAttack = false
@@ -7,17 +7,17 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 		
 	image_alpha = 1
 
-	alarm[weaponAlarms.notAttacking] = attackDurations.shotgun
-	alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.shotgun
+	alarm[weaponAlarms.notAttacking] = global.attackDurations.shotgun
+	alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.shotgun
 		
 	image_angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		
-	x = obj_player.x + (dcos(image_angle) * weaponDistance.shotgun)
-	y = obj_player.y - (dsin(image_angle) * weaponDistance.shotgun)
+	x = obj_player.x + (dcos(image_angle) * global.weaponDistance.shotgun)
+	y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
 	
 	// recoil
-	obj_player.xVelocity -= recoil.shotgun * dcos(image_angle)
-	obj_player.grav += recoil.shotgun * dsin(image_angle)
+	obj_player.xVelocity -= global.recoil.shotgun * dcos(image_angle)
+	obj_player.grav += global.recoil.shotgun * dsin(image_angle)
 		
 	var targets = ds_list_create()
 	instance_place_list(x, y, parryables, targets, false)

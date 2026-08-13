@@ -34,5 +34,9 @@
     "path":"sprites/spr_destructable/spr_destructable.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "solid",
+    "nonpassable",
+  ],
   "visible":true,
 }

@@ -4,6 +4,10 @@ if (instance_exists(obj_player)) {
 		image_angle = directionPointing
 		
 		image_yscale = scr_find_angle_x_direction(directionPointing)
+		
+		if (scr_keyboard_check_keys(obj_player.keybinds.switchWeapon)) {
+			
+		}
 	}
 	
 	x = obj_player.x + (dcos(directionPointing) * distanceFromPlayer)
@@ -15,12 +19,12 @@ if (instance_exists(obj_player)) {
 		
 		switch weaponSelected {
 			case "revolver":
-				alarm[weaponAlarms.notAttacking] = attackDurations.revolver
-				alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.revolver
+				alarm[weaponAlarms.notAttacking] = global.attackDurations.revolver
+				alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.revolver
 				
 				// recoil
-				obj_player.xVelocity -= recoil.revolver * dcos(directionPointing)
-				obj_player.grav += recoil.revolver * dsin(directionPointing)
+				obj_player.xVelocity -= global.recoil.revolver * dcos(directionPointing)
+				obj_player.grav += global.recoil.revolver * dsin(directionPointing)
 				
 				var hitX = x
 				var hitY = y
@@ -53,6 +57,16 @@ if (instance_exists(obj_player)) {
 				
 				instance_create_layer(x, y, "Weapons", obj_visual_projectile, {endX : hitX, endY : hitY})
 				
+				break
+			case "grenadeLauncher":
+				alarm[weaponAlarms.notAttacking] = global.attackDurations.grenadeLauncher
+				alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.grenadeLauncher
+				
+				// recoil
+				obj_player.xVelocity -= global.recoil.grenadeLauncher * dcos(directionPointing)
+				obj_player.grav += global.recoil.grenadeLauncher * dsin(directionPointing)
+				
+				instance_create_layer(x, y, layer, obj_weapon_projectile)
 				break
 		}
 	}

@@ -32,5 +32,8 @@
     "path":"sprites/spr_passable/spr_passable.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "solid",
+  ],
   "visible":true,
 }

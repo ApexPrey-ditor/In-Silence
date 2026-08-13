@@ -5,7 +5,7 @@ room_goto(rm_test)
 
 //game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = ["revolver"]
+global.weaponsObtained = ["revolver", "grenadeLauncher"]
 global.shotgunObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
@@ -34,37 +34,32 @@ pausedObjects = []
 
 global.weaponDamage = {
 	shotgun : 5,
-	revolver : 3
+	revolver : 3,
+	grenadeLauncher : 5
 }
 
-enum roomSize {
-	width,
-	height
+global.attackDurations = {
+	shotgun : 10,
+	revolver : 10,
+	grenadeLauncher : 6
 }
 
-enum weaponAlarms {
-	notAttacking,
-	takeOffCooldown
+global.attackCooldowns = {
+	shotgun : 30,
+	revolver : 20,
+	grenadeLauncher : 60,
 }
 
-enum attackDurations {
-	shotgun = 10,
-	revolver = 10
+global.recoil = {
+	shotgun : 4,
+	revolver : 2,
+	grenadeLauncher : 4
 }
 
-enum attackCooldowns {
-	shotgun = 30,
-	revolver = 20
-}
-
-enum recoil {
-	shotgun = 4,
-	revolver = 2
-}
-
-enum weaponDistance {
-	shotgun = 48,
-	revolver = 32
+global.weaponDistance = {
+	shotgun : 48,
+	revolver : 32,
+	grenadeLauncher : 32
 }
 
 enum initAlarms {

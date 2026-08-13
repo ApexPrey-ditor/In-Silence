@@ -1,3 +1,8 @@
+enum weaponAlarms {
+	notAttacking,
+	takeOffCooldown
+}
+
 distanceFromPlayer = 48
 directionPointing = 0
 canAttack = true
@@ -11,7 +16,11 @@ function scr_update_weapon() {
 	switch (weaponSelected) {
 		case "revolver":
 			sprite_index = spr_revolver
-			distanceFromPlayer = weaponDistance.revolver
-			alarm[weaponAlarms.takeOffCooldown] = attackCooldowns.revolver
+			distanceFromPlayer = global.weaponDistance.revolver
+			alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.revolver
+		case "grenadeLauncher":
+			sprite_index = spr_grenade_launcher
+			distanceFromPlayer = global.weaponDistance.grenadeLauncher
+			alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.grenadeLauncher
 	}
 }
