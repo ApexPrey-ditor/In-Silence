@@ -4,7 +4,7 @@ switch weaponSelected {
 	case "revolver":
 		distanceFromPlayer = global.weaponDistance.revolver
 		break
-	case "grenadeLauncher":
+	case "grenade_launcher":
 		distanceFromPlayer = global.weaponDistance.grenadeLauncher
 		break
 }

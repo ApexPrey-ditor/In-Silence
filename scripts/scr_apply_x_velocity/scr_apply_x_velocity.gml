@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_apply_x_velocity(xvel, solids, applyFriction=true, nonPassable=noone, xvelFrictionless=0, moving=true) {
+function scr_apply_x_velocity(xvel, solids, applyFriction=true, nonPassable=noone, xvelFrictionless=0, moving=true, bounce=false) {
 	if (nonPassable == noone) {
 		nonPassable = solids
 	}
@@ -27,7 +27,9 @@ function scr_apply_x_velocity(xvel, solids, applyFriction=true, nonPassable=noon
 			x -= scr_plus_minus(xvel)
 		}
 		
-		return 0
+		if (not bounce) {
+			return 0
+		}
 	}
 	
 	return returnedXvel

@@ -14,5 +14,5 @@ if (place_meeting(x, y + grav, solids)) {
 	grav = -grav * bounceEfficiency
 }
 
-scr_apply_gravity(grav, gravIntensity, gravLimit, solids)
-scr_apply_x_velocity(xVelocity, solids, false)
+grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, , true)
+xVelocity = scr_apply_x_velocity(xVelocity, solids, , , , , true)

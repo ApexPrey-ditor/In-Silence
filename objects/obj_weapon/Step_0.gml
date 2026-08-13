@@ -5,8 +5,15 @@ if (instance_exists(obj_player)) {
 		
 		image_yscale = scr_find_angle_x_direction(directionPointing)
 		
-		if (scr_keyboard_check_keys(obj_player.keybinds.switchWeapon)) {
+		if (scr_keyboard_check_keys_pressed(obj_player.keybinds.switchWeapon)) {
+			if (currentWeapon + 1 < array_length(weapons)) {
+				weaponSelected = weapons[currentWeapon + 1]
+			}
+			else {
+				weaponSelected = weapons[0]
+			}
 			
+			scr_update_weapon()
 		}
 	}
 	
@@ -58,7 +65,7 @@ if (instance_exists(obj_player)) {
 				instance_create_layer(x, y, "Weapons", obj_visual_projectile, {endX : hitX, endY : hitY})
 				
 				break
-			case "grenadeLauncher":
+			case "grenade_launcher":
 				alarm[weaponAlarms.notAttacking] = global.attackDurations.grenadeLauncher
 				alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.grenadeLauncher
 				
@@ -66,7 +73,7 @@ if (instance_exists(obj_player)) {
 				obj_player.xVelocity -= global.recoil.grenadeLauncher * dcos(directionPointing)
 				obj_player.grav += global.recoil.grenadeLauncher * dsin(directionPointing)
 				
-				instance_create_layer(x, y, layer, obj_weapon_projectile)
+				instance_create_layer(x, y, layer, obj_weapon_projectile, {direction : directionPointing, speed : clamp(distance_to_point(mouse_x, mouse_y) / 20, 5, 20)})
 				break
 		}
 	}

@@ -5,7 +5,7 @@ room_goto(rm_test)
 
 //game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenadeLauncher"]
+global.weaponsObtained = ["revolver", "grenade_launcher"]
 global.shotgunObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
@@ -47,7 +47,7 @@ global.attackDurations = {
 global.attackCooldowns = {
 	shotgun : 30,
 	revolver : 20,
-	grenadeLauncher : 60,
+	grenadeLauncher : 60
 }
 
 global.recoil = {

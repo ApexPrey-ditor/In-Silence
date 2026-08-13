@@ -1,6 +1,6 @@
 // Script assets have changed for v2.3.0 see
 // https://help.yoyogames.com/hc/en-us/articles/360005277377 for more information
-function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassable=noone) {
+function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassable=noone, bounce=false) {
 	if (nonpassable == noone) {
 		nonpassable = collider
 	}
@@ -19,7 +19,9 @@ function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassab
 				y -= 1
 			}
 			
-			return 0
+			if (not bounce) {
+				return 0
+			}
 		}
 		else {
 			// if gravity is going up and going into a wall, increase y until 1 pixel below solid
@@ -29,7 +31,9 @@ function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassab
 		}
 		
 		if (place_meeting(x, y + 1, nonpassable) or place_meeting(x, y - 1, nonpassable)) {
-			return 0
+			if (not bounce) {
+				return 0
+			}
 		}
 	}
 	
