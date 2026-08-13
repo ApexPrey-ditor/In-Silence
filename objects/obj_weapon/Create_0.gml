@@ -8,7 +8,7 @@ directionPointing = 0
 canAttack = true
 attacking = false
 
-shootables = [obj_enemy_parent, obj_destructable, obj_solid_hitbox, obj_target]
+shootables = scr_get_objects_of_tag("shootable")
 
 currentWeapon = 0
 weapons = global.weaponsObtained

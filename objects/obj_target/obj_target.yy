@@ -40,5 +40,8 @@
     "path":"sprites/spr_target/spr_target.yy",
   },
   "spriteMaskId":null,
+  "tags":[
+    "shootable",
+  ],
   "visible":true,
 }

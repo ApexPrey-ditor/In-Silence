@@ -42,6 +42,7 @@
   "tags":[
     "solid",
     "nonpassable",
+    "shootable",
   ],
   "visible":true,
 }

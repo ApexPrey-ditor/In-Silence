@@ -6,7 +6,7 @@ room_goto(rm_test)
 //game_set_speed(3, gamespeed_fps)
 
 global.weaponsObtained = ["revolver", "grenade_launcher"] // "revolver", "grenade_launcher"
-global.shotgunObtained = false
+global.shotgunObtained = true
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
@@ -40,7 +40,7 @@ global.weaponDamage = {
 
 global.attackDurations = {
 	shotgun : 10,
-	revolver : 10,
+	revolver : 3,
 	grenadeLauncher : 6
 }
 

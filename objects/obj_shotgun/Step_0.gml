@@ -38,10 +38,22 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 				}
 				else if (targetedObject.object_index == obj_enemy_projectile) {
 					targetedObject.direction += 180
-					targetedObject.speed *= 3
+					targetedObject.speed *= hitbackPower
 					targetedObject.creator = obj_player
 					
-					obj_init.alarm[initAlarms.unpauseAll] = 15
+					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
+					scr_pause_objects(all)
+				}
+				else if (targetedObject.object_index == obj_weapon_projectile) {
+					targetedObject.xVelocity += dcos(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
+					targetedObject.grav -= dsin(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
+					
+					with (targetedObject) {
+						detonationTime += grenadeLifespanIncrease
+						alarm[grenadeAlarms.detonate] += grenadeLifespanIncrease
+					}
+					
+					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
 					scr_pause_objects(all)
 				}
 			}

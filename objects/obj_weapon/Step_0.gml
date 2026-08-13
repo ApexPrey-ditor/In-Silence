@@ -60,9 +60,15 @@ if (instance_exists(obj_player)) {
 							scr_trigger_target()
 						}
 					}
+					else if (targetedObject.object_index == obj_weapon_projectile) {
+						with (targetedObject) {
+							damage += global.weaponDamage.revolver
+							alarm[grenadeAlarms.detonate] = 1
+						}
+					}
 				}
 				
-				instance_create_layer(x, y, "Weapons", obj_visual_projectile, {endX : hitX, endY : hitY})
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY})
 				
 				break
 			case "grenade_launcher":
