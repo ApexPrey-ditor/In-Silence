@@ -3,10 +3,10 @@ room_goto(rm_test)
 
 //audio_group_load(Music)
 
-//game_set_speed(6, gamespeed_fps)
+//game_set_speed(3, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenade_launcher"]
-global.shotgunObtained = true
+global.weaponsObtained = ["revolver", "grenade_launcher"] // "revolver", "grenade_launcher"
+global.shotgunObtained = false
 
 removeFromRoom = {rm_prelude_1_intro : [],
 				rm_scraps_01_intro : [],
