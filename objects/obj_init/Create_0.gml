@@ -36,6 +36,12 @@ global.recoil = {
 	grenadeLauncher : 4
 }
 
+global.knockback = {
+	shotgun : 7,
+	revolver : 3,
+	grenadeLauncher : 1
+}
+
 global.weaponDistance = {
 	shotgun : 48,
 	revolver : 32,
@@ -53,5 +59,5 @@ if (global.shotgunObtained) {
 	instance_create_layer(0, 0, "Weapons", obj_shotgun)
 }
 
-// window_set_fullscreen(true)
+ window_set_fullscreen(true)
 // game_set_speed(2, gamespeed_fps)

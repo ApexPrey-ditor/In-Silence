@@ -8,19 +8,17 @@ function scr_unpause_objects(objects, ids=[], excludes=[]) {
 	}
 	
 	for (var i = 0; i < array_length(ids); i++) {
-		if (instance_exists(ids[i])) {
-			if (!array_contains(excludes, ids[i].object_index) and !array_contains(excludes, ids[i])) {
-				if (objects == all) {
-					instance_activate_object(ids[i])
-					array_delete(obj_init.pausedObjects, array_get_index(obj_init.pausedObjects, ids[i]), 1)
-					i -= 1
-				}
-				else if (array_contains(objects, ids[i].object_index)) {
-					instance_activate_object(ids[i])
-					array_delete(obj_init.pausedObjects, array_get_index(obj_init.pausedObjects, ids[i]), 1)
-					array_delete(ids, array_get_index(ids, ids[i]), 1)
-					i -= 1
-				}
+		if (!array_contains(excludes, ids[i].object_index) and !array_contains(excludes, ids[i])) {
+			if (objects == all) {
+				instance_activate_object(ids[i])
+				array_delete(obj_init.pausedObjects, array_get_index(obj_init.pausedObjects, ids[i]), 1)
+				i -= 1
+			}
+			else if (array_contains(objects, ids[i].object_index)) {
+				instance_activate_object(ids[i])
+				array_delete(obj_init.pausedObjects, array_get_index(obj_init.pausedObjects, ids[i]), 1)
+				array_delete(ids, array_get_index(ids, ids[i]), 1)
+				i -= 1
 			}
 		}
 	}

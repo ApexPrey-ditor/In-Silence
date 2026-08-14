@@ -49,6 +49,11 @@ climbing = false
 xVelocity = 0
 xVelocityFrictionless = 0
 
+#macro afterImageDissapearRate 0.05
+#macro afterImageBaseCooldown 70
+afterImages = []
+afterImageCooldown = 0
+
 hitpoints = 5
 invincibility = false
 

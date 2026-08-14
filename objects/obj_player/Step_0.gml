@@ -217,6 +217,25 @@ if (isDiving or isSliding or isDashing) {
 	applyFriction = false
 }
 
+for (var i = 0; i < array_length(afterImages); i++) {
+	afterImages[i].alpha -= afterImageDissapearRate
+	
+	if (afterImages[i].alpha <= 0) {
+		array_delete(afterImages, i, 1)
+		i--
+	}
+}
+
+if (abs(xVelocity) > baseDashSpeed or -grav > jumpHeight) {
+	if (afterImageCooldown <= 0) {
+		array_push(afterImages, {sprite : sprite_index, subimage : image_index, x : x, y : y, xScale : image_xscale, yScale : image_yscale, alpha : 0.5})
+		afterImageCooldown = afterImageBaseCooldown
+	}
+	else {
+		afterImageCooldown -= abs(xVelocity) + abs(grav)
+	}
+}
+
 xVelocity = scr_apply_x_velocity(xVelocity, solids, applyFriction, nonpassable, xVelocityFrictionless, movement)
 
 if (place_meeting(x, y, solids)) {

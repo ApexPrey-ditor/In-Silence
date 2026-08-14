@@ -24,6 +24,10 @@ if (instance_exists(obj_player)) {
 		canAttack = false
 		attacking = true
 		
+		with (obj_enemy_parent) {
+			scr_test_sound_detection(other.x, other.y)
+		}
+		
 		switch weaponSelected {
 			case "revolver":
 				alarm[weaponAlarms.notAttacking] = global.attackDurations.revolver
@@ -51,6 +55,10 @@ if (instance_exists(obj_player)) {
 				if (instance_exists(targetedObject)) {
 					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
 						targetedObject.hitpoints -= global.weaponDamage.revolver
+						
+						// knockback
+						targetedObject.xVelocity += global.knockback.revolver * dcos(directionPointing)
+						targetedObject.grav -= global.knockback.revolver * dsin(directionPointing)
 					}
 					else if (targetedObject.object_index == obj_destructable) {
 						instance_destroy(targetedObject)
@@ -63,7 +71,7 @@ if (instance_exists(obj_player)) {
 					else if (targetedObject.object_index == obj_weapon_projectile) {
 						with (targetedObject) {
 							damage += global.weaponDamage.revolver
-							alarm[grenadeAlarms.detonate] = 1
+							scr_detonate_grenade()
 						}
 					}
 				}

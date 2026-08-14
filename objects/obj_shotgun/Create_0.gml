@@ -4,7 +4,7 @@ attacking = false
 #macro baseParryFreezeFrame 10
 #macro grenadeLifespanIncrease 60
 
-parryables = [obj_enemy_parent, obj_destructable, obj_enemy_projectile, obj_weapon_projectile]
+parryables = [obj_enemy_parent, obj_destructable, obj_weapon_projectile]
 
 hitbackPower = 3
 

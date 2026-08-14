@@ -4,6 +4,10 @@ y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
 if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 	canAttack = false
 	attacking = true
+	
+	with (obj_enemy_parent) {
+		scr_test_sound_detection(other.x, other.y)
+	}
 		
 	image_alpha = 1
 
@@ -29,14 +33,15 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 			if (instance_exists(targetedObject)) {
 				if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
 					targetedObject.hitpoints -= global.weaponDamage.shotgun
-					obj_player.isSlamming = false
-					obj_player.isDiving = false
-					obj_player.canWalk = true
+					
+					// knockback
+					targetedObject.xVelocity += global.knockback.revolver * dcos(directionPointing)
+					targetedObject.grav -= global.knockback.revolver * dsin(directionPointing)
 				}
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)
 				}
-				else if (targetedObject.object_index == obj_enemy_projectile) {
+				else if (targetedObject.object_index == obj_weapon_pickups) { // temp
 					targetedObject.direction += 180
 					targetedObject.speed *= hitbackPower
 					targetedObject.creator = obj_player
