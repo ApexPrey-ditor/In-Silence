@@ -22,7 +22,8 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 		}
 	}
 	else {
-		xVelocity += sign(image_xscale) * xAcceleration / airControlFactor
-		xVelocity = clamp(xVelocity, -topXSpeed, topXSpeed)
+		if (abs(xVelocity) < topXSpeed) {
+			xVelocity += sign(image_xscale) * xAcceleration / airControlFactor
+		}
 	}
 }

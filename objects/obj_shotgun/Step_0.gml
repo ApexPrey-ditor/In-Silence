@@ -41,7 +41,7 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)
 				}
-				else if (targetedObject.object_index == obj_weapon_pickups) { // temp
+				else if (targetedObject.object_index == obj_enemy_projectile) {
 					targetedObject.direction += 180
 					targetedObject.speed *= hitbackPower
 					targetedObject.creator = obj_player
