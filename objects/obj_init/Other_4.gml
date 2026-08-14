@@ -1,3 +1,7 @@
+if (not array_contains(struct_get_names(removeFromRoom), room_get_name(room))) {
+	struct_set(removeFromRoom, room_get_name(room), [])
+}
+
 var structKeysList = struct_get_names(removeFromRoom)
 var instancesToKill = []
 

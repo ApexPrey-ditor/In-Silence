@@ -9,4 +9,4 @@ topXSpeed = 0
 
 bounceHeight = 10
 
-solids = [obj_solid_hitbox, obj_destructable, obj_passable]
+solids = scr_get_objects_of_tag("solid")

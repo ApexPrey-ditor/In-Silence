@@ -27,8 +27,18 @@ function scr_camera_apply_borders() {
 }
 
 function scr_camera_scale(targetPos, time) {
-	scaleSpeed = (targetPos - scale) / time
-	targetScale = targetPos
+	if (targetPos == 0) {
+		// 0 is actually a key for set to room size (wow so cool)
+		targetPos = min(room_width / baseWidth, room_height / baseHeight)
+	}
+	if (time == 0) {
+		show_debug_message("Invalid Camera Time Scale")
+	}
+	else {
+		scaleSpeed = (targetPos - scale) / time
+		
+		targetScale = targetPos
+	}
 }
 
 scr_camera_apply_borders()

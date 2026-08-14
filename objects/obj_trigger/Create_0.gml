@@ -4,6 +4,9 @@ function scr_trigger_effect() {
 			case "playSong":
 				audio_play_sound(asset_id, 0, true)
 				break
+			case "setCameraZoom":
+				obj_camera.scr_camera_scale(value1, value2)
+				break
 		}
 	}
 	

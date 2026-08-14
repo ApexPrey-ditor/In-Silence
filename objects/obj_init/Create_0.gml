@@ -1,4 +1,4 @@
-room_goto(rm_test)
+room_goto(rm_prison_1)
 //room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
@@ -8,27 +8,7 @@ room_goto(rm_test)
 global.weaponsObtained = ["revolver", "grenade_launcher"] // "revolver", "grenade_launcher"
 global.shotgunObtained = true
 
-removeFromRoom = {rm_prelude_1_intro : [],
-				rm_scraps_01_intro : [],
-				rm_scraps_02_entrance : [],
-				rm_scraps_03_shack : [],
-				rm_scraps_04_drone : [],
-				rm_scraps_05_wire : [],
-				rm_scraps_06_basement : [],
-				rm_scraps_07_balcony : [],
-				rm_scraps_08_indoors : [],
-				rm_scraps_09_ladder : [],
-				rm_scraps_10_rooftops : [],
-				rm_scraps_11_exit : [],
-				rm_mountainside_01_intro : [],
-				rm_mountainside_02_forest : [],
-				rm_mountainside_03_big : [],
-				rm_mountainside_04_side : [],
-				rm_mountainside_05_climb : [],
-				rm_mountainside_06_steep : [],
-				rm_mountainside_07_vertical : [],
-				rm_mountainside_08_summit : [],
-				rm_mountainside_09_exit : []}
+removeFromRoom = {}
 				
 pausedObjects = []
 
