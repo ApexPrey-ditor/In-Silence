@@ -7,6 +7,15 @@ xVelocity = scr_apply_x_velocity(xVelocity, solids, false)
 // actual AI
 if (not doBasicWalk and instance_exists(obj_player)) {
 	image_xscale = scr_plus_minus(obj_player.x - x) * abs(image_xscale)
+	image_speed = abs(xVelocity) / 5
+	
+	if (distance_to_object(obj_player) < spriteRange) {
+		sprite_index = spr_prison_walker_open
+	}
+	else {
+		sprite_index = spr_prison_walker
+	}
+	
 	if (place_meeting(x, y + 1, solids)) {
 		xVelocity += sign(image_xscale) * xAcceleration
 		xVelocity = clamp(xVelocity, -topXSpeed, topXSpeed)

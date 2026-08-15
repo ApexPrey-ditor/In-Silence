@@ -11,11 +11,13 @@ global.shotgunObtained = true
 global.combo = {baseRevolver : 0,
 					baseGrenade : 0,
 					baseParry : 0,
-					friendlyFire : 0}
+					friendlyFire : 0,
+					outOfBounds : 0}
 global.comboNames = {baseRevolver : "Blunt",
 					baseGrenade : "Explosive",
 					baseParry : "Reflective",
-					friendlyFire : "Tricky"}
+					friendlyFire : "Tricky",
+					outOfBounds : "Out Of Bounds"}
 global.comboKills = 0
 #macro comboTimer 120
 global.comboTimeout = comboTimer

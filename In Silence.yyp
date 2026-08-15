@@ -107,6 +107,7 @@
     {"id":{"name":"spr_passable","path":"sprites/spr_passable/spr_passable.yy",},},
     {"id":{"name":"spr_preyditor_gaming_setup","path":"sprites/spr_preyditor_gaming_setup/spr_preyditor_gaming_setup.yy",},},
     {"id":{"name":"spr_prison_shooter","path":"sprites/spr_prison_shooter/spr_prison_shooter.yy",},},
+    {"id":{"name":"spr_prison_walker_open","path":"sprites/spr_prison_walker_open/spr_prison_walker_open.yy",},},
     {"id":{"name":"spr_prison_walker","path":"sprites/spr_prison_walker/spr_prison_walker.yy",},},
     {"id":{"name":"spr_proximity_trigger","path":"sprites/spr_proximity_trigger/spr_proximity_trigger.yy",},},
     {"id":{"name":"spr_revolver_pickup","path":"sprites/spr_revolver_pickup/spr_revolver_pickup.yy",},},
