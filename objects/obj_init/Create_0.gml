@@ -8,6 +8,18 @@ room_goto(rm_prison_1)
 global.weaponsObtained = ["revolver", "grenade_launcher"] // "revolver", "grenade_launcher"
 global.shotgunObtained = true
 
+global.combo = {baseRevolver : 0,
+					baseGrenade : 0,
+					baseParry : 0,
+					friendlyFire : 0}
+global.comboNames = {baseRevolver : "Blunt",
+					baseGrenade : "Explosive",
+					baseParry : "Reflective",
+					friendlyFire : "Tricky"}
+global.comboKills = 0
+#macro comboTimer 120
+global.comboTimeout = comboTimer
+
 removeFromRoom = {}
 				
 pausedObjects = []

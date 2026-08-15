@@ -1,0 +1,2 @@
+// detect player
+doBasicWalk = false

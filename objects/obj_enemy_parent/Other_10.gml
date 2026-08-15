@@ -1,5 +1,4 @@
-// detect player
-
+// send detections to others
 doBasicWalk = false
 
 with (obj_enemy_parent) {

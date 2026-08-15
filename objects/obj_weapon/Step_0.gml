@@ -59,6 +59,8 @@ if (instance_exists(obj_player)) {
 						// knockback
 						targetedObject.xVelocity += global.knockback.revolver * dcos(directionPointing)
 						targetedObject.grav -= global.knockback.revolver * dsin(directionPointing)
+						
+						scr_add_combo("baseRevolver")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
 						instance_destroy(targetedObject)

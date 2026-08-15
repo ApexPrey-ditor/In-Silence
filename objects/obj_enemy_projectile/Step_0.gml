@@ -11,6 +11,8 @@ if (_target != noone and _target != creator and _target.object_index != creator)
 		}
 		else {
 			hitpoints -= other.friendlyDamage
+			
+			scr_add_combo("friendlyFire")
 		}
 	}
 	instance_destroy()

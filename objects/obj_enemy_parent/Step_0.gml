@@ -1,4 +1,5 @@
 if (hitpoints <= 0) {
+	global.comboKills += 1
 	instance_destroy()
 }
 
@@ -8,7 +9,7 @@ if (place_meeting(x, y, obj_hurtbox)) {
 
 if (instance_exists(obj_player)) {
 	if (distance_to_object(obj_player) < visualDetectionRange and collision_line(x, y, obj_player.x, obj_player.y, solids, false, true) == noone) {
-		event_user(enemyUserEvents.detectPlayer)
+		event_user(enemyUserEvents.globalDetect)
 	}
 }
 

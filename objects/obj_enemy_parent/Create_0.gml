@@ -1,4 +1,5 @@
 enum enemyUserEvents {
+	globalDetect,
 	detectPlayer
 }
 
@@ -20,7 +21,7 @@ visualDetectionRange = 1600
 
 function scr_test_sound_detection(originX, originY, detectionMultiplier=1) {
 	if (point_distance(x, y, originX, originY) < visualDetectionRange * detectionMultiplier) {
-		event_user(enemyUserEvents.detectPlayer)
+		event_user(enemyUserEvents.globalDetect)
 	}
 }
 

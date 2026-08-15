@@ -71,6 +71,7 @@
     {"id":{"name":"rm_init","path":"rooms/rm_init/rm_init.yy",},},
     {"id":{"name":"rm_prison_1","path":"rooms/rm_prison_1/rm_prison_1.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
+    {"id":{"name":"scr_add_combo","path":"scripts/scr_add_combo/scr_add_combo.yy",},},
     {"id":{"name":"scr_apply_gravity","path":"scripts/scr_apply_gravity/scr_apply_gravity.yy",},},
     {"id":{"name":"scr_apply_x_velocity","path":"scripts/scr_apply_x_velocity/scr_apply_x_velocity.yy",},},
     {"id":{"name":"scr_find_angle_x_direction","path":"scripts/scr_find_angle_x_direction/scr_find_angle_x_direction.yy",},},

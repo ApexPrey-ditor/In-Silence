@@ -47,6 +47,8 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 					targetedObject.creator = obj_player
 					
 					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
+					
+					scr_add_combo("baseParry")
 					scr_pause_objects(all)
 				}
 				else if (targetedObject.object_index == obj_weapon_projectile) {

@@ -21,6 +21,10 @@ blastKnockback = global.knockback.grenadeLauncher
 alarm[grenadeAlarms.detonate] = detonationTime
 
 function scr_detonate_grenade() {
+	with (obj_enemy_parent) {
+		scr_test_sound_detection(other.x, other.y)
+	}
+	
 	instance_create_layer(x, y, layer, obj_visual_projectile, {colour : c_red, fadeTime : 60, width : radius, type : "circle"})
 
 	var _targets = ds_list_create()
@@ -41,6 +45,8 @@ function scr_detonate_grenade() {
 			_target.grav -= dsin(direction) * (radius - _distanceToObject) * (sqrt(damage) * blastKnockback)
 			
 			_target.hitpoints -= damage
+			
+			scr_add_combo("baseGrenade")
 		}
 		else {
 			switch (_target.object_index) {
