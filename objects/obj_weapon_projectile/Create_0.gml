@@ -20,6 +20,11 @@ blastKnockback = global.knockback.grenadeLauncher
 
 alarm[grenadeAlarms.detonate] = detonationTime
 
+function scr_add_speed(amount, dir) {
+	xVelocity += dcos(dir) * amount
+	grav -= dsin(dir) * amount
+}
+
 function scr_detonate_grenade() {
 	with (obj_enemy_parent) {
 		scr_test_sound_detection(other.x, other.y)

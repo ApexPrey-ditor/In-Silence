@@ -1,9 +1,9 @@
 {
   "$GMScript":"v1",
-  "%Name":"scr_keyboard_check_keys_pressed",
+  "%Name":"scr_input_check_pressed",
   "isCompatibility":false,
   "isDnD":false,
-  "name":"scr_keyboard_check_keys_pressed",
+  "name":"scr_input_check_pressed",
   "parent":{
     "name":"Scripts",
     "path":"folders/Scripts.yy",

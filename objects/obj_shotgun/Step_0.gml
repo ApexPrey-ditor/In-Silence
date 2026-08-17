@@ -1,7 +1,7 @@
 x = obj_player.x + (dcos(image_angle) * global.weaponDistance.shotgun)
 y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
 
-if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
+if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 	canAttack = false
 	attacking = true
 	
@@ -35,8 +35,8 @@ if (mouse_check_button_pressed(obj_player.keybinds.quickShotgun) and canAttack) 
 					targetedObject.hitpoints -= global.weaponDamage.shotgun
 					
 					// knockback
-					targetedObject.xVelocity += global.knockback.revolver * dcos(directionPointing)
-					targetedObject.grav -= global.knockback.revolver * dsin(directionPointing)
+					targetedObject.xVelocity += global.knockback.revolver * dcos(image_angle)
+					targetedObject.grav -= global.knockback.revolver * dsin(image_angle)
 				}
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)

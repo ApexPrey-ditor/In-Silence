@@ -9,6 +9,9 @@ enum playerAlarms {
 	cancelDash
 }
 
+repeatNames = ["Very ", "Super ", "Ultra ", "OMEGA "]
+repeatValues = [1, 5, 10, 20]
+
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity
@@ -19,6 +22,13 @@ jumpHeight = 17
 // macros are constants
 #macro cayoteFrameLimit 6
 cayoteFrames = cayoteFrameLimit
+#macro baseFrictionlessFrames 3
+frictionlessFrames = 0
+
+#macro baseJumpBuffer 3
+#macro baseDashBuffer 3
+jumpBuffer = 0
+dashBuffer = 0
 
 #macro airControlFactor 10
 #macro baseWalkSpeed 7
@@ -130,6 +140,7 @@ keybinds = {left : [ord("A")],
 			jump : [vk_space, ord("W")],
 			dash : [vk_shift],
 			slam : [ord("S"), vk_control],
-			shoot : mb_left,
-			quickShotgun : mb_right,
-			switchWeapon : [ord("E")]}
+			shoot : [mb_left],
+			quickShotgun : [mb_right],
+			switchWeapon : [ord("E")],
+			switchBackwards : [ord("Q")]}

@@ -5,21 +5,23 @@ room_goto(rm_prison_1)
 
 //game_set_speed(3, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenade_launcher"] // "revolver", "grenade_launcher"
+global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle"]
 global.shotgunObtained = true
 
 global.combo = {baseRevolver : 0,
 					baseGrenade : 0,
+					baseEnergyRifle : 0,
 					baseParry : 0,
 					friendlyFire : 0,
 					outOfBounds : 0}
 global.comboNames = {baseRevolver : "Blunt",
 					baseGrenade : "Explosive",
+					baseEnergyRifle : "Weak",
 					baseParry : "Reflective",
 					friendlyFire : "Tricky",
 					outOfBounds : "Out Of Bounds"}
 global.comboKills = 0
-#macro comboTimer 120
+#macro comboTimer 180
 global.comboTimeout = comboTimer
 
 removeFromRoom = {}
@@ -29,37 +31,43 @@ pausedObjects = []
 global.weaponDamage = {
 	shotgun : 5,
 	revolver : 3,
-	grenadeLauncher : 5
+	grenadeLauncher : 5,
+	energyRifle : 1
 }
 
 global.attackDurations = {
 	shotgun : 10,
 	revolver : 3,
-	grenadeLauncher : 6
+	grenadeLauncher : 6,
+	energyRifle : 3,
 }
 
 global.attackCooldowns = {
 	shotgun : 30,
 	revolver : 20,
-	grenadeLauncher : 60
+	grenadeLauncher : 60,
+	energyRifle : 7
 }
 
 global.recoil = {
 	shotgun : 4,
 	revolver : 2,
-	grenadeLauncher : 4
+	grenadeLauncher : 4,
+	energyRifle : 1
 }
 
 global.knockback = {
 	shotgun : 7,
 	revolver : 3,
-	grenadeLauncher : 1
+	grenadeLauncher : 1,
+	energyRifle : 1
 }
 
 global.weaponDistance = {
 	shotgun : 48,
 	revolver : 32,
-	grenadeLauncher : 32
+	grenadeLauncher : 32,
+	energyRifle : 32
 }
 
 enum initAlarms {

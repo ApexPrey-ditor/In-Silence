@@ -8,20 +8,34 @@ var _screenWidth = view_get_wport(view_current)
 
 var _combo = ""
 var _keyName = ""
-var _ajectiveNumber = 0
+var _repeatAmout = 0
+var _adjectiveNumber = 0
+var _adjectives = []
 
 for (var i = 0; i < array_length(struct_get_names(global.combo)); i++) {
 	_keyName = struct_get_names(global.combo)[i]
 	
 	if (struct_get(global.combo, _keyName) > 0) {
-		_ajectiveNumber += 1
-		if (_ajectiveNumber % 2 == 0) {
+		_adjectiveNumber += 1
+		if (_adjectiveNumber % 2 == 0) {
 			_combo = _combo + "And "
 		}
 		
-		repeat (struct_get(global.combo, _keyName) - 1) {
-			_combo = _combo + "Very "
+		_repeatAmout = struct_get(global.combo, _keyName) - 1
+		
+		if (_repeatAmout > 0) {
+			for (var w = array_length(repeatNames) - 1; w >= 0; w--) {
+				repeat (floor(_repeatAmout / repeatValues[w])) {
+					array_push(_adjectives, repeatNames[w])
+					_repeatAmout -= repeatValues[w]
+				}
+			}
 		}
+		
+		for (var w = array_length(_adjectives) - 1; w >= 0; w--) {
+			_combo = _combo + _adjectives[w]
+		}
+		_adjectives = []
 		
 		_combo = _combo + struct_get(global.comboNames, _keyName) + " "
 	}
