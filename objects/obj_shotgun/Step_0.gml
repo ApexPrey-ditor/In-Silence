@@ -37,6 +37,9 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					// knockback
 					targetedObject.xVelocity += global.knockback.revolver * dcos(image_angle)
 					targetedObject.grav -= global.knockback.revolver * dsin(image_angle)
+					
+					global.railcannonCharge += hitChargeAmount
+					scr_add_combo("baseShotgun")
 				}
 				else if (targetedObject.object_index == obj_destructable) {
 					instance_destroy(targetedObject)

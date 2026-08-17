@@ -78,7 +78,8 @@ draw_healthbar(10, _screenHeight - 25, 10 + 50/3, _screenHeight - 35, stamina * 
 draw_healthbar(10 + 50/3, _screenHeight - 25, 10 + 50/3*2, _screenHeight - 35, (stamina - 1) * 100, c_black, c_blue, c_aqua, 0, true, true)
 draw_healthbar(10 + 50/3*2, _screenHeight - 25, 60, _screenHeight - 35, (stamina - 2) * 100, c_black, c_blue, c_aqua, 0, true, true)
 
-//
+// railcannon charge
+draw_healthbar(10, _screenHeight - 40, 60, _screenHeight - 50, (global.railcannonCharge / global.railcannonChargeRequirement) * 100, c_black, c_dkgray, c_aqua, 0, true, true)
 
 
 scr_reset_draw()

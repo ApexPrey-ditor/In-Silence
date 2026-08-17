@@ -11,18 +11,20 @@ global.shotgunObtained = true
 global.railcannonCharge = 0
 global.railcannonChargeRequirement = 10
 
-global.combo = {baseRevolver : 0,
+global.combo = {baseParry : 0,
+					baseShotgun : 0,
+					baseRevolver : 0,
 					baseGrenade : 0,
 					baseEnergyRifle : 0,
 					baseRailcannon : 0,
-					baseParry : 0,
 					friendlyFire : 0,
 					outOfBounds : 0}
-global.comboNames = {baseRevolver : "Blunt",
+global.comboNames = {baseParry : "Reflective",
+					baseShotgun : "Point Blank",
+					baseRevolver : "Blunt",
 					baseGrenade : "Explosive",
 					baseEnergyRifle : "Weak",
 					baseRailcannon : "Massive",
-					baseParry : "Reflective",
 					friendlyFire : "Tricky",
 					outOfBounds : "Out Of Bounds"}
 global.comboKills = 0
