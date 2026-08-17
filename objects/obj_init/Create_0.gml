@@ -5,18 +5,23 @@ room_goto(rm_prison_1)
 
 //game_set_speed(3, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle"]
+global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 global.shotgunObtained = true
+
+global.railcannonCharge = 0
+global.railcannonChargeRequirement = 10
 
 global.combo = {baseRevolver : 0,
 					baseGrenade : 0,
 					baseEnergyRifle : 0,
+					baseRailcannon : 0,
 					baseParry : 0,
 					friendlyFire : 0,
 					outOfBounds : 0}
 global.comboNames = {baseRevolver : "Blunt",
 					baseGrenade : "Explosive",
 					baseEnergyRifle : "Weak",
+					baseRailcannon : "Massive",
 					baseParry : "Reflective",
 					friendlyFire : "Tricky",
 					outOfBounds : "Out Of Bounds"}
@@ -32,7 +37,8 @@ global.weaponDamage = {
 	shotgun : 5,
 	revolver : 3,
 	grenadeLauncher : 5,
-	energyRifle : 1
+	energyRifle : 1,
+	railcannon : 40
 }
 
 global.attackDurations = {
@@ -40,34 +46,39 @@ global.attackDurations = {
 	revolver : 3,
 	grenadeLauncher : 6,
 	energyRifle : 3,
+	railcannon : 1
 }
 
 global.attackCooldowns = {
 	shotgun : 30,
 	revolver : 20,
 	grenadeLauncher : 60,
-	energyRifle : 7
+	energyRifle : 7,
+	railcannon : 1,
 }
 
 global.recoil = {
 	shotgun : 4,
 	revolver : 2,
 	grenadeLauncher : 4,
-	energyRifle : 1
+	energyRifle : 1,
+	railcannon : 5
 }
 
 global.knockback = {
 	shotgun : 7,
 	revolver : 3,
 	grenadeLauncher : 1,
-	energyRifle : 1
+	energyRifle : 1,
+	railcannon : 15
 }
 
 global.weaponDistance = {
 	shotgun : 48,
 	revolver : 32,
 	grenadeLauncher : 32,
-	energyRifle : 32
+	energyRifle : 32,
+	railcannon : 32
 }
 
 enum initAlarms {

@@ -30,7 +30,9 @@ if (instance_exists(obj_player)) {
 	x = obj_player.x + (dcos(directionPointing) * distanceFromPlayer)
 	y = obj_player.y - (dsin(directionPointing) * distanceFromPlayer)
 	
-	if (scr_input_check_pressed(obj_player.keybinds.shoot) or (scr_input_check(obj_player.keybinds.shoot) and holdShoot) and canAttack) {
+	if ((scr_input_check_pressed(obj_player.keybinds.shoot) or (scr_input_check(obj_player.keybinds.shoot) and holdShoot))
+			and canAttack
+			and (weaponSelected != "railcannon" or global.railcannonCharge >= global.railcannonChargeRequirement)) {
 		canAttack = false
 		attacking = true
 		
@@ -78,6 +80,7 @@ if (instance_exists(obj_player)) {
 						targetedObject.xVelocity += knockback * dcos(directionPointing)
 						targetedObject.grav -= knockback * dsin(directionPointing)
 						
+						global.railcannonCharge += revolverChargeAdd
 						scr_add_combo("baseRevolver")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
@@ -96,7 +99,7 @@ if (instance_exists(obj_player)) {
 					}
 				}
 				
-				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY})
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, width : revolverShotWidth})
 				
 				break
 			case "grenade_launcher":
@@ -142,6 +145,7 @@ if (instance_exists(obj_player)) {
 						targetedObject.xVelocity += knockback * dcos(directionPointing)
 						targetedObject.grav -= knockback * dsin(directionPointing)
 						
+						global.railcannonCharge += energyRifleChargeAdd
 						scr_add_combo("baseEnergyRifle")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
@@ -159,8 +163,62 @@ if (instance_exists(obj_player)) {
 					}
 				}
 				
-				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY})
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, width : energyRifleShotWidth})
 				
+				break
+			case "railcannon":
+				alarm[weaponAlarms.notAttacking] = attackDuration
+				alarm[weaponAlarms.takeOffCooldown] = attackCooldown
+				
+				global.railcannonCharge = 0
+				
+				// recoil
+				obj_player.xVelocity -= recoil * dcos(directionPointing)
+				obj_player.grav += recoil * dsin(directionPointing)
+				
+				hitX = x
+				hitY = y
+				
+				xIncrease = dcos(directionPointing)
+				yIncrease = -dsin(directionPointing)
+				
+				while (!position_meeting(hitX, hitY, shootables) and
+						hitX > 0 and hitX < room_width and
+						hitY > 0 and hitY < room_height) {
+					hitX += xIncrease
+					hitY += yIncrease
+				}
+				
+				targetedObject = instance_position(hitX, hitY, shootables)
+				
+				if (instance_exists(targetedObject)) {
+					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
+						targetedObject.hitpoints -= damage
+						
+						// knockback
+						targetedObject.xVelocity += knockback * dcos(directionPointing)
+						targetedObject.grav -= knockback * dsin(directionPointing)
+						
+						scr_add_combo("baseRailcannon")
+					}
+					else if (targetedObject.object_index == obj_destructable) {
+						instance_destroy(targetedObject)
+					}
+					else if (targetedObject.object_index == obj_target) {
+						with (targetedObject) {
+							scr_trigger_target()
+						}
+					}
+					else if (targetedObject.object_index == obj_weapon_projectile) {
+						with (targetedObject) {
+							damage += other.damage
+							radius *= railcannonRadiusMultiply
+							scr_detonate_grenade()
+						}
+					}
+				}
+				
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, width : railcannonShotWidth})
 				break
 		}
 	}

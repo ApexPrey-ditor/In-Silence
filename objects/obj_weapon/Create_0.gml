@@ -3,12 +3,20 @@ enum weaponAlarms {
 	takeOffCooldown
 }
 
+revolverChargeAdd = 1
+revolverShotWidth = 5
+
 grenadeSpeedMin = 5
 grenadeSpeedMax = 20
 grenadeSpeedDivisor = 20
 
+energyRifleChargeAdd = 0.2
 energyRifleSpeedAdd = 2
 energyRifleSpread = 3
+energyRifleShotWidth = 3
+
+railcannonRadiusMultiply = 2
+railcannonShotWidth = 15
 
 distanceFromPlayer = 48
 directionPointing = 0
@@ -71,6 +79,19 @@ function scr_update_weapon() {
 			sprite_index = spr_energy_rifle
 			distanceFromPlayer = global.weaponDistance.energyRifle
 			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.energyRifle
+			break
+		case "railcannon":
+			damage = global.weaponDamage.railcannon
+			knockback = global.knockback.railcannon
+			attackDuration = global.attackDurations.railcannon
+			attackCooldown = global.attackCooldowns.railcannon
+			recoil = global.recoil.railcannon
+			holdShoot = false
+			
+			currentWeapon = 3
+			sprite_index = spr_railcannon
+			distanceFromPlayer = global.weaponDistance.railcannon
+			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.railcannon
 			break
 	}
 }

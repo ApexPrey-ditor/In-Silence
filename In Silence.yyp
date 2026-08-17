@@ -111,6 +111,7 @@
     {"id":{"name":"spr_prison_walker_open","path":"sprites/spr_prison_walker_open/spr_prison_walker_open.yy",},},
     {"id":{"name":"spr_prison_walker","path":"sprites/spr_prison_walker/spr_prison_walker.yy",},},
     {"id":{"name":"spr_proximity_trigger","path":"sprites/spr_proximity_trigger/spr_proximity_trigger.yy",},},
+    {"id":{"name":"spr_railcannon","path":"sprites/spr_railcannon/spr_railcannon.yy",},},
     {"id":{"name":"spr_revolver_pickup","path":"sprites/spr_revolver_pickup/spr_revolver_pickup.yy",},},
     {"id":{"name":"spr_revolver","path":"sprites/spr_revolver/spr_revolver.yy",},},
     {"id":{"name":"spr_roomEntryPoint","path":"sprites/spr_roomEntryPoint/spr_roomEntryPoint.yy",},},

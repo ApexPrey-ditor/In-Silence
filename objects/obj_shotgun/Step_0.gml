@@ -48,6 +48,7 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					
 					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
 					
+					global.railcannonCharge += parryChargeAmount
 					scr_add_combo("baseParry")
 					scr_pause_objects(all)
 				}

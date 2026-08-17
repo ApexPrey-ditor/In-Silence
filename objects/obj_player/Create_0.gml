@@ -9,8 +9,8 @@ enum playerAlarms {
 	cancelDash
 }
 
-repeatNames = ["Very ", "Super ", "Ultra ", "OMEGA "]
-repeatValues = [1, 5, 10, 20]
+repeatNames = ["Very ", "Super ", "Ultra ", "OMEGA ", "in silence "]
+repeatValues = [1, 3, 5, 10, 20]
 
 grav = 0
 #macro baseIntensity 0.5
