@@ -1,6 +1,7 @@
 enum enemyUserEvents {
 	globalDetect,
-	detectPlayer
+	detectPlayer,
+	parried
 }
 
 hitpoints = 1
@@ -13,6 +14,10 @@ terminalVelocity = 35
 xVelocity = 0
 doBasicWalk = true
 walkSpeed = 0
+
+parryableAttack = false
+
+weight = 1
 
 bounceHeight = 10
 

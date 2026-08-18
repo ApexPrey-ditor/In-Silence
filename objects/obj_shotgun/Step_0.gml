@@ -38,6 +38,8 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					targetedObject.xVelocity += global.knockback.revolver * dcos(image_angle)
 					targetedObject.grav -= global.knockback.revolver * dsin(image_angle)
 					
+					scr_trigger_user_event(targetedObject, enemyUserEvents.parried)
+					
 					global.railcannonCharge += hitChargeAmount
 					scr_add_combo("baseShotgun")
 				}
@@ -51,11 +53,11 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					
 					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
 					
-					global.railcannonCharge += parryChargeAmount
+					global.railcannonCharge += global.parryChargeAmount
 					scr_add_combo("baseParry")
 					scr_pause_objects(all)
 				}
-				else if (targetedObject.object_index == obj_weapon_projectile) {
+				else if (targetedObject.object_index == obj_grenade) {
 					targetedObject.xVelocity += dcos(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
 					targetedObject.grav -= dsin(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
 					

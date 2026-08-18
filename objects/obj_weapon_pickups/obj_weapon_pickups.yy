@@ -29,14 +29,14 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"weapon","filters":[],"listItems":[],"multiselect":false,"name":"weapon","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"stabilizer","varType":2,},
-    {"$GMObjectProperty":"v2","%Name":"pickup_spr","filters":[],"listItems":[],"multiselect":false,"name":"pickup_spr","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_stabilizer_pickup","path":"sprites/spr_stabilizer_pickup/spr_stabilizer_pickup.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_stabilizer_pickup","varType":5,},
+    {"$GMObjectProperty":"v2","%Name":"pickup_spr","filters":[],"listItems":[],"multiselect":false,"name":"pickup_spr","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resource":{"name":"spr_shotgun_pickup","path":"sprites/spr_shotgun_pickup/spr_shotgun_pickup.yy",},"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"spr_shotgun_pickup","varType":5,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_stabilizer_pickup",
-    "path":"sprites/spr_stabilizer_pickup/spr_stabilizer_pickup.yy",
+    "name":"spr_shotgun_pickup",
+    "path":"sprites/spr_shotgun_pickup/spr_shotgun_pickup.yy",
   },
   "spriteMaskId":null,
   "visible":true,

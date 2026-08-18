@@ -4,7 +4,7 @@ if (place_meeting(x + xVelocity, y, solids)) {
 	}
 	
 	var _collided = instance_place(x + sign(xVelocity), y, solids)
-	if (_collided.object_index == obj_weapon_projectile) {
+	if (_collided.object_index == obj_grenade) {
 		var _sharedVelocity = abs(_collided.xVelocity) + abs(xVelocity)
 		
 		xVelocity = _sharedVelocity / 2 * sign(xVelocity)
@@ -20,7 +20,7 @@ if (place_meeting(x, y + grav, solids)) {
 	}
 	
 	var _collided = instance_place(x, y + sign(grav), solids)
-	if (_collided.object_index == obj_weapon_projectile) {
+	if (_collided.object_index == obj_grenade) {
 		var _sharedVelocity = abs(_collided.grav) + abs(grav)
 		
 		grav = _sharedVelocity / 2 * sign(grav)

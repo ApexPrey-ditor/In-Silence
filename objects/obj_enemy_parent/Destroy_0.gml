@@ -1,1 +1,3 @@
-scr_permanant_destroy()
+if (permakill) {
+	scr_permanant_destroy()
+}

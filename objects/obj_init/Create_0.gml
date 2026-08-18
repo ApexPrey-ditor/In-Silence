@@ -11,6 +11,8 @@ global.shotgunObtained = true
 global.railcannonCharge = 0
 global.railcannonChargeRequirement = 10
 
+global.parryChargeAmount = 3
+
 global.combo = {baseParry : 0,
 					baseShotgun : 0,
 					baseRevolver : 0,
@@ -40,7 +42,8 @@ global.weaponDamage = {
 	revolver : 3,
 	grenadeLauncher : 5,
 	energyRifle : 1,
-	railcannon : 40
+	railcannon : 40,
+	blaster : 0
 }
 
 global.attackDurations = {
@@ -48,7 +51,8 @@ global.attackDurations = {
 	revolver : 3,
 	grenadeLauncher : 6,
 	energyRifle : 3,
-	railcannon : 1
+	railcannon : 1,
+	blaster : 3
 }
 
 global.attackCooldowns = {
@@ -57,6 +61,7 @@ global.attackCooldowns = {
 	grenadeLauncher : 60,
 	energyRifle : 7,
 	railcannon : 1,
+	blaster : 3
 }
 
 global.recoil = {
@@ -64,7 +69,8 @@ global.recoil = {
 	revolver : 2,
 	grenadeLauncher : 4,
 	energyRifle : 1,
-	railcannon : 5
+	railcannon : 5,
+	baster : 0
 }
 
 global.knockback = {
@@ -72,7 +78,8 @@ global.knockback = {
 	revolver : 3,
 	grenadeLauncher : 1,
 	energyRifle : 1,
-	railcannon : 15
+	railcannon : 15,
+	blaster : 0
 }
 
 global.weaponDistance = {
@@ -80,7 +87,8 @@ global.weaponDistance = {
 	revolver : 32,
 	grenadeLauncher : 32,
 	energyRifle : 32,
-	railcannon : 32
+	railcannon : 32,
+	blaster : 32
 }
 
 enum initAlarms {

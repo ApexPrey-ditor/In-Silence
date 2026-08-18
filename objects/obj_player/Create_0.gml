@@ -66,6 +66,7 @@ afterImageCooldown = 0
 
 hitpoints = 5
 invincibility = false
+weight = 1
 
 spawnPointID = 0
 spawnPointOffset = 1

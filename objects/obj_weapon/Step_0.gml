@@ -74,14 +74,8 @@ if (instance_exists(obj_player)) {
 				
 				if (instance_exists(targetedObject)) {
 					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-						targetedObject.hitpoints -= damage
-						
-						// knockback
-						targetedObject.xVelocity += knockback * dcos(directionPointing)
-						targetedObject.grav -= knockback * dsin(directionPointing)
-						
-						global.railcannonCharge += revolverChargeAdd
-						scr_add_combo("baseRevolver")
+						// enemy
+						scr_process_hit(targetedObject, revolverChargeAdd, "baseRevolver")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
 						instance_destroy(targetedObject)
@@ -91,7 +85,7 @@ if (instance_exists(obj_player)) {
 							scr_trigger_target()
 						}
 					}
-					else if (targetedObject.object_index == obj_weapon_projectile) {
+					else if (targetedObject.object_index == obj_grenade) {
 						with (targetedObject) {
 							damage += other.damage
 							scr_detonate_grenade()
@@ -110,7 +104,7 @@ if (instance_exists(obj_player)) {
 				obj_player.xVelocity -= recoil * dcos(directionPointing)
 				obj_player.grav += recoil * dsin(directionPointing)
 				
-				instance_create_layer(x, y, layer, obj_weapon_projectile, {direction : directionPointing, speed : clamp(distance_to_point(mouse_x, mouse_y) / grenadeSpeedDivisor, grenadeSpeedMin, grenadeSpeedMax), damage : damage})
+				instance_create_layer(x, y, layer, obj_grenade, {direction : directionPointing, speed : clamp(distance_to_point(mouse_x, mouse_y) / grenadeSpeedDivisor, grenadeSpeedMin, grenadeSpeedMax), damage : damage})
 				break
 			case "energy_rifle":
 				alarm[weaponAlarms.notAttacking] = attackDuration
@@ -139,14 +133,8 @@ if (instance_exists(obj_player)) {
 				
 				if (instance_exists(targetedObject)) {
 					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-						targetedObject.hitpoints -= damage
-						
-						// knockback
-						targetedObject.xVelocity += knockback * dcos(directionPointing)
-						targetedObject.grav -= knockback * dsin(directionPointing)
-						
-						global.railcannonCharge += energyRifleChargeAdd
-						scr_add_combo("baseEnergyRifle")
+						// enemy
+						scr_process_hit(targetedObject, energyRifleChargeAdd, "baseEnergyRifle")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
 						instance_destroy(targetedObject)
@@ -156,7 +144,7 @@ if (instance_exists(obj_player)) {
 							scr_trigger_target()
 						}
 					}
-					else if (targetedObject.object_index == obj_weapon_projectile) {
+					else if (targetedObject.object_index == obj_grenade) {
 						with (targetedObject) {
 							scr_add_speed(other.energyRifleSpeedAdd, other.directionPointing)
 						}
@@ -193,13 +181,8 @@ if (instance_exists(obj_player)) {
 				
 				if (instance_exists(targetedObject)) {
 					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-						targetedObject.hitpoints -= damage
-						
-						// knockback
-						targetedObject.xVelocity += knockback * dcos(directionPointing)
-						targetedObject.grav -= knockback * dsin(directionPointing)
-						
-						scr_add_combo("baseRailcannon")
+						// enemy
+						scr_process_hit(targetedObject, 0, "baseRailcannon")
 					}
 					else if (targetedObject.object_index == obj_destructable) {
 						instance_destroy(targetedObject)
@@ -209,7 +192,7 @@ if (instance_exists(obj_player)) {
 							scr_trigger_target()
 						}
 					}
-					else if (targetedObject.object_index == obj_weapon_projectile) {
+					else if (targetedObject.object_index == obj_grenade) {
 						with (targetedObject) {
 							damage += other.damage
 							radius *= railcannonRadiusMultiply
@@ -219,6 +202,16 @@ if (instance_exists(obj_player)) {
 				}
 				
 				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, width : railcannonShotWidth})
+				break
+			case "blaster":
+				alarm[weaponAlarms.notAttacking] = attackDuration
+				alarm[weaponAlarms.takeOffCooldown] = attackCooldown
+				
+				// recoil (blaster has none)
+				// obj_player.xVelocity -= recoil * dcos(directionPointing)
+				// obj_player.grav += recoil * dsin(directionPointing)
+				
+				instance_create_layer(x, y, layer, obj_grenade, {direction : directionPointing, speed : clamp(distance_to_point(mouse_x, mouse_y) / grenadeSpeedDivisor, grenadeSpeedMin, grenadeSpeedMax), damage : damage})
 				break
 		}
 	}

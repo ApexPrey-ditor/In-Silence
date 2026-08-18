@@ -18,6 +18,9 @@ energyRifleShotWidth = 3
 railcannonRadiusMultiply = 2
 railcannonShotWidth = 15
 
+blasterSpread = 5
+blasterChargeAdd = 0.1
+
 distanceFromPlayer = 48
 directionPointing = 0
 canAttack = true
@@ -36,6 +39,21 @@ currentWeapon = 0
 weapons = global.weaponsObtained
 
 scr_update_weapon()
+
+function scr_process_hit(enemy, addedCharge, addedCombo) {
+	enemy.hitpoints -= damage
+						
+	// knockback
+	enemy.xVelocity += knockback * dcos(directionPointing)
+	enemy.grav -= knockback * dsin(directionPointing)
+	
+	with (enemy) {
+		event_user(enemyUserEvents.globalDetect)
+	}
+						
+	global.railcannonCharge += addedCharge
+	scr_add_combo(addedCombo)
+}
 
 function scr_update_weapon() {
 	canAttack = false
@@ -93,5 +111,17 @@ function scr_update_weapon() {
 			distanceFromPlayer = global.weaponDistance.railcannon
 			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.railcannon
 			break
+		case "blaster":
+			damage = global.weaponDamage.energyRifle
+			knockback = global.knockback.energyRifle
+			attackDuration = global.attackDurations.energyRifle
+			attackCooldown = global.attackCooldowns.energyRifle
+			recoil = global.recoil.energyRifle
+			holdShoot = true
+			
+			currentWeapon = 2
+			sprite_index = spr_energy_rifle
+			distanceFromPlayer = global.weaponDistance.energyRifle
+			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.energyRifle
 	}
 }
