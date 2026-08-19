@@ -1,4 +1,4 @@
-inherit = {}
+inherit = {permakill : false}
 
 for (var i = 0; i < array_length(inheritKeys); i++) {
 	struct_set(inherit, inheritKeys[i], inheritValues[i])
