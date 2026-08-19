@@ -121,6 +121,7 @@
     {"id":{"name":"spr_jimBob","path":"sprites/spr_jimBob/spr_jimBob.yy",},},
     {"id":{"name":"spr_jimmy_gaming_setup","path":"sprites/spr_jimmy_gaming_setup/spr_jimmy_gaming_setup.yy",},},
     {"id":{"name":"spr_ladder","path":"sprites/spr_ladder/spr_ladder.yy",},},
+    {"id":{"name":"spr_moving_solid","path":"sprites/spr_moving_solid/spr_moving_solid.yy",},},
     {"id":{"name":"spr_passable","path":"sprites/spr_passable/spr_passable.yy",},},
     {"id":{"name":"spr_preyditor_gaming_setup","path":"sprites/spr_preyditor_gaming_setup/spr_preyditor_gaming_setup.yy",},},
     {"id":{"name":"spr_prison_crab_kick","path":"sprites/spr_prison_crab_kick/spr_prison_crab_kick.yy",},},

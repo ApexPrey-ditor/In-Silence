@@ -70,7 +70,7 @@ function scr_detonate_grenade() {
 					_target.xVelocity += dcos(direction) * (radius - _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
 					_target.grav -= dsin(direction) * (radius - _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
 					break
-				case obj_weapon_projectile:
+				case obj_grenade:
 					_distanceToObject = distance_to_point(_target.x, _target.y)
 					direction = point_direction(x, y, _target.x, _target.y)
 			

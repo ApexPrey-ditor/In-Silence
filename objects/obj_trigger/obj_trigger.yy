@@ -32,6 +32,7 @@
         "\"playSong\"",
         "\"setCameraZoom\"",
         "\"triggerSpawner\"",
+        "\"triggerMovingPlatform\"",
       ],"multiselect":true,"name":"action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"trigger","filters":[],"listItems":[
         "\"touch\"",
@@ -41,6 +42,7 @@
     {"$GMObjectProperty":"v2","%Name":"asset_id","filters":[],"listItems":[],"multiselect":false,"name":"asset_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"value1","filters":[],"listItems":[],"multiselect":false,"name":"value1","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"value2","filters":[],"listItems":[],"multiselect":false,"name":"value2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"target_id","filters":[],"listItems":[],"multiselect":false,"name":"target_id","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
