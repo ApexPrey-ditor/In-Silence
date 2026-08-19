@@ -19,7 +19,7 @@ jumpRange = 60
 
 flightSpeed = 30
 slamTimer = 15
-shockwaveSpeed = 7
+shockwaveAcceleration = 0.1
 friendlyShockwaveDamage = 1
 targetY = 0
 targetX = 0

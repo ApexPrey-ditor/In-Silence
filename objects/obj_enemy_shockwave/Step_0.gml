@@ -1,4 +1,5 @@
 x += xVelocity
+xVelocity += xAcceleration
 
 if (place_meeting(x, y, solids) or not place_meeting(x, y + 1, solids)) {
 	instance_destroy()	

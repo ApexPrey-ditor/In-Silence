@@ -89,8 +89,8 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 					}
 					else {
 						if (place_meeting(x, y + 1, solids)) {
-							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xVelocity : shockwaveSpeed, creator : id, friendlyDamage : friendlyShockwaveDamage})
-							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xVelocity : -shockwaveSpeed, creator : id, friendlyDamage : friendlyShockwaveDamage})
+							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xAcceleration : shockwaveAcceleration, creator : id, friendlyDamage : friendlyShockwaveDamage})
+							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xAcceleration : -shockwaveAcceleration, creator : id, friendlyDamage : friendlyShockwaveDamage})
 							
 							alarm[0] = attackCooldown
 							attackPhase = -1

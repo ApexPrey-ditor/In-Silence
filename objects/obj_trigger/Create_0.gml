@@ -7,6 +7,9 @@ function scr_trigger_effect() {
 			case "setCameraZoom":
 				obj_camera.scr_camera_scale(value1, value2)
 				break
+			case "triggerSpawner":
+				// stuff here
+				break
 		}
 	}
 	
