@@ -10,11 +10,17 @@ nodes = []
 xSpeed = 0
 ySpeed = 0
 
+movementTime = 1
+repetitions = 0
+
 wasTouching = false
 
 // add easing later
 function scr_move_to_node(time) {
-	nodeOn =+ 1
+	nodeOn += 1
+	if (nodeOn >= array_length(nodes)) {
+		nodeOn = 0
+	}
 	var _nextNode = nodes[nodeOn]
 	
 	direction = point_direction(x, y, _nextNode.x, _nextNode.y)
