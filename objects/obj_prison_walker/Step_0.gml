@@ -16,6 +16,10 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 		sprite_index = spr_prison_walker
 	}
 	
+	if (place_meeting(x, y, obj_player)) {
+		obj_player.scr_hit()
+	}
+	
 	if (place_meeting(x, y + 1, solids)) {
 		xVelocity += sign(image_xscale) * xAcceleration
 		xVelocity = clamp(xVelocity, -topXSpeed, topXSpeed)

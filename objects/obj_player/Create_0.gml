@@ -110,24 +110,16 @@ function scr_dash_cancel() {
 	xVelocity = xVelocity * 1.2
 }
 
-function scr_hit(angle, impact = 10, recovery = 30, damage = 1) {
-	xVelocity = impact * angle
-	grav = -impact
-	xVelocityFrictionless = 0
-	canWalk = true
-	
-	alarm[playerAlarms.hit] = recovery
-	
-	if (climbing) {
-		scr_dismount_ladder()
-	}
-	
+function scr_hit(impact = 10, recovery = 30, damage = 1) {
 	if (!invincibility) {
 		hitpoints -= damage
 		invincibility = true
 		
-		canMove = false
 		alarm[playerAlarms.hit] = recovery
+		
+		obj_init.alarm[initAlarms.unpauseAll] = impact
+		
+		scr_pause_objects(all)
 	}
 }
 

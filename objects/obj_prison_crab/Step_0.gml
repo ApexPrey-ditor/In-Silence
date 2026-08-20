@@ -41,6 +41,9 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 							grav = 0
 							attackPhase = 2
 						}
+						if (place_meeting(x, y, obj_player) and sprite_index == spr_prison_crab_kick) {
+							obj_player.scr_hit()
+						}
 						if (image_index == sprite_get_number(sprite_index) - 1 and sprite_index == spr_prison_crab_punch) {
 							sprite_index = spr_prison_crab
 						}
@@ -127,7 +130,7 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 						sprite_index = spr_prison_crab_punch
 						
 						if (place_meeting(x, y, obj_player)) {
-							// bro got hit
+							obj_player.scr_hit()
 						}
 						
 						if (image_index == sprite_get_number(sprite_index) - 1) {

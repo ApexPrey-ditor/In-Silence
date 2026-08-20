@@ -15,7 +15,7 @@ xVelocity = 0
 doBasicWalk = true
 walkSpeed = 0
 
-parryableAttack = false
+parryable = false
 friendlyPushback = 5
 
 weight = 1

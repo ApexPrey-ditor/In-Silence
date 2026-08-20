@@ -15,6 +15,6 @@ if (_target != noone and _target != creator and _target.object_index != creator 
 		scr_add_combo("friendlyFire")
 	}
 	else if (_target.object_index == obj_player) {
-		// bro got hit
+		obj_player.scr_hit()
 	}
 }
