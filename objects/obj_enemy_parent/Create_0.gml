@@ -16,6 +16,7 @@ doBasicWalk = true
 walkSpeed = 0
 
 parryableAttack = false
+friendlyPushback = 5
 
 weight = 1
 

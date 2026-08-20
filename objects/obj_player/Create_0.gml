@@ -10,7 +10,7 @@ enum playerAlarms {
 }
 
 repeatNames = ["Very ", "Super ", "Ultra ", "OMEGA ", "in silence "]
-repeatValues = [1, 3, 5, 10, 20]
+repeatValues = [1, 3, 5, 10, 100]
 
 grav = 0
 #macro baseIntensity 0.5

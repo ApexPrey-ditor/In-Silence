@@ -2,8 +2,10 @@ enum movingHitboxAlarms {
 	stopMovement
 }
 
+effected = [obj_player, obj_enemy_parent]
+
 nodeOn = 0
-	
+
 nodeObjects = [instance_create_layer(x, y, layer, obj_node, {movementId : movementId, nodeNumber : 0})]
 nodes = []
 
@@ -13,7 +15,7 @@ ySpeed = 0
 movementTime = 1
 repetitions = 0
 
-wasTouching = false
+wasTouching = []
 
 // add easing later
 function scr_move_to_node(time) {

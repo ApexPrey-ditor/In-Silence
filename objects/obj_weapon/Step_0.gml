@@ -170,33 +170,37 @@ if (instance_exists(obj_player)) {
 				xIncrease = dcos(directionPointing)
 				yIncrease = -dsin(directionPointing)
 				
-				while (!position_meeting(hitX, hitY, shootables) and
-						hitX > 0 and hitX < room_width and
+				while (hitX > 0 and hitX < room_width and
 						hitY > 0 and hitY < room_height) {
 					hitX += xIncrease
 					hitY += yIncrease
 				}
 				
-				targetedObject = instance_position(hitX, hitY, shootables)
+				var _targetedObjects = ds_list_create()
+				collision_line_list(x, y, hitX, hitY, shootables, false, true, _targetedObjects, false)
 				
-				if (instance_exists(targetedObject)) {
-					if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-						// enemy
-						scr_process_hit(targetedObject, 0, "baseRailcannon")
-					}
-					else if (targetedObject.object_index == obj_destructable) {
-						instance_destroy(targetedObject)
-					}
-					else if (targetedObject.object_index == obj_target) {
-						with (targetedObject) {
-							scr_trigger_target()
+				for (var i = 0; i < ds_list_size(_targetedObjects); ++i) {
+					targetedObject = ds_list_find_value(_targetedObjects, i)
+					
+				    if (instance_exists(targetedObject)) {
+						if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
+							// enemy
+							scr_process_hit(targetedObject, 0, "baseRailcannon")
 						}
-					}
-					else if (targetedObject.object_index == obj_grenade) {
-						with (targetedObject) {
-							damage += other.damage
-							radius *= railcannonRadiusMultiply
-							scr_detonate_grenade()
+						else if (targetedObject.object_index == obj_destructable) {
+							instance_destroy(targetedObject)
+						}
+						else if (targetedObject.object_index == obj_target) {
+							with (targetedObject) {
+								scr_trigger_target()
+							}
+						}
+						else if (targetedObject.object_index == obj_grenade) {
+							with (targetedObject) {
+								damage += other.damage
+								radius *= railcannonRadiusMultiply
+								scr_detonate_grenade()
+							}
 						}
 					}
 				}
