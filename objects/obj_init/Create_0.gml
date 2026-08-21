@@ -49,7 +49,7 @@ global.weaponDamage = {
 global.attackDurations = {
 	shotgun : 10,
 	revolver : 3,
-	grenadeLauncher : 6,
+	grenadeLauncher : 1, // 6
 	energyRifle : 3,
 	railcannon : 1,
 	blaster : 3
@@ -58,7 +58,7 @@ global.attackDurations = {
 global.attackCooldowns = {
 	shotgun : 30,
 	revolver : 20,
-	grenadeLauncher : 60,
+	grenadeLauncher : 1, // 60
 	energyRifle : 7,
 	railcannon : 1,
 	blaster : 3

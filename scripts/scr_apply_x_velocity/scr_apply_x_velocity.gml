@@ -23,9 +23,18 @@ function scr_apply_x_velocity(xvel, solids, applyFriction=true, nonPassable=noon
 	if (place_meeting(x + sign(xvel), y, nonPassable)) {
 		x = floor(x)
 		
+		if (not place_meeting(x + sign(xvel), y - stepUpHeight, nonPassable)) {
+			while (place_meeting(x + sign(xvel), y, nonPassable)) {
+				y -= 1
+			}
+			
+			bounce = true
+		}
+		
 		while (place_meeting(x, y, nonPassable)) {
 			x -= scr_plus_minus(xvel)
 		}
+		
 		
 		if (not bounce) {
 			return 0
