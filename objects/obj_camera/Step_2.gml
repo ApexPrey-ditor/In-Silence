@@ -5,8 +5,8 @@ if (scale != targetScale) {
 		scale = targetScale
 	}
 	
-	viewWidth = ceil(baseWidth * scale)
-	viewHeight = ceil(baseHeight * scale)
+	viewWidth = floor(baseWidth * scale)
+	viewHeight = floor(baseHeight * scale)
 	
 	camera_set_view_size(camera, viewWidth, viewHeight)
 }
