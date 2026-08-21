@@ -1,4 +1,4 @@
-targetObject = noone
+targetObjects = []
 ableToTrigger = true
 
 if (delay > 0) {
@@ -17,41 +17,40 @@ function scr_trigger_effect() {
 					break
 				case "triggerSpawner":
 					with (obj_enemy_spawner) {
-						if (spanwerId == other.targetId) {
-							other.targetObject = id
+						if (spawnerId == other.targetId) {
+							array_push(other.targetObjects, id)
 						}
 					}
 				
-					if (targetObject != noone) {
-						targetObject.scr_start_spawner()
+					for (var m = 0; m < array_length(targetObjects); m++) {
+						targetObjects[m].scr_start_spawner()
 					}
 					break
 				case "triggerMovingPlatform":
 					with (obj_moving_hitbox) {
 						if (movementId == other.targetId) {
-							other.targetObject = id
+							array_push(other.targetObjects, id)
 						}
 					}
-				
-					if (targetObject != noone) {
-						if (value2 == -1) {
-							value2 = infinity
-						}
+					if (value2 == -1) {
+						value2 = infinity
+					}
 					
-						targetObject.movementTime = value1
-						targetObject.repetitions = value2
+					for (var m = 0; m < array_length(targetObjects); m++) {
+						targetObjects[m].movementTime = value1
+						targetObjects[m].repetitions = value2
 					
-						targetObject.scr_move_to_node(value1)
+						targetObjects[m].scr_move_to_node(value1)
 					}
 					break
 				case "triggerTrigger":
 					with (obj_trigger) {
 						if (triggerId == other.nextTriggerID) {
-							other.targetObject = id
+							array_push(other.targetObjects, id)
 						}
 					}
 				
-					if (targetObject != noone) {
+					for (var m = 0; m < array_length(targetObjects); m++) {
 						targetObject.scr_trigger_effect()
 					}
 					break
