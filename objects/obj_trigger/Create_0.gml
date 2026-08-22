@@ -15,7 +15,7 @@ if (delay > 0) {
 
 function scr_trigger_effect() {
 	if (not requirementMet) {
-		if (requirements == "noEnemies" and not instance_exists(obj_enemy_parent)) {
+		if (requirements == "noEnemies" and not (instance_exists(obj_enemy_parent) or instance_exists(obj_enemy_spawner))) {
 			requirementMet = true
 		}
 	}
