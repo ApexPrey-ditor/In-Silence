@@ -1,3 +1,5 @@
+activated = true
+
 if (hitpoints <= 0) {
 	global.comboKills += 1
 	instance_destroy()

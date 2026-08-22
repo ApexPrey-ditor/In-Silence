@@ -15,6 +15,8 @@ xVelocity = 0
 doBasicWalk = true
 walkSpeed = 0
 
+activated = false
+
 parryable = false
 friendlyPushback = 5
 

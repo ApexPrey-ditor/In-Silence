@@ -34,10 +34,15 @@
     {"$GMFolder":"","%Name":"Tile Sets","folderPath":"folders/Tile Sets.yy","name":"Tile Sets","resourceType":"GMFolder","resourceVersion":"2.0",},
     {"$GMFolder":"","%Name":"Timelines","folderPath":"folders/Timelines.yy","name":"Timelines","resourceType":"GMFolder","resourceVersion":"2.0",},
   ],
-  "ForcedPrefabProjectReferences":[],
+  "ForcedPrefabProjectReferences":[
+    {"link":"io.gamemaker.gmparticlepresets-1.0.0","name":"io.gamemaker.gmparticlepresets-1.0.0","path":"io.gamemaker.gmparticlepresets-1.0.0.yyp",},
+  ],
   "IncludedFiles":[],
   "isEcma":false,
-  "LibraryEmitters":[],
+  "LibraryEmitters":[
+    {"name":"wallace","path":"particlelib/wallace/wallace.yy",},
+    {"name":"Blood Trail","path":"particlelib/Blood Trail/Blood Trail.yy",},
+  ],
   "MetaData":{
     "IDEVersion":"2026.0.0.16",
   },
@@ -87,6 +92,7 @@
     {"id":{"name":"scr_add_combo","path":"scripts/scr_add_combo/scr_add_combo.yy",},},
     {"id":{"name":"scr_apply_gravity","path":"scripts/scr_apply_gravity/scr_apply_gravity.yy",},},
     {"id":{"name":"scr_apply_x_velocity","path":"scripts/scr_apply_x_velocity/scr_apply_x_velocity.yy",},},
+    {"id":{"name":"scr_burst_particles","path":"scripts/scr_burst_particles/scr_burst_particles.yy",},},
     {"id":{"name":"scr_find_angle_x_direction","path":"scripts/scr_find_angle_x_direction/scr_find_angle_x_direction.yy",},},
     {"id":{"name":"scr_get_objects_of_tag","path":"scripts/scr_get_objects_of_tag/scr_get_objects_of_tag.yy",},},
     {"id":{"name":"scr_input_check_pressed","path":"scripts/scr_input_check_pressed/scr_input_check_pressed.yy",},},

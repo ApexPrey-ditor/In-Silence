@@ -104,3 +104,38 @@ if (global.shotgunObtained) {
 
  window_set_fullscreen(true)
 // game_set_speed(2, gamespeed_fps)
+
+// holy moly its 10,000 lines of particle effects
+
+// main particle system
+psMain = part_system_create();
+part_system_draw_order(psMain, true);
+
+// blood trail
+pBloodTrail = part_type_create();
+part_type_shape(pBloodTrail, pt_shape_square);
+part_type_size(pBloodTrail, 1, 1, 0, 0);
+part_type_scale(pBloodTrail, 0.2, 0.2);
+part_type_speed(pBloodTrail, 0, 0, 0, 0);
+part_type_direction(pBloodTrail, 80, 100, 0, 0);
+part_type_gravity(pBloodTrail, 0, 270);
+part_type_orientation(pBloodTrail, 0, 0, 0, 0, true);
+part_type_colour3(pBloodTrail, $0000CC, $0000B2, $000099);
+part_type_alpha3(pBloodTrail, 0.392, 0.196, 0);
+part_type_blend(pBloodTrail, false);
+part_type_life(pBloodTrail, 10, 10);
+
+// blood
+pBlood = part_type_create();
+part_type_shape(pBlood, pt_shape_square);
+part_type_size(pBlood, 0.8, 1.2, 0, 0);
+part_type_scale(pBlood, 0.2, 0.2);
+part_type_speed(pBlood, 7, 13, -0.05, 0);
+part_type_direction(pBlood, 0, 360, 0, 0);
+part_type_gravity(pBlood, 0.35, 270);
+part_type_orientation(pBlood, 0, 360, 2, 0, false);
+part_type_colour3(pBlood, $0000FF, $0000E5, $0000CC);
+part_type_alpha3(pBlood, 1, 0.784, 0);
+part_type_blend(pBlood, false);
+part_type_life(pBlood, 80, 80);
+part_type_step(pBlood, 1, pBloodTrail);

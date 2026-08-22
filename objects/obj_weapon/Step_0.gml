@@ -205,7 +205,7 @@ if (instance_exists(obj_player)) {
 					}
 				}
 				
-				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, width : railcannonShotWidth})
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, fadeTime : railcannonShotDuration, width : railcannonShotWidth})
 				break
 			case "blaster":
 				alarm[weaponAlarms.notAttacking] = attackDuration

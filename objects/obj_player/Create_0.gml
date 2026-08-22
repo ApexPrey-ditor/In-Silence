@@ -96,6 +96,16 @@ function scr_reset_player() {
 	hitpoints = 5
 	invincibility = false
 	weight = 3
+	
+	global.railcannonCharge = 0
+	
+	global.comboTimeout = 0
+	
+	for (var i = 0; i < array_length(struct_get_names(global.combo)); i++) {
+		struct_set(global.combo, struct_get_names(global.combo)[i], 0)
+	}
+	
+	global.comboKills = 0
 }
 
 function scr_find_spawn_point(spawnID) {
