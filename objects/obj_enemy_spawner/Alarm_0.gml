@@ -6,3 +6,6 @@ amount -= 1
 if (amount > 0) {
 	alarm[0] = repeatDelay
 }
+else {
+	instance_destroy()
+}

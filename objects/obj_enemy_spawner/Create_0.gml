@@ -23,6 +23,8 @@ function scr_start_spawner() {
 			repeat (amount) {
 				instance_create_layer(x, y, layer, enemy, inherit)
 			}
+			
+			instance_destroy()
 		}
 	}
 }
