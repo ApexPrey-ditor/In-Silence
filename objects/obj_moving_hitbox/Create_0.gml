@@ -2,7 +2,7 @@ enum movingHitboxAlarms {
 	stopMovement
 }
 
-effected = [obj_player, obj_enemy_parent]
+effected = [obj_player, obj_enemy_parent, obj_grenade]
 
 nodeOn = 0
 

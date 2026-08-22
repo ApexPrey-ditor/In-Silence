@@ -1,10 +1,12 @@
 event_inherited()
 
-if (place_meeting(x, y, target)) {
+var _targeted = instance_place(x, y, target)
+
+if (_targeted != noone) {
 	if (frictionless) {
-		target.xVelocityFrictionless = x_vel
-		target.alarm[playerAlarms.removeFrictionlessXVelocity] = frictionlessTimeout
+		_targeted.xVelocityFrictionless = x_vel
+		_targeted.alarm[playerAlarms.removeFrictionlessXVelocity] = frictionlessTimeout
 	}
-	target.xVelocity = x_vel
-	target.grav = y_vel
+	_targeted.xVelocity = x_vel
+	_targeted.grav = y_vel
 }

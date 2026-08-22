@@ -35,6 +35,7 @@
     {"$GMObjectProperty":"v2","%Name":"action","filters":[],"listItems":[
         "\"playSong\"",
         "\"setCameraZoom\"",
+        "\"setCameraOffset\"",
         "\"triggerSpawner\"",
         "\"triggerMovingPlatform\"",
         "\"triggerTrigger\"",
@@ -44,6 +45,10 @@
         "\"instant\"",
         "\"triggered\"",
       ],"multiselect":false,"name":"trigger","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"touch\"","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"requirements","filters":[],"listItems":[
+        "\"none\"",
+        "\"noEnemies\"",
+      ],"multiselect":false,"name":"requirements","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"none\"","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"delay","filters":[],"listItems":[],"multiselect":false,"name":"delay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"oneTime","filters":[],"listItems":[],"multiselect":false,"name":"oneTime","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"permaDestroy","filters":[],"listItems":[],"multiselect":false,"name":"permaDestroy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
@@ -51,6 +56,7 @@
     {"$GMObjectProperty":"v2","%Name":"assetId","filters":[],"listItems":[],"multiselect":false,"name":"assetId","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
     {"$GMObjectProperty":"v2","%Name":"value1","filters":[],"listItems":[],"multiselect":false,"name":"value1","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"value2","filters":[],"listItems":[],"multiselect":false,"name":"value2","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
+    {"$GMObjectProperty":"v2","%Name":"value3","filters":[],"listItems":[],"multiselect":false,"name":"value3","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0.0","varType":0,},
     {"$GMObjectProperty":"v2","%Name":"targetId","filters":[],"listItems":[],"multiselect":false,"name":"targetId","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"nextTriggerID","filters":[],"listItems":[],"multiselect":false,"name":"nextTriggerID","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
   ],

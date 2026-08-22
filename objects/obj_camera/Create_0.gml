@@ -7,6 +7,13 @@ viewHeight = 1080
 cameraX = 0
 cameraY = 0
 
+cameraOffsetX = 0
+cameraOffsetY = 0
+targetXOffset = 0
+targetYOffset = 0
+xSpeed = 0
+ySpeed = 0
+
 scale = 1
 targetScale = 1
 scaleSpeed = 0
@@ -26,12 +33,25 @@ function scr_camera_scale(targetPos, time) {
 		targetPos = min(room_width / baseWidth, room_height / baseHeight)
 	}
 	if (time == 0) {
-		show_debug_message("Invalid Camera Time Scale")
+		show_debug_message("Invalid Camera Time Scale (scaling)")
 	}
 	else {
 		scaleSpeed = (targetPos - scale) / time
 		
 		targetScale = targetPos
+	}
+}
+
+function scr_camera_offset(targetX, targetY, time) {
+	if (time == 0) {
+		show_debug_message("Invalid Camera Time Scale (offset)")
+	}
+	else {
+		xSpeed = (cameraOffsetX - targetX) / time
+		ySpeed = (cameraOffsetY - targetY) / time
+		
+		targetXOffset = targetX
+		targetYOffset = targetY
 	}
 }
 

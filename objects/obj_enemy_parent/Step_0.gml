@@ -25,7 +25,7 @@ if (instance_exists(obj_player)) {
 	}
 }
 
-if (doBasicWalk) {
+if (doBasicWalk and place_meeting(x, y + 1, solids)) {
 	xVelocity = walkSpeed * xDirection
 
 	if (place_meeting(x + xDirection, y, solids) or !position_meeting(x + (abs(sprite_width) / 2 * xDirection) + xDirection, bbox_bottom + stepUpHeight + 1, solids) or bbox_left + xVelocity < 0 or bbox_right + xVelocity > room_width) {
