@@ -1,4 +1,4 @@
-room_goto(rm_prison_02)
+room_goto(rm_prison_07)
 //room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
