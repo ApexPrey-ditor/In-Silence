@@ -47,8 +47,8 @@ function scr_camera_offset(targetX, targetY, time) {
 		show_debug_message("Invalid Camera Time Scale (offset)")
 	}
 	else {
-		xSpeed = (cameraOffsetX - targetX) / time
-		ySpeed = (cameraOffsetY - targetY) / time
+		xSpeed = (targetX - cameraOffsetX) / time
+		ySpeed = (targetY - cameraOffsetY) / time
 		
 		targetXOffset = targetX
 		targetYOffset = targetY
