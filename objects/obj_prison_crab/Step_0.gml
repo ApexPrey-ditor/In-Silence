@@ -3,10 +3,12 @@ event_inherited()
 
 if (calculateMovement) {
 	var _preSpriteIndex = sprite_index
+	var _preImageIndex = image_index
 	sprite_index = spr_prison_crab
 	grav = scr_apply_gravity(grav, baseIntensity, terminalVelocity, solids)
 	xVelocity = scr_apply_x_velocity(xVelocity, solids, applyFriction)
 	sprite_index = _preSpriteIndex
+	image_index = _preImageIndex
 }
 
 // actual AI

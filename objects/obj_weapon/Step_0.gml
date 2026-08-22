@@ -170,7 +170,8 @@ if (instance_exists(obj_player)) {
 				xIncrease = dcos(directionPointing)
 				yIncrease = -dsin(directionPointing)
 				
-				while (hitX > 0 and hitX < room_width and
+				while (!position_meeting(hitX, hitY, solids) and
+						hitX > 0 and hitX < room_width and
 						hitY > 0 and hitY < room_height) {
 					hitX += xIncrease
 					hitY += yIncrease

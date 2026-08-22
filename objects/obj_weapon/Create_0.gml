@@ -35,6 +35,7 @@ attackCooldown = 0
 recoil = 0
 
 shootables = scr_get_objects_of_tag("shootable")
+solids = scr_get_objects_of_tag("solid")
 
 currentWeapon = 0
 weapons = global.weaponsObtained
