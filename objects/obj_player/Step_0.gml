@@ -188,6 +188,11 @@ if (place_meeting(x, y, hurtboxes)) {
 	scr_hit()
 }
 
+if (hitpoints <= 0) {
+	scr_reset_player()
+	room_restart()
+}
+
 // climing
 if (place_meeting(x, y, obj_ladder)) {
 	if (scr_input_check(keybinds.up) and !climbing and canMove) {

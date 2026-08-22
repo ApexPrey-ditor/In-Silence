@@ -78,7 +78,7 @@ function scr_update_weapon() {
 			attackDuration = global.attackDurations.grenadeLauncher
 			attackCooldown = global.attackCooldowns.grenadeLauncher
 			recoil = global.recoil.grenadeLauncher
-			holdShoot = true // false
+			holdShoot = false // false
 			
 			currentWeapon = 1
 			sprite_index = spr_grenade_launcher

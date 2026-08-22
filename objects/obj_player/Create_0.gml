@@ -71,6 +71,33 @@ weight = 3
 spawnPointID = 0
 spawnPointOffset = 1
 
+function scr_reset_player() {
+	grav = 0
+
+	jumpBuffer = 0
+	dashBuffer = 0
+	stamina = 3
+	isDashing = false
+
+	canWalk = true
+	canMove = true
+	isSlamming = false
+	isDiving = false
+	isSliding = false
+	
+	climbing = false
+
+	xVelocity = 0
+	xVelocityFrictionless = 0
+
+	afterImages = []
+	afterImageCooldown = 0
+
+	hitpoints = 5
+	invincibility = false
+	weight = 3
+}
+
 function scr_find_spawn_point(spawnID) {
 	var numberOfEntryPoints = instance_number(obj_room_entry_point)
 	var entryID = noone
