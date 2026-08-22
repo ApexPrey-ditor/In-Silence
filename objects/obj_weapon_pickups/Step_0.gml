@@ -1,3 +1,5 @@
+event_inherited()
+
 if (place_meeting(x, y, obj_player)) {
 	if (weapon == "stabilizer") {
 		global.stabilizerObtained = true

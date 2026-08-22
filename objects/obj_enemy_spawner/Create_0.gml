@@ -1,3 +1,5 @@
+event_inherited()
+
 inherit = {permakill : false}
 
 for (var i = 0; i < array_length(inheritKeys); i++) {

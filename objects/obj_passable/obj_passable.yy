@@ -9,7 +9,10 @@
     "name":"Room Hitboxes",
     "path":"folders/Objects/Room Hitboxes.yy",
   },
-  "parentObjectId":null,
+  "parentObjectId":{
+    "name":"obj_hitbox_parent",
+    "path":"objects/obj_hitbox_parent/obj_hitbox_parent.yy",
+  },
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,

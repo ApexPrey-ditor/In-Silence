@@ -1,3 +1,5 @@
+event_inherited()
+
 if (place_meeting(x, y, target)) {
 	if (frictionless) {
 		target.xVelocityFrictionless = x_vel

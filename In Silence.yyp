@@ -57,6 +57,7 @@
     {"id":{"name":"obj_enemy_shockwave","path":"objects/obj_enemy_shockwave/obj_enemy_shockwave.yy",},},
     {"id":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},},
     {"id":{"name":"obj_grenade","path":"objects/obj_grenade/obj_grenade.yy",},},
+    {"id":{"name":"obj_hitbox_parent","path":"objects/obj_hitbox_parent/obj_hitbox_parent.yy",},},
     {"id":{"name":"obj_hurtbox","path":"objects/obj_hurtbox/obj_hurtbox.yy",},},
     {"id":{"name":"obj_init","path":"objects/obj_init/obj_init.yy",},},
     {"id":{"name":"obj_invisible","path":"objects/obj_invisible/obj_invisible.yy",},},

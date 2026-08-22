@@ -1,3 +1,5 @@
+event_inherited()
+
 nextTrigger = noone
 
 function scr_trigger_target() {
@@ -14,7 +16,5 @@ function scr_trigger_target() {
 }
 
 function scr_apply_target_action() {
-	with (nextTrigger) {
-		scr_apply_with_delay()
-	}
+	nextTrigger.scr_trigger_effect()
 }

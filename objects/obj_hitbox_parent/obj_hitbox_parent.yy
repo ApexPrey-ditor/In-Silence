@@ -1,20 +1,18 @@
 {
   "$GMObject":"",
-  "%Name":"obj_solid_hitbox",
+  "%Name":"obj_hitbox_parent",
   "eventList":[
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
-  "name":"obj_solid_hitbox",
+  "name":"obj_hitbox_parent",
   "overriddenProperties":[],
   "parent":{
     "name":"Room Hitboxes",
     "path":"folders/Objects/Room Hitboxes.yy",
   },
-  "parentObjectId":{
-    "name":"obj_hitbox_parent",
-    "path":"objects/obj_hitbox_parent/obj_hitbox_parent.yy",
-  },
+  "parentObjectId":null,
   "persistent":false,
   "physicsAngularDamping":0.1,
   "physicsDensity":0.5,
@@ -29,20 +27,12 @@
   "physicsShapePoints":[],
   "physicsStartAwake":true,
   "properties":[
-    {"$GMObjectProperty":"v2","%Name":"precise","filters":[],"listItems":[],"multiselect":false,"name":"precise","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"attach","filters":[],"listItems":[],"multiselect":false,"name":"attach","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
   "solid":false,
-  "spriteId":{
-    "name":"spr_solid",
-    "path":"sprites/spr_solid/spr_solid.yy",
-  },
+  "spriteId":null,
   "spriteMaskId":null,
-  "tags":[
-    "solid",
-    "nonpassable",
-    "shootable",
-  ],
   "visible":true,
 }
