@@ -1,12 +1,12 @@
 // Inherit the parent event
 event_inherited()
 
-xAcceleration = 0.3
+xAcceleration = 0.25
 walkSpeed = 3
 
 hitpoints = 5
 
-topXSpeed = 15
+topXSpeed = 10
 
 jumpHeight = 13
 jumpRange = 2
