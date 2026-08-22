@@ -1,5 +1,6 @@
 targetObjects = []
 ableToTrigger = true
+waiting = false
 
 if (delay > 0) {
 	ableToTrigger = false
@@ -65,6 +66,7 @@ function scr_trigger_effect() {
 		}
 	}
 	else {
+		waiting = true
 		alarm[0] = delay
 	}
 }

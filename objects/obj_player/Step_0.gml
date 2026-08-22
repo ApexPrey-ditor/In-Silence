@@ -185,8 +185,7 @@ if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 }
 
 if (place_meeting(x, y, hurtboxes)) {
-	scr_hit(0, 0, 15)
-	room_restart()
+	scr_hit()
 }
 
 // climing

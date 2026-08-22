@@ -7,7 +7,7 @@ if (attach) {
 	attached = instance_place(x, y, obj_moving_hitbox)
 	
 	if (attached != noone) {
-		xOffset = attached.x - x
-		yOffset = attached.y - y
+		xOffset = x - attached.x
+		yOffset = y - attached.y
 	}
 }
