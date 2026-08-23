@@ -173,4 +173,8 @@ keybinds = {left : [ord("A")],
 			shoot : [mb_left],
 			quickShotgun : [mb_right],
 			switchWeapon : [ord("E")],
-			switchBackwards : [ord("Q")]}
+			switchBackwards : [ord("Q")],
+			switchRevolver : [ord("1")],
+			switchGrenadeLauncher : [ord("2")],
+			switchEnergyRifle : [ord("3")],
+			switchRailcannon : [ord("4")],}

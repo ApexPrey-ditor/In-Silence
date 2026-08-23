@@ -25,6 +25,22 @@ if (instance_exists(obj_player)) {
 			
 			scr_update_weapon()
 		}
+		if (scr_input_check_pressed(obj_player.keybinds.switchRevolver)) {
+			weaponSelected = weapons[0]
+			scr_update_weapon()
+		}
+		if (scr_input_check_pressed(obj_player.keybinds.switchGrenadeLauncher)) {
+			weaponSelected = weapons[1]
+			scr_update_weapon()
+		}
+		if (scr_input_check_pressed(obj_player.keybinds.switchEnergyRifle)) {
+			weaponSelected = weapons[2]
+			scr_update_weapon()
+		}
+		if (scr_input_check_pressed(obj_player.keybinds.switchRailcannon)) {
+			weaponSelected = weapons[3]
+			scr_update_weapon()
+		}
 	}
 	
 	x = obj_player.x + (dcos(directionPointing) * distanceFromPlayer)
@@ -199,7 +215,7 @@ if (instance_exists(obj_player)) {
 						else if (targetedObject.object_index == obj_grenade) {
 							with (targetedObject) {
 								damage += other.damage
-								radius *= railcannonRadiusMultiply
+								radius *= other.railcannonRadiusMultiply
 								scr_detonate_grenade()
 							}
 						}

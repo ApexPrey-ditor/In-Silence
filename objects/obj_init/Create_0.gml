@@ -3,7 +3,7 @@ room_goto(rm_prison_01)
 
 //audio_group_load(Music)
 
-//game_set_speed(3, gamespeed_fps)
+//game_set_speed(1, gamespeed_fps)
 
 global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 global.shotgunObtained = true
