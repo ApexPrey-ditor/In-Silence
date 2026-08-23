@@ -35,8 +35,8 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					targetedObject.hitpoints -= global.weaponDamage.shotgun
 					
 					// knockback
-					targetedObject.xVelocity += global.knockback.revolver * dcos(image_angle)
-					targetedObject.grav -= global.knockback.revolver * dsin(image_angle)
+					targetedObject.xVelocity += global.knockback.shotgun * dcos(image_angle)
+					targetedObject.grav -= global.knockback.shotgun * dsin(image_angle)
 					
 					scr_trigger_user_event(targetedObject, enemyUserEvents.parried)
 					
@@ -50,6 +50,8 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					targetedObject.direction += 180
 					targetedObject.speed *= hitbackPower
 					targetedObject.creator = obj_player
+					
+					targetedObject.friendlyDamage *= hitbackPower
 					
 					obj_init.alarm[initAlarms.unpauseAll] = baseParryFreezeFrame
 					
