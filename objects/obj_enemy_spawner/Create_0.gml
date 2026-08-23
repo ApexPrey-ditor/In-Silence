@@ -1,6 +1,6 @@
 event_inherited()
 
-if (countAsEnemy) {
+if (not onlyCountWhenActivated) {
 	global.enemiesLeft += 1
 }
 
@@ -15,6 +15,8 @@ if (not triggered) {
 }
 
 function scr_start_spawner() {
+	global.enemiesLeft += 1
+	
 	if (amount == -1) {
 		amount = infinity
 	}
