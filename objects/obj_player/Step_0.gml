@@ -167,7 +167,7 @@ if (scr_input_check_pressed(keybinds.jump)) {
 // jumping
 if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
-	grav = min(grav, 0) - jumpHeight
+	grav = -jumpHeight
 	_applyFriction = false
 	
 	if (isDashing) {

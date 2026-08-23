@@ -15,11 +15,14 @@ function scr_apply_gravity(currentGravity, intensity, limit, collider, nonpassab
 	if (place_meeting(x, y + 1, collider) or place_meeting(x, y, collider)) {
 		if (currentGravity >= 0) {
 			// if gravity is going down and going into a wall, decrease y until 1 pixel above solid
-			while (place_meeting(x, y, collider)) {
+			
+			var _intoPassable = not place_meeting(x, y - currentGravity, collider) and (currentGravity == 0 or place_meeting(x, y, collider))
+			
+			while (place_meeting(x, y, nonpassable) or (not place_meeting(x, y - currentGravity, collider) and place_meeting(x, y, collider))) {
 				y -= 1
 			}
 			
-			if (not bounce) {
+			if (not bounce and _intoPassable) {
 				return 0
 			}
 		}
