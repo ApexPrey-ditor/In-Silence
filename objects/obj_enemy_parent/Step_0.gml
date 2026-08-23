@@ -16,7 +16,7 @@ var _collidingEnemy = instance_place(x, y, obj_enemy_parent)
 if (_collidingEnemy != noone) {
 	var _centerDistance = point_distance(x, y, _collidingEnemy.x, _collidingEnemy.y)
 	if (_centerDistance < friendlyPushback) {
-		_collidingEnemy.xVelocity += (friendlyPushback - _centerDistance)
+		_collidingEnemy.xVelocity += (friendlyPushback - _centerDistance) * scr_plus_minus(_collidingEnemy.x - x)
 	}
 }
 

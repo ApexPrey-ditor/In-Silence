@@ -2,6 +2,7 @@ draw_set_colour(c_black)
 
 draw_text(10, 10, xVelocity)
 draw_text(10, 25, grav)
+draw_text(10, 40, global.enemiesLeft)
 
 var _screenHeight = view_get_hport(view_current)
 var _screenWidth = view_get_wport(view_current)

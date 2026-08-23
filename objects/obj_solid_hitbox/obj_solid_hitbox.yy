@@ -43,6 +43,7 @@
     "solid",
     "nonpassable",
     "shootable",
+    "nonpiercable",
   ],
   "visible":true,
 }

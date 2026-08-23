@@ -15,12 +15,16 @@ if (delay > 0) {
 
 function scr_trigger_effect() {
 	if (not requirementMet) {
-		if (requirements == "noEnemies" and not (instance_exists(obj_enemy_parent) or instance_exists(obj_enemy_spawner))) {
+		if (requirements == "noEnemies" and global.enemiesLeft <= 0) {
 			requirementMet = true
 		}
 	}
 	if (requirementMet) {
 		if (ableToTrigger) {
+			if (delay > 0) {
+				ableToTrigger = false
+			}
+			
 			for (var i = 0; i < array_length(action); i++) {
 				targetObjects = []
 			

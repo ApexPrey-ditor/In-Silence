@@ -1,4 +1,4 @@
-room_goto(rm_prison_09)
+room_goto(rm_prison_06)
 //room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
@@ -34,6 +34,8 @@ global.comboNames = {baseParry : "Reflective",
 global.comboKills = 0
 #macro comboTimer 180
 global.comboTimeout = comboTimer
+
+global.enemiesLeft = 0
 
 removeFromRoom = {}
 				

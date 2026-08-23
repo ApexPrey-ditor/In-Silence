@@ -152,6 +152,9 @@ function scr_hit(impact = 10, recovery = 30, damage = 1) {
 		hitpoints -= damage
 		invincibility = true
 		
+		canMove = true
+		canWalk = true
+		
 		alarm[playerAlarms.hit] = recovery
 		
 		obj_init.alarm[initAlarms.unpauseAll] = impact

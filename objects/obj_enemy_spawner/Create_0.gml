@@ -1,5 +1,9 @@
 event_inherited()
 
+if (countAsEnemy) {
+	global.enemiesLeft += 1
+}
+
 inherit = {permakill : false}
 
 for (var i = 0; i < array_length(inheritKeys); i++) {
