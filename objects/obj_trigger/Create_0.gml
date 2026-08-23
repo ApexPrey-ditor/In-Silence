@@ -3,6 +3,11 @@ event_inherited()
 targetObjects = []
 ableToTrigger = true
 waiting = false
+
+if (array_contains(requirements, "none")) {
+	array_delete(requirements, array_get_index(requirements, "none"), 1)
+}
+
 requirementsNeeded = array_length(requirements)
 
 if (delay > 0) {
@@ -13,11 +18,11 @@ function scr_trigger_effect() {
 	if (requirementsNeeded > 0) {
 		if (array_contains(requirements, "noEnemies") and global.enemiesLeft <= 0) {
 			requirementsNeeded -= 1
-			array_delete(requirements, array_get_index(requirementsNeeded, "noEnemies"), 1)
+			array_delete(requirements, array_get_index(requirements, "noEnemies"), 1)
 		}
 		if (array_contains(requirements, "triggeredBefore")) {
 			requirementsNeeded -= 1
-			array_delete(requirements, array_get_index(requirementsNeeded, "triggeredBefore"), 1)
+			array_delete(requirements, array_get_index(requirements, "triggeredBefore"), 1)
 		}
 	}
 	if (requirementsNeeded <= 0) {
