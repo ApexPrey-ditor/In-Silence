@@ -6,3 +6,6 @@ if (trigger == "touch") {
 		scr_trigger_effect()
 	}
 }
+if (trigger == "always") {
+	scr_trigger_effect()
+}
