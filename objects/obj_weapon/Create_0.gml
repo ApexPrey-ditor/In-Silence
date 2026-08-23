@@ -17,7 +17,7 @@ energyRifleShotWidth = 3
 
 railcannonRadiusMultiply = 2
 railcannonShotWidth = 15
-railcannonShotDuration = 12
+railcannonShotDuration = 30
 
 blasterSpread = 5
 blasterChargeAdd = 0.1

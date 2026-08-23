@@ -1,4 +1,4 @@
-room_goto(rm_prison_09)
+room_goto(rm_prison_04)
 //room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
@@ -20,6 +20,7 @@ global.combo = {baseParry : 0,
 					baseEnergyRifle : 0,
 					baseRailcannon : 0,
 					friendlyFire : 0,
+					envirokill : 0,
 					outOfBounds : 0}
 global.comboNames = {baseParry : "Reflective",
 					baseShotgun : "Point Blank",
@@ -28,6 +29,7 @@ global.comboNames = {baseParry : "Reflective",
 					baseEnergyRifle : "Weak",
 					baseRailcannon : "Massive",
 					friendlyFire : "Tricky",
+					envirokill : "Environmental",
 					outOfBounds : "Out Of Bounds"}
 global.comboKills = 0
 #macro comboTimer 180

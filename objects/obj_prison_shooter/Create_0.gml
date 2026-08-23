@@ -10,6 +10,8 @@ topXSpeed = 5
 
 range = 512
 
+friendlyPushback = 7
+
 jumpHeight = 13
 solidJumpRange = 15
 

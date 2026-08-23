@@ -1,7 +1,3 @@
-if (place_meeting(x, y, solids)) {
-	instance_destroy()	
-}
-
 var _target = instance_place(x, y, targets)
 
 if (_target != noone and _target != creator and _target.object_index != creator) {
@@ -13,6 +9,13 @@ if (_target != noone and _target != creator and _target.object_index != creator)
 	else if (_target.object_index == obj_player) {
 		obj_player.scr_hit()
 	}
+	else if (_target.object_index == obj_destructable) {
+		instance_destroy(_target)
+	}
 	
 	instance_destroy()
+}
+
+if (place_meeting(x, y, solids)) {
+	instance_destroy()	
 }
