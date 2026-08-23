@@ -6,6 +6,7 @@ if (hitpoints <= 0) {
 }
 
 if (place_meeting(x, y, obj_hurtbox)) {
+	global.comboKills += 1
 	scr_add_combo("envirokill")
 	instance_destroy()
 }
