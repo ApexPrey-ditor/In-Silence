@@ -9,6 +9,10 @@ for (var i = 0; i < ds_list_size(_targets); i++) {
 		_targeted.xVelocityFrictionless = x_vel
 		_targeted.alarm[playerAlarms.removeFrictionlessXVelocity] = frictionlessTimeout
 	}
-	_targeted.xVelocity = x_vel
-	_targeted.grav = y_vel
+	if (x_vel != 0) {
+		_targeted.xVelocity = x_vel
+	}
+	if (y_vel != 0) {
+		_targeted.grav = y_vel
+	}
 }
