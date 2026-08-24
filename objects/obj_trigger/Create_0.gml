@@ -20,10 +20,6 @@ function scr_trigger_effect() {
 			requirementsNeeded -= 1
 			array_delete(requirements, array_get_index(requirements, "noEnemies"), 1)
 		}
-		if (array_contains(requirements, "triggeredBefore")) {
-			requirementsNeeded -= 1
-			array_delete(requirements, array_get_index(requirements, "triggeredBefore"), 1)
-		}
 	}
 	if (requirementsNeeded <= 0) {
 		if (ableToTrigger) {
@@ -76,6 +72,11 @@ function scr_trigger_effect() {
 						with (obj_trigger) {
 							if (triggerId == other.nextTriggerID) {
 								array_push(other.targetObjects, id)
+								
+								if (array_contains(requirements, "triggeredBefore")) {
+									requirementsNeeded -= 1
+									array_delete(requirements, array_get_index(requirements, "triggeredBefore"), 1)
+								}
 							}
 						}
 				
