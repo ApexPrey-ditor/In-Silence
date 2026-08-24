@@ -13,7 +13,7 @@ instance_place_list(x, y, effected, _onPlatform, false)
 
 for (var i = 0; i < ds_list_size(_onPlatform); i++) {
 	var _target = ds_list_find_value(_onPlatform, i)
-	array_union(wasTouching, [_target])
+	wasTouching = array_union(wasTouching, [_target])
 	
 	while (place_meeting(x, y, _target)) {
 		_target.x += scr_plus_minus(xSpeed)
@@ -27,7 +27,7 @@ instance_place_list(x, y - 1, effected, _onPlatform, false)
 
 for (var i = 0; i < ds_list_size(_onPlatform); i++) {
 	var _target = ds_list_find_value(_onPlatform, i)
-	array_union(wasTouching, [_target])
+	wasTouching = array_union(wasTouching, [_target])
 	
 	with (_target) {
 		scr_place_move(other.xSpeed, 0, solids)
