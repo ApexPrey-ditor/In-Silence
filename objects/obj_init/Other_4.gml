@@ -12,6 +12,8 @@ for (var i = 0; i < array_length(structKeysList); i++) {
 		for (var w = 0; w < array_length(instancesToKill); w++) {
 			instance_destroy(instancesToKill[w])
 		}
-		exit
+		break
 	}
 }
+
+global.enemiesLeft = 0
