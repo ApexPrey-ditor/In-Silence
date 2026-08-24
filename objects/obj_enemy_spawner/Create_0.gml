@@ -15,7 +15,9 @@ if (not triggered) {
 }
 
 function scr_start_spawner() {
-	global.enemiesLeft += 1
+	if (onlyCountWhenActivated) {
+		global.enemiesLeft += 1
+	}
 	
 	if (amount == -1) {
 		amount = infinity
