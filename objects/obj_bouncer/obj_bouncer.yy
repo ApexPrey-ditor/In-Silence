@@ -36,6 +36,7 @@
       ],"listItems":[
         "obj_player",
         "obj_enemy_parent",
+        "obj_grenade",
       ],"multiselect":true,"name":"target","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"obj_player","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"frictionless","filters":[],"listItems":[],"multiselect":false,"name":"frictionless","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"frictionlessTimeout","filters":[],"listItems":[],"multiselect":false,"name":"frictionlessTimeout","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"2","varType":1,},

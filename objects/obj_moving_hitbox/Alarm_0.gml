@@ -1,5 +1,15 @@
 // stops movement
 
+if (launch) {
+	for (var i = 0; i < array_length(wasTouching); i++) {
+		wasTouching[i].xVelocity += xSpeed
+		wasTouching[i].grav += ySpeed
+		
+		array_delete(wasTouching, i, 1)
+		i--
+	}
+}
+
 xSpeed = 0
 ySpeed = 0
 

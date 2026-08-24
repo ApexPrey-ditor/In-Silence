@@ -16,8 +16,8 @@ for (var i = 0; i < ds_list_size(_targets); i++) {
 		_targeted.grav = y_vel
 		
 		if (_targeted.object_index == obj_player) {
-			canMove = true
-			canWalk = true
+			_targeted.canMove = true
+			_targeted.canWalk = true
 		}
 	}
 }
