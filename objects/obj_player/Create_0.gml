@@ -106,6 +106,7 @@ function scr_reset_player() {
 	}
 	
 	global.comboKills = 0
+	global.enemiesLeft = 0
 }
 
 function scr_find_spawn_point(spawnID) {
