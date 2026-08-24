@@ -15,10 +15,14 @@ if (delay > 0) {
 }
 
 function scr_trigger_effect() {
-	if (requirementsNeeded > 0) {
-		if (array_contains(requirements, "noEnemies") and global.enemiesLeft <= 0) {
+	for (var i = 0; i < array_length(requirements); i++) {
+		if (requirements[i] == "noEnemies" and global.enemiesLeft <= 0) {
 			requirementsNeeded -= 1
-			array_delete(requirements, array_get_index(requirements, "noEnemies"), 1)
+			array_delete(requirements, i, 1)
+			i--
+		}
+		else {
+			break
 		}
 	}
 	if (requirementsNeeded <= 0) {
