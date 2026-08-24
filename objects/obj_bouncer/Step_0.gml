@@ -14,5 +14,10 @@ for (var i = 0; i < ds_list_size(_targets); i++) {
 	}
 	if (y_vel != 0) {
 		_targeted.grav = y_vel
+		
+		if (_targeted.object_index == obj_player) {
+			canMove = true
+			canWalk = true
+		}
 	}
 }
