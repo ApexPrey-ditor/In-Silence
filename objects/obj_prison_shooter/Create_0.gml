@@ -1,6 +1,11 @@
 // Inherit the parent event
 event_inherited()
 
+#macro shooterScale 0.7
+
+image_xscale = image_xscale * shooterScale
+image_yscale = image_yscale * shooterScale
+
 xAcceleration = 0.5
 walkSpeed = 2
 

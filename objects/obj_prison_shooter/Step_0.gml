@@ -9,6 +9,8 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 	image_xscale = scr_plus_minus(obj_player.x - x) * abs(image_xscale)
 	
 	if (distance_to_object(obj_player) > range or collision_line(x, y, x + xVelocity * solidJumpRange, y, solids, false, true) != noone) {
+		image_speed = 1
+		
 		alarm[0] = -1
 		charging = false
 		
@@ -28,6 +30,9 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 	}
 	else {
 		xVelocity = 0
+		if (sprite_index == spr_prison_shooter) {
+			image_speed = 0
+		}
 		
 		if (not charging) {
 			charging = true
@@ -36,4 +41,8 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 			alarm[0] = cooldown
 		}
 	}
+}
+
+if (sprite_index == spr_prison_shooter_shoot and image_index == sprite_get_number(sprite_index) - 1) {
+	sprite_index = spr_prison_shooter
 }
