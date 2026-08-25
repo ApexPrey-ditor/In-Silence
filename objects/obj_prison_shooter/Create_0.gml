@@ -11,7 +11,7 @@ walkSpeed = 2
 
 weight = 3
 
-hitpoints = 5 * obj_prison_manager.enemyPower
+hitpoints = 4 * obj_prison_manager.enemyPower
 
 topXSpeed = 5
 
