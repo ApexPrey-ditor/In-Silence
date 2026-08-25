@@ -142,6 +142,7 @@
     {"id":{"name":"spr_prison_crab","path":"sprites/spr_prison_crab/spr_prison_crab.yy",},},
     {"id":{"name":"spr_prison_shooter_shoot","path":"sprites/spr_prison_shooter_shoot/spr_prison_shooter_shoot.yy",},},
     {"id":{"name":"spr_prison_shooter","path":"sprites/spr_prison_shooter/spr_prison_shooter.yy",},},
+    {"id":{"name":"spr_prison_upgrader","path":"sprites/spr_prison_upgrader/spr_prison_upgrader.yy",},},
     {"id":{"name":"spr_prison_walker_open","path":"sprites/spr_prison_walker_open/spr_prison_walker_open.yy",},},
     {"id":{"name":"spr_prison_walker","path":"sprites/spr_prison_walker/spr_prison_walker.yy",},},
     {"id":{"name":"spr_proximity_trigger","path":"sprites/spr_proximity_trigger/spr_proximity_trigger.yy",},},
