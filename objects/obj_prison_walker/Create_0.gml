@@ -1,14 +1,14 @@
 // Inherit the parent event
 event_inherited()
 
-xAcceleration = 0.25
+xAcceleration = 0.25 * obj_prison_manager.enemyPower
 walkSpeed = 3
 
-hitpoints = 5
+hitpoints = 5 * obj_prison_manager.enemyPower
 
-topXSpeed = 10
+topXSpeed = 10 * obj_prison_manager.enemyPower
 
-jumpHeight = 13
+jumpHeight = 13 * obj_prison_manager.enemyPower
 jumpRange = 2
 solidJumpRange = 15
 

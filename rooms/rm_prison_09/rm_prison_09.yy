@@ -159,7 +159,7 @@
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":1.0,"x":1376.0,"y":2304.0,},
         {"$GMRInstance":"v4","%Name":"inst_2333E3A8","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2333E3A8","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":24.0,"scaleY":2.0,"x":1056.0,"y":2336.0,},
         {"$GMRInstance":"v4","%Name":"inst_32A59A9F","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_32A59A9F","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"roomGoto","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_prison_10","path":"rooms/rm_prison_10/rm_prison_10.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_prison_10",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"roomGoto","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_prison_normal","path":"rooms/rm_prison_normal/rm_prison_normal.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_prison_normal",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":3.0,"x":1184.0,"y":416.0,},
         {"$GMRInstance":"v4","%Name":"inst_5DFEDE3B","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5DFEDE3B","objectId":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"propertyId":{"name":"enemy","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"resource":{"name":"obj_prison_walker","path":"objects/obj_prison_walker/obj_prison_walker.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"obj_prison_walker",},
@@ -307,6 +307,9 @@
     "Width":2880,
   },
   "sequenceId":null,
+  "tags":[
+    "normalPrison",
+  ],
   "views":[
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

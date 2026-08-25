@@ -66,7 +66,7 @@
         {"$GMRInstance":"v4","%Name":"inst_6227CC5C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6227CC5C","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":59.0,"x":7360.0,"y":-32.0,},
         {"$GMRInstance":"v4","%Name":"inst_267F01B6","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_267F01B6","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":67.0,"scaleY":41.0,"x":6848.0,"y":224.0,},
         {"$GMRInstance":"v4","%Name":"inst_27383ADF","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_27383ADF","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"properties":[
-            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"roomGoto","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_prison_09","path":"rooms/rm_prison_09/rm_prison_09.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_prison_09",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},"propertyId":{"name":"roomGoto","path":"objects/obj_room_transition/obj_room_transition.yy",},"resource":{"name":"rm_prison_normal","path":"rooms/rm_prison_normal/rm_prison_normal.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"rm_prison_normal",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":4.0,"x":7296.0,"y":1632.0,},
         {"$GMRInstance":"v4","%Name":"inst_2FB3E4CA","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_2FB3E4CA","objectId":{"name":"obj_moving_hitbox","path":"objects/obj_moving_hitbox/obj_moving_hitbox.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_moving_hitbox","path":"objects/obj_moving_hitbox/obj_moving_hitbox.yy",},"propertyId":{"name":"movementId","path":"objects/obj_moving_hitbox/obj_moving_hitbox.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"1400",},
@@ -214,6 +214,9 @@
     "Width":7400,
   },
   "sequenceId":null,
+  "tags":[
+    "normalPrison",
+  ],
   "views":[
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},
     {"hborder":32,"hport":768,"hspeed":-1,"hview":768,"inherit":false,"objectId":null,"vborder":32,"visible":false,"vspeed":-1,"wport":1366,"wview":1366,"xport":0,"xview":0,"yport":0,"yview":0,},

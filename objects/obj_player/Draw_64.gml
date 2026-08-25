@@ -1,12 +1,26 @@
 draw_set_colour(c_black)
 
-draw_text(10, 10, xVelocity)
-draw_text(10, 25, grav)
-draw_text(10, 40, global.enemiesLeft)
-
 var _screenHeight = view_get_hport(view_current)
 var _screenWidth = view_get_wport(view_current)
 
+// health
+draw_healthbar(10, _screenHeight - 10, 60, _screenHeight - 20, hitpoints / maxHealth * 100, c_black, c_red, c_green, 0, true, true)
+
+// stamina
+draw_healthbar(10, _screenHeight - 25, 10 + 50/3, _screenHeight - 35, stamina * 100, c_black, c_blue, c_aqua, 0, true, true)
+draw_healthbar(10 + 50/3, _screenHeight - 25, 10 + 50/3*2, _screenHeight - 35, (stamina - 1) * 100, c_black, c_blue, c_aqua, 0, true, true)
+draw_healthbar(10 + 50/3*2, _screenHeight - 25, 60, _screenHeight - 35, (stamina - 2) * 100, c_black, c_blue, c_aqua, 0, true, true)
+
+// railcannon charge
+draw_healthbar(10, _screenHeight - 40, 60, _screenHeight - 50, (global.railcannonCharge / global.railcannonChargeRequirement) * 100, c_black, c_dkgray, c_aqua, 0, true, true)
+
+// General Info
+draw_text(10, _screenHeight - 100, string(global.enemiesLeft) + " Left")
+draw_text(10, _screenHeight - 85, "HSpeed: " + string(xVelocity) + " hu/s")
+draw_text(10, _screenHeight - 70, "VSpeed: " + string(grav) + " vu/s")
+
+
+// combo
 var _combo = ""
 var _keyName = ""
 var _repeatAmout = 0
@@ -70,17 +84,5 @@ else {
 
 draw_set_halign(fa_right)
 draw_text(_screenWidth - 32, 10, "That was a " + _combo)
-
-// health
-draw_healthbar(10, _screenHeight - 10, 60, _screenHeight - 20, hitpoints / 5 * 100, c_black, c_red, c_green, 0, true, true)
-
-// stamina
-draw_healthbar(10, _screenHeight - 25, 10 + 50/3, _screenHeight - 35, stamina * 100, c_black, c_blue, c_aqua, 0, true, true)
-draw_healthbar(10 + 50/3, _screenHeight - 25, 10 + 50/3*2, _screenHeight - 35, (stamina - 1) * 100, c_black, c_blue, c_aqua, 0, true, true)
-draw_healthbar(10 + 50/3*2, _screenHeight - 25, 60, _screenHeight - 35, (stamina - 2) * 100, c_black, c_blue, c_aqua, 0, true, true)
-
-// railcannon charge
-draw_healthbar(10, _screenHeight - 40, 60, _screenHeight - 50, (global.railcannonCharge / global.railcannonChargeRequirement) * 100, c_black, c_dkgray, c_aqua, 0, true, true)
-
 
 scr_reset_draw()

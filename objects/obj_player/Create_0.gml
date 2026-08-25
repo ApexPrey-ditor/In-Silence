@@ -64,6 +64,7 @@ xVelocityFrictionless = 0
 afterImages = []
 afterImageCooldown = 0
 
+maxHealth = 5
 hitpoints = 5
 invincibility = false
 weight = 3

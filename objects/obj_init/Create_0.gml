@@ -1,4 +1,6 @@
-room_goto(rm_prison_09)
+randomise()
+
+room_goto(rm_prison_init)
 //room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
