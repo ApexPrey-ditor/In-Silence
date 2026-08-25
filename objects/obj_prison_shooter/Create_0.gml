@@ -4,6 +4,8 @@ event_inherited()
 xAcceleration = 0.5
 walkSpeed = 2
 
+weight = 3
+
 hitpoints = 5 * obj_prison_manager.enemyPower
 
 topXSpeed = 5

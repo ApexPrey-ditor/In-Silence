@@ -13,6 +13,7 @@ if (room == rm_prison_normal) {
 	
 	if (roomNumber % 3 == 0) {
 		enemyPower += enemyPowerIncrease
+		enemyLevel += 1
 		
 		if (instance_exists(obj_player)) {
 			obj_player.hitpoints = obj_player.maxHealth

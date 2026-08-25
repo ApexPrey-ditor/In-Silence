@@ -4,7 +4,7 @@ event_inherited()
 xAcceleration = 0.5 * obj_prison_manager.enemyPower
 topXSpeed = 15 * obj_prison_manager.enemyPower
 applyFriction = false
-weight = 3
+weight = 4
 
 calculateMovement = true
 
