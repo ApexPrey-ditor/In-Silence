@@ -69,6 +69,7 @@
     {"id":{"name":"obj_prison_crab","path":"objects/obj_prison_crab/obj_prison_crab.yy",},},
     {"id":{"name":"obj_prison_manager","path":"objects/obj_prison_manager/obj_prison_manager.yy",},},
     {"id":{"name":"obj_prison_shooter","path":"objects/obj_prison_shooter/obj_prison_shooter.yy",},},
+    {"id":{"name":"obj_prison_upgrade","path":"objects/obj_prison_upgrade/obj_prison_upgrade.yy",},},
     {"id":{"name":"obj_prison_walker","path":"objects/obj_prison_walker/obj_prison_walker.yy",},},
     {"id":{"name":"obj_room_entry_point","path":"objects/obj_room_entry_point/obj_room_entry_point.yy",},},
     {"id":{"name":"obj_room_transition","path":"objects/obj_room_transition/obj_room_transition.yy",},},
@@ -92,6 +93,7 @@
     {"id":{"name":"rm_prison_10","path":"rooms/rm_prison_10/rm_prison_10.yy",},},
     {"id":{"name":"rm_prison_init","path":"rooms/rm_prison_init/rm_prison_init.yy",},},
     {"id":{"name":"rm_prison_normal","path":"rooms/rm_prison_normal/rm_prison_normal.yy",},},
+    {"id":{"name":"rm_prison_upgrade","path":"rooms/rm_prison_upgrade/rm_prison_upgrade.yy",},},
     {"id":{"name":"rm_test","path":"rooms/rm_test/rm_test.yy",},},
     {"id":{"name":"scr_add_combo","path":"scripts/scr_add_combo/scr_add_combo.yy",},},
     {"id":{"name":"scr_apply_gravity","path":"scripts/scr_apply_gravity/scr_apply_gravity.yy",},},
@@ -171,6 +173,7 @@
     {"roomId":{"name":"rm_prison_10","path":"rooms/rm_prison_10/rm_prison_10.yy",},},
     {"roomId":{"name":"rm_prison_init","path":"rooms/rm_prison_init/rm_prison_init.yy",},},
     {"roomId":{"name":"rm_prison_normal","path":"rooms/rm_prison_normal/rm_prison_normal.yy",},},
+    {"roomId":{"name":"rm_prison_upgrade","path":"rooms/rm_prison_upgrade/rm_prison_upgrade.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[
