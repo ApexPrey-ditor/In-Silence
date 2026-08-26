@@ -1,6 +1,6 @@
 event_inherited()
 
-nextTrigger = noone
+nextTriggers = []
 
 function scr_trigger_target() {
 	if (delay > 0) {
@@ -16,5 +16,7 @@ function scr_trigger_target() {
 }
 
 function scr_apply_target_action() {
-	nextTrigger.scr_trigger_effect()
+	for (var i = 0; i < array_length(nextTriggers); i++) {
+		nextTriggers[i].scr_trigger_effect()
+	}
 }
