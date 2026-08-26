@@ -17,12 +17,14 @@ if (room == rm_prison_normal) {
 	if (roomNumber % 3 == 0) {
 		enemyPower *= enemyPowerIncrease
 		enemyLevel += 1
-		
-		if (instance_exists(obj_player)) {
-			if (roomNumber % 6 == 0) {
-				room_goto(rm_prison_upgrade)
-			}
+	}
+	
+	if (instance_exists(obj_player)) {
+		if (roomNumber % 5 == 0) {
+			room_goto(rm_prison_upgrade)
 		}
 	}
-	room_goto(_nextRoom)
+	else {
+		room_goto(_nextRoom)
+	}
 }
