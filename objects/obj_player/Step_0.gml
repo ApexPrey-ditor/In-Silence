@@ -78,9 +78,9 @@ else {
 	
 	// sliding
 	if (scr_input_check(keybinds.slam) and canMove) {
-		if (abs(xVelocity) < baseSlideSpeed) {
+		if (abs(xVelocity) < slideSpeed) {
 			// sets slide to base speed if under
-			xVelocity = baseSlideSpeed * scr_plus_minus(image_xscale)
+			xVelocity = slideSpeed * scr_plus_minus(image_xscale)
 		}
 		
 		if (isDashing) {
@@ -146,8 +146,8 @@ if (scr_input_check_pressed(keybinds.dash) and canWalk and stamina >= 1) {
 	isDashing = true
 	stamina -= 1
 	
-	if (abs(xVelocity * 1.5) < abs(baseDashSpeed)) {
-		xVelocity = sign(image_xscale) * baseDashSpeed
+	if (abs(xVelocity * 1.5) < abs(dashSpeed)) {
+		xVelocity = sign(image_xscale) * dashSpeed
 	}
 	else {
 		xVelocity = sign(image_xscale) * abs(xVelocity) * 1.5

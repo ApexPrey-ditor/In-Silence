@@ -1,5 +1,5 @@
-x = obj_player.x + (dcos(image_angle) * global.weaponDistance.shotgun)
-y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
+x = obj_player.x + (dcos(image_angle) * distanceFromPlayer)
+y = obj_player.y - (dsin(image_angle) * distanceFromPlayer)
 
 if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 	canAttack = false
@@ -11,17 +11,17 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 		
 	image_alpha = 1
 
-	alarm[weaponAlarms.notAttacking] = global.attackDurations.shotgun
-	alarm[weaponAlarms.takeOffCooldown] = global.attackCooldowns.shotgun
+	alarm[weaponAlarms.notAttacking] = attackDuration
+	alarm[weaponAlarms.takeOffCooldown] = attackCooldown
 		
 	image_angle = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		
-	x = obj_player.x + (dcos(image_angle) * global.weaponDistance.shotgun)
-	y = obj_player.y - (dsin(image_angle) * global.weaponDistance.shotgun)
+	x = obj_player.x + (dcos(image_angle) * distanceFromPlayer)
+	y = obj_player.y - (dsin(image_angle) * distanceFromPlayer)
 	
 	// recoil
-	obj_player.xVelocity -= global.recoil.shotgun * dcos(image_angle)
-	obj_player.grav += global.recoil.shotgun * dsin(image_angle)
+	obj_player.xVelocity -= recoil * dcos(image_angle)
+	obj_player.grav += recoil * dsin(image_angle)
 		
 	var targets = ds_list_create()
 	instance_place_list(x, y, parryables, targets, false)
@@ -32,11 +32,11 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 						
 			if (instance_exists(targetedObject)) {
 				if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
-					targetedObject.hitpoints -= global.weaponDamage.shotgun
+					targetedObject.hitpoints -= damage
 					
 					// knockback
-					targetedObject.xVelocity += global.knockback.shotgun * dcos(image_angle)
-					targetedObject.grav -= global.knockback.shotgun * dsin(image_angle)
+					targetedObject.xVelocity += knockback * dcos(image_angle)
+					targetedObject.grav -= knockback * dsin(image_angle)
 					
 					scr_trigger_user_event(targetedObject, enemyUserEvents.parried)
 					
@@ -60,8 +60,8 @@ if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
 					scr_pause_objects(all)
 				}
 				else if (targetedObject.object_index == obj_grenade) {
-					targetedObject.xVelocity += dcos(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
-					targetedObject.grav -= dsin(image_angle) * (global.weaponDamage.shotgun * hitbackPower)
+					targetedObject.xVelocity += dcos(image_angle) * (damage * hitbackPower)
+					targetedObject.grav -= dsin(image_angle) * (damage * hitbackPower)
 					
 					with (targetedObject) {
 						detonationTime += grenadeLifespanIncrease

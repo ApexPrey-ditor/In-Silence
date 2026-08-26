@@ -63,11 +63,11 @@ function scr_update_weapon() {
 	
 	switch (weaponSelected) {
 		case "revolver":
-			damage = global.weaponDamage.revolver
-			knockback = global.knockback.revolver
-			attackDuration = global.attackDurations.revolver
-			attackCooldown = global.attackCooldowns.revolver
-			recoil = global.recoil.revolver
+			damage = global.weaponDamage.revolver * global.damageMult
+			knockback = global.knockback.revolver * global.knockbackMult
+			attackDuration = ceil(global.attackDurations.revolver * global.durationsMult)
+			attackCooldown = ceil(global.attackCooldowns.revolver * global.cooldownsMult)
+			recoil = global.recoil.revolver * global.recoilMult
 			holdShoot = false
 		
 			currentWeapon = 0
@@ -76,55 +76,43 @@ function scr_update_weapon() {
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
 			break
 		case "grenade_launcher":
-			damage = global.weaponDamage.grenadeLauncher
-			knockback = global.knockback.grenadeLauncher
-			attackDuration = global.attackDurations.grenadeLauncher
-			attackCooldown = global.attackCooldowns.grenadeLauncher
-			recoil = global.recoil.grenadeLauncher
+			damage = global.weaponDamage.grenadeLauncher * global.damageMult
+			knockback = global.knockback.grenadeLauncher * global.knockbackMult
+			attackDuration = ceil(global.attackDurations.grenadeLauncher * global.durationsMult)
+			attackCooldown = ceil(global.attackCooldowns.grenadeLauncher * global.cooldownsMult)
+			recoil = global.recoil.grenadeLauncher * global.recoilMult
 			holdShoot = false // false
 			
 			currentWeapon = 1
 			sprite_index = spr_grenade_launcher
 			distanceFromPlayer = global.weaponDistance.grenadeLauncher
-			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.grenadeLauncher
+			alarm[weaponAlarms.takeOffCooldown] = attackDuration
 			break
 		case "energy_rifle":
-			damage = global.weaponDamage.energyRifle
-			knockback = global.knockback.energyRifle
-			attackDuration = global.attackDurations.energyRifle
-			attackCooldown = global.attackCooldowns.energyRifle
-			recoil = global.recoil.energyRifle
+			damage = global.weaponDamage.energyRifle * global.damageMult
+			knockback = global.knockback.energyRifle * global.knockbackMult
+			attackDuration = ceil(global.attackDurations.energyRifle * global.durationsMult)
+			attackCooldown = ceil(global.attackCooldowns.energyRifle * global.cooldownsMult)
+			recoil = global.recoil.energyRifle * global.recoilMult
 			holdShoot = true
 			
 			currentWeapon = 2
 			sprite_index = spr_energy_rifle
 			distanceFromPlayer = global.weaponDistance.energyRifle
-			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.energyRifle
+			alarm[weaponAlarms.takeOffCooldown] = attackDuration
 			break
 		case "railcannon":
-			damage = global.weaponDamage.railcannon
-			knockback = global.knockback.railcannon
-			attackDuration = global.attackDurations.railcannon
-			attackCooldown = global.attackCooldowns.railcannon
-			recoil = global.recoil.railcannon
+			damage = global.weaponDamage.railcannon * global.damageMult
+			knockback = global.knockback.railcannon * global.knockbackMult
+			attackDuration = ceil(global.attackDurations.railcannon * global.durationsMult)
+			attackCooldown = ceil(global.attackCooldowns.railcannon * global.cooldownsMult)
+			recoil = global.recoil.railcannon * global.recoilMult
 			holdShoot = false
 			
 			currentWeapon = 3
 			sprite_index = spr_railcannon
 			distanceFromPlayer = global.weaponDistance.railcannon
-			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.railcannon
+			alarm[weaponAlarms.takeOffCooldown] = attackDuration
 			break
-		case "blaster":
-			damage = global.weaponDamage.energyRifle
-			knockback = global.knockback.energyRifle
-			attackDuration = global.attackDurations.energyRifle
-			attackCooldown = global.attackCooldowns.energyRifle
-			recoil = global.recoil.energyRifle
-			holdShoot = true
-			
-			currentWeapon = 2
-			sprite_index = spr_energy_rifle
-			distanceFromPlayer = global.weaponDistance.energyRifle
-			alarm[weaponAlarms.takeOffCooldown] = global.attackDurations.energyRifle
 	}
 }

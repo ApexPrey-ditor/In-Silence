@@ -43,6 +43,7 @@ removeFromRoom = {}
 				
 pausedObjects = []
 
+global.damageMult = 1
 global.weaponDamage = {
 	shotgun : 5,
 	revolver : 3,
@@ -52,6 +53,7 @@ global.weaponDamage = {
 	blaster : 0
 }
 
+global.durationsMult = 1
 global.attackDurations = {
 	shotgun : 10,
 	revolver : 3,
@@ -61,6 +63,7 @@ global.attackDurations = {
 	blaster : 3
 }
 
+global.cooldownsMult = 1
 global.attackCooldowns = {
 	shotgun : 30,
 	revolver : 20,
@@ -70,6 +73,7 @@ global.attackCooldowns = {
 	blaster : 3
 }
 
+global.recoilMult = 1
 global.recoil = {
 	shotgun : 4,
 	revolver : 2,
@@ -79,6 +83,7 @@ global.recoil = {
 	baster : 0
 }
 
+global.knockbackMult = 1
 global.knockback = {
 	shotgun : 7,
 	revolver : 3,

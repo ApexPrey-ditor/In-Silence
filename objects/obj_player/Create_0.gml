@@ -12,12 +12,15 @@ enum playerAlarms {
 repeatNames = ["Very ", "Super ", "Ultra ", "OMEGA ", "in silence "]
 repeatValues = [1, 3, 5, 10, 100]
 
+jumpHeightMult = 1
+moveSpeedMult = 1
+
 grav = 0
 #macro baseIntensity 0.5
 gravIntensity = baseIntensity
 gravLimit = 35
 
-jumpHeight = 17
+jumpHeight = 17 * jumpHeightMult
 
 // macros are constants
 #macro cayoteFrameLimit 6
@@ -32,13 +35,16 @@ dashBuffer = 0
 
 #macro airControlFactor 10
 #macro baseWalkSpeed 7
-walkSpeed = baseWalkSpeed
+walkSpeed = baseWalkSpeed * moveSpeedMult
 #macro baseSlideSpeed 13
+slideSpeed = baseSlideSpeed * moveSpeedMult
 #macro baseSlideBoost 4
 
 #macro baseDashSpeed 20
+dashSpeed = baseDashSpeed * moveSpeedMult
 #macro baseDashDuration 15
-#macro maxStamina 3
+#macro baseMaxStamina 3
+maxStamina = baseMaxStamina
 #macro staminaRegenDuration 60
 stamina = 3
 isDashing = false
@@ -50,7 +56,7 @@ isDiving = false
 isSliding = false
 
 #macro baseLadderSpeed 7
-ladderSpeed = baseLadderSpeed
+ladderSpeed = baseLadderSpeed * moveSpeedMult
 climbing = false
 
 #macro airResistance 0.97
@@ -65,7 +71,7 @@ afterImages = []
 afterImageCooldown = 0
 
 maxHealth = 5
-hitpoints = 5
+hitpoints = maxHealth
 invincibility = false
 weight = 3
 
@@ -74,9 +80,22 @@ spawnPointOffset = 1
 
 function scr_reset_player() {
 	grav = 0
+	gravIntensity = baseIntensity
+	gravLimit = 35
+
+	jumpHeight = 17 * jumpHeightMult
+
+	cayoteFrames = cayoteFrameLimit
+	frictionlessFrames = 0
 
 	jumpBuffer = 0
 	dashBuffer = 0
+
+	walkSpeed = baseWalkSpeed * moveSpeedMult
+	slideSpeed = baseSlideSpeed * moveSpeedMult
+
+	dashSpeed = baseDashSpeed * moveSpeedMult
+	maxStamina = baseMaxStamina
 	stamina = 3
 	isDashing = false
 
@@ -85,7 +104,8 @@ function scr_reset_player() {
 	isSlamming = false
 	isDiving = false
 	isSliding = false
-	
+
+	ladderSpeed = baseLadderSpeed * moveSpeedMult
 	climbing = false
 
 	xVelocity = 0
@@ -94,7 +114,8 @@ function scr_reset_player() {
 	afterImages = []
 	afterImageCooldown = 0
 
-	hitpoints = 5
+	maxHealth = 5
+	hitpoints = maxHealth
 	invincibility = false
 	weight = 3
 	

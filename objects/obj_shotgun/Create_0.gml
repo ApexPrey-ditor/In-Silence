@@ -10,4 +10,12 @@ hitbackPower = 3
 
 hitChargeAmount = 1.5
 
+damage = global.weaponDamage.shotgun * global.damageMult
+knockback = global.knockback.shotgun * global.knockbackMult
+attackDuration = global.attackDurations.shotgun * global.durationsMult
+attackCooldown = global.attackCooldowns.shotgun * global.cooldownsMult
+recoil = global.recoil.shotgun * global.recoilMult
+
+distanceFromPlayer = global.weaponDistance.shotgun
+
 image_alpha = 0
