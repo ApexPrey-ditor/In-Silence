@@ -23,7 +23,11 @@ function scr_start_spawner() {
 				instance_create_layer(x, y, layer, enemy, inherit)
 			}
 			
-			instance_destroy()
+			global.enemiesLeft -= 1
+	
+			if (permaDestroy) {
+				scr_permanant_destroy()
+			}
 		}
 	}
 }

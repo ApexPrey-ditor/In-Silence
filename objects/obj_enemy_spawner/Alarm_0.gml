@@ -7,5 +7,9 @@ if (amount > 0) {
 	alarm[0] = repeatDelay
 }
 else {
-	instance_destroy()
+	global.enemiesLeft -= 1
+	
+	if (permaDestroy) {
+		scr_permanant_destroy()
+	}
 }
