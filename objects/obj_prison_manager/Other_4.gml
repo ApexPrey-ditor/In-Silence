@@ -23,8 +23,8 @@ if (room == rm_prison_normal) {
 		if (roomNumber % 5 == 0) {
 			room_goto(rm_prison_upgrade)
 		}
-	}
-	else {
-		room_goto(_nextRoom)
+		else {
+			room_goto(_nextRoom)
+		}
 	}
 }
