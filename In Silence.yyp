@@ -102,6 +102,7 @@
     {"id":{"name":"rm_prison_18","path":"rooms/rm_prison_18/rm_prison_18.yy",},},
     {"id":{"name":"rm_prison_19","path":"rooms/rm_prison_19/rm_prison_19.yy",},},
     {"id":{"name":"rm_prison_20","path":"rooms/rm_prison_20/rm_prison_20.yy",},},
+    {"id":{"name":"rm_prison_bonus_06","path":"rooms/rm_prison_bonus_06/rm_prison_bonus_06.yy",},},
     {"id":{"name":"rm_prison_init","path":"rooms/rm_prison_init/rm_prison_init.yy",},},
     {"id":{"name":"rm_prison_normal","path":"rooms/rm_prison_normal/rm_prison_normal.yy",},},
     {"id":{"name":"rm_prison_upgrade","path":"rooms/rm_prison_upgrade/rm_prison_upgrade.yy",},},
@@ -146,6 +147,7 @@
     {"id":{"name":"spr_jimmy_gaming_setup","path":"sprites/spr_jimmy_gaming_setup/spr_jimmy_gaming_setup.yy",},},
     {"id":{"name":"spr_ladder","path":"sprites/spr_ladder/spr_ladder.yy",},},
     {"id":{"name":"spr_moving_solid","path":"sprites/spr_moving_solid/spr_moving_solid.yy",},},
+    {"id":{"name":"spr_node","path":"sprites/spr_node/spr_node.yy",},},
     {"id":{"name":"spr_passable","path":"sprites/spr_passable/spr_passable.yy",},},
     {"id":{"name":"spr_precise_solid","path":"sprites/spr_precise_solid/spr_precise_solid.yy",},},
     {"id":{"name":"spr_preyditor_gaming_setup","path":"sprites/spr_preyditor_gaming_setup/spr_preyditor_gaming_setup.yy",},},
@@ -198,6 +200,7 @@
     {"roomId":{"name":"rm_prison_18","path":"rooms/rm_prison_18/rm_prison_18.yy",},},
     {"roomId":{"name":"rm_prison_19","path":"rooms/rm_prison_19/rm_prison_19.yy",},},
     {"roomId":{"name":"rm_prison_20","path":"rooms/rm_prison_20/rm_prison_20.yy",},},
+    {"roomId":{"name":"rm_prison_bonus_06","path":"rooms/rm_prison_bonus_06/rm_prison_bonus_06.yy",},},
   ],
   "templateType":"game",
   "TextureGroups":[

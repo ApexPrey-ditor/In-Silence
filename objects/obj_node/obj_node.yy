@@ -34,8 +34,8 @@
   "resourceVersion":"2.0",
   "solid":false,
   "spriteId":{
-    "name":"spr_moving_solid",
-    "path":"sprites/spr_moving_solid/spr_moving_solid.yy",
+    "name":"spr_node",
+    "path":"sprites/spr_node/spr_node.yy",
   },
   "spriteMaskId":null,
   "visible":true,

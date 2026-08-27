@@ -175,12 +175,19 @@ if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 		scr_dash_cancel()
 	}
 	if (isSliding) {
-		isSliding = false
-		canWalk = true
 		sprite_index = spr_jimBob
+		
+		if (place_meeting(x, y, solids)) {
+			sprite_index = spr_jimBob_sliding
+		}
+		else {
+			isSliding = false
+			canWalk = true
+		
 
-		// jumping out gives speed
-		xVelocity += scr_plus_minus(image_xscale) * baseSlideBoost
+			// jumping out gives speed
+			xVelocity += scr_plus_minus(image_xscale) * baseSlideBoost
+		}
 	}
 }
 
