@@ -114,5 +114,18 @@ function scr_update_weapon() {
 			distanceFromPlayer = global.weaponDistance.railcannon
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
 			break
+		case "debug_gun":
+			damage = 9999
+			knockback = 10
+			attackDuration = 1
+			attackCooldown = 1
+			recoil =3
+			holdShoot = true
+			
+			currentWeapon = 4
+			sprite_index = spr_dubug_gun
+			distanceFromPlayer = 48
+			alarm[weaponAlarms.takeOffCooldown] = attackDuration
+			break
 	}
 }

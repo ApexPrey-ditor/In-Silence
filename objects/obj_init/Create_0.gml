@@ -7,7 +7,8 @@ room_goto(rm_prison_init)
 
 //game_set_speed(1, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
+//global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
+global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
 global.shotgunObtained = true
 
 global.railcannonCharge = 0

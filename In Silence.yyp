@@ -131,6 +131,7 @@
     {"id":{"name":"spr_destructable","path":"sprites/spr_destructable/spr_destructable.yy",},},
     {"id":{"name":"spr_drone_1","path":"sprites/spr_drone_1/spr_drone_1.yy",},},
     {"id":{"name":"spr_drone_2","path":"sprites/spr_drone_2/spr_drone_2.yy",},},
+    {"id":{"name":"spr_dubug_gun","path":"sprites/spr_dubug_gun/spr_dubug_gun.yy",},},
     {"id":{"name":"spr_enemy_projectile","path":"sprites/spr_enemy_projectile/spr_enemy_projectile.yy",},},
     {"id":{"name":"spr_enemy_shockwave","path":"sprites/spr_enemy_shockwave/spr_enemy_shockwave.yy",},},
     {"id":{"name":"spr_enemySpawner","path":"sprites/spr_enemySpawner/spr_enemySpawner.yy",},},

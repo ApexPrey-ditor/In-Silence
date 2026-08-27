@@ -224,15 +224,57 @@ if (instance_exists(obj_player)) {
 				
 				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, fadeTime : railcannonShotDuration, width : railcannonShotWidth})
 				break
-			case "blaster":
+			case "debug_gun":
 				alarm[weaponAlarms.notAttacking] = attackDuration
 				alarm[weaponAlarms.takeOffCooldown] = attackCooldown
 				
-				// recoil (blaster has none)
-				// obj_player.xVelocity -= recoil * dcos(directionPointing)
-				// obj_player.grav += recoil * dsin(directionPointing)
+				// recoil
+				obj_player.xVelocity -= recoil * dcos(directionPointing)
+				obj_player.grav += recoil * dsin(directionPointing)
 				
-				instance_create_layer(x, y, layer, obj_grenade, {direction : directionPointing, speed : clamp(distance_to_point(mouse_x, mouse_y) / grenadeSpeedDivisor, grenadeSpeedMin, grenadeSpeedMax), damage : damage})
+				hitX = x
+				hitY = y
+				
+				xIncrease = dcos(directionPointing)
+				yIncrease = -dsin(directionPointing)
+				
+				while (!position_meeting(hitX, hitY, nonpiercables) and
+						hitX > 0 and hitX < room_width and
+						hitY > 0 and hitY < room_height) {
+					hitX += xIncrease
+					hitY += yIncrease
+				}
+				
+				_targetedObjects = ds_list_create()
+				collision_line_list(x, y, hitX, hitY, shootables, false, true, _targetedObjects, false)
+				
+				for (var i = 0; i < ds_list_size(_targetedObjects); ++i) {
+					targetedObject = ds_list_find_value(_targetedObjects, i)
+					
+				    if (instance_exists(targetedObject)) {
+						if (object_is_ancestor(targetedObject.object_index, obj_enemy_parent)) {
+							// enemy
+							scr_process_hit(targetedObject, 0, "baseRailcannon")
+						}
+						else if (targetedObject.object_index == obj_destructable) {
+							instance_destroy(targetedObject)
+						}
+						else if (targetedObject.object_index == obj_target) {
+							with (targetedObject) {
+								scr_trigger_target()
+							}
+						}
+						else if (targetedObject.object_index == obj_grenade) {
+							with (targetedObject) {
+								damage += other.damage
+								radius *= other.railcannonRadiusMultiply
+								scr_detonate_grenade()
+							}
+						}
+					}
+				}
+				
+				instance_create_layer(x, y, layer, obj_visual_projectile, {endX : hitX, endY : hitY, fadeTime : railcannonShotDuration, width : railcannonShotWidth})
 				break
 		}
 	}
