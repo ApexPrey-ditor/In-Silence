@@ -23,7 +23,7 @@ jumpHeight = 13
 solidJumpRange = 15
 
 charging = false
-cooldown = 60 / obj_prison_manager.enemyPower
+cooldown = 60 / ((obj_prison_manager.enemyPower - 1) / 3 + 1)
 
 friendlyDamage = 2
 projectileSpeed = 7

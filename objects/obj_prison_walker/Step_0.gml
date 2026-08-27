@@ -1,8 +1,8 @@
 // Inherit the parent event
 event_inherited()
 
-grav = scr_apply_gravity(grav, baseIntensity, terminalVelocity, solids)
-xVelocity = scr_apply_x_velocity(xVelocity, solids, false)
+grav = scr_apply_gravity(grav, baseIntensity, terminalVelocity, solids, nonpassable)
+xVelocity = scr_apply_x_velocity(xVelocity, solids, false, nonpassable)
 
 // actual AI
 if (not doBasicWalk and instance_exists(obj_player)) {

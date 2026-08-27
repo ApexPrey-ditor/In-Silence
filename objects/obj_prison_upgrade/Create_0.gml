@@ -24,11 +24,14 @@ function scr_apply_upgrade(upgrade) {
 			global.knockbackMult += struct_get(upgrades, upgrade)
 			break
 		case "moveSpeed":
-			show_debug_message("RAAAAAAAAAAAAAAA")
 			if (instance_exists(obj_player)) {
 				obj_player.moveSpeedMult += struct_get(upgrades, upgrade)
 				obj_player.scr_reset_player()
 			}
 			break
+	}
+	
+	if (instance_exists(obj_weapon)) {
+		obj_weapon.scr_update_weapon()
 	}
 }
