@@ -131,6 +131,17 @@ function scr_reset_player() {
 	global.enemiesLeft = 0
 }
 
+function scr_recalc_stats() {
+	jumpHeight = 17 * jumpHeightMult
+	
+	walkSpeed = baseWalkSpeed * moveSpeedMult
+	slideSpeed = baseSlideSpeed * moveSpeedMult
+
+	dashSpeed = baseDashSpeed * moveSpeedMult
+	
+	ladderSpeed = baseLadderSpeed * moveSpeedMult
+}
+
 function scr_find_spawn_point(spawnID) {
 	var numberOfEntryPoints = instance_number(obj_room_entry_point)
 	var entryID = noone

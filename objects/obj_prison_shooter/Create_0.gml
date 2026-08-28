@@ -27,3 +27,5 @@ cooldown = 60 / ((obj_prison_manager.enemyPower - 1) / 3 + 1)
 
 friendlyDamage = 2
 projectileSpeed = 7
+
+lineOfSightBlockers = [obj_solid_hitbox, obj_moving_hitbox]

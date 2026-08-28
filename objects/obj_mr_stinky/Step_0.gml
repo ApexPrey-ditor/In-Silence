@@ -30,9 +30,6 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 	}
 	else {
 		xVelocity = 0
-		if (sprite_index == spr_prison_shooter) {
-			image_speed = 0
-		}
 		
 		if (not charging) {
 			charging = true
@@ -41,8 +38,4 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 			alarm[0] = cooldown
 		}
 	}
-}
-
-if (sprite_index == spr_prison_shooter_shoot and image_index == sprite_get_number(sprite_index) - 1) {
-	sprite_index = spr_prison_shooter
 }
