@@ -8,7 +8,7 @@ xVelocity = scr_apply_x_velocity(xVelocity, solids, false, nonpassable)
 if (not doBasicWalk and instance_exists(obj_player)) {
 	image_xscale = scr_plus_minus(obj_player.x - x) * abs(image_xscale)
 	
-	if (distance_to_object(obj_player) > range or collision_line(x, y, x + xVelocity * solidJumpRange, y, solids, false, true) != noone) {
+	if (distance_to_object(obj_player) > range or collision_line(x, y, obj_player.x, obj_player.y, solids, false, true) != noone) {
 		image_speed = 1
 		
 		alarm[0] = -1
