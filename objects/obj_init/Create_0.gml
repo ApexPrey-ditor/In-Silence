@@ -1,17 +1,17 @@
 randomise()
 
+//room_goto(rm_temp_tutorial)
 room_goto(rm_temp_tutorial)
-//room_goto(rm_mountainside_09_exit)
 
 //audio_group_load(Music)
 
-//game_set_speed(1, gamespeed_fps)
+//game_set_speed(6, gamespeed_fps)
 
 global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
 global.shotgunObtained = true
 
-global.railcannonCharge = 0
+global.railcannonCharge = 10
 global.railcannonChargeRequirement = 10
 
 global.parryChargeAmount = 3
