@@ -11,7 +11,7 @@ global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railc
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
 global.shotgunObtained = true
 
-global.railcannonCharge = 10
+global.railcannonCharge = 0
 global.railcannonChargeRequirement = 10
 
 global.parryChargeAmount = 3
