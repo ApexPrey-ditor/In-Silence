@@ -20,21 +20,21 @@ for (var i = 0; i < ds_list_size(_onPlatform); i++) {
 	}
 }
 
-y += ySpeed
-
 ds_list_clear(_onPlatform)
 instance_place_list(x, y - 1, effected, _onPlatform, false)
+
+y += ySpeed
 
 for (var i = 0; i < ds_list_size(_onPlatform); i++) {
 	var _target = ds_list_find_value(_onPlatform, i)
 	wasTouching = array_union(wasTouching, [_target])
 	
-	with (_target) {
-		scr_place_move(other.xSpeed, 0, solids)
+	while (not place_meeting(x, y - 1, _target)) {
+		_target.y += scr_plus_minus(ySpeed)
 	}
 	
-	while (place_meeting(x, y, _target)) {
-		_target.y += scr_plus_minus(ySpeed)
+	with (_target) {
+		scr_place_move(other.xSpeed, 0, solids)
 	}
 }
 
