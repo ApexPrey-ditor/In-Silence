@@ -5,6 +5,10 @@ if (launch) {
 		wasTouching[i].xVelocity += xSpeed
 		wasTouching[i].grav += ySpeed
 		
+		with (wasTouching[i]) {
+			scr_place_move(other.xSpeed, other.ySpeed, solids)
+		}
+		
 		array_delete(wasTouching, i, 1)
 		i--
 	}
