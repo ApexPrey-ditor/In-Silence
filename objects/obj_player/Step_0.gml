@@ -2,11 +2,15 @@
 //xVelocity += pushedVelocity[coordinate.xPosition]d a 
 //grav += pushedVelocity[coordinate.yPosition]
 
+if (place_meeting(x, y, solids)) {
+	show_debug_message("inside solid")
+}
+
 // does gravity
 grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, nonpassable)
 
 if (place_meeting(x, y, solids)) {
-	//show_debug_message("Grav Failed")
+	show_debug_message("Grav Failed")
 }
 
 var _movement = false
@@ -272,8 +276,12 @@ if (global.comboTimeout == 0) {
 	global.comboKills = 0
 }
 
+if (place_meeting(x, y, solids)) {
+	show_debug_message("inside solid")
+}
+
 xVelocity = scr_apply_x_velocity(xVelocity, solids, _applyFriction, nonpassable, xVelocityFrictionless, _movement)
 
 if (place_meeting(x, y, solids)) {
-	//show_debug_message("x Failed")
+	show_debug_message("x Failed")
 }

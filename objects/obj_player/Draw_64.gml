@@ -1,5 +1,7 @@
 draw_set_colour(c_black)
 
+draw_text(10, 90, string(x) + " " + string(y))
+
 var _screenHeight = view_get_hport(view_current)
 var _screenWidth = view_get_wport(view_current)
 
