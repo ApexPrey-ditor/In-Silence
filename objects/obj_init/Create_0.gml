@@ -54,7 +54,13 @@ global.weaponDamage = {
 	blaster : 0
 }
 
-enum 
+enum baseWeaponDamage {
+	shotgun = 5,
+	revolver = 3,
+	grenadeLauncher = 5,
+	energyRifle = 1,
+	railcannon = 40
+}
 
 global.durationsMult = 1
 global.attackDurations = {
