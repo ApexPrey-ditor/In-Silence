@@ -40,7 +40,7 @@
     {"$GMObjectProperty":"v2","%Name":"permaDestroy","filters":[],"listItems":[],"multiselect":false,"name":"permaDestroy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"amount","filters":[],"listItems":[],"multiselect":false,"name":"amount","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"1","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"repeatDelay","filters":[],"listItems":[],"multiselect":false,"name":"repeatDelay","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
-    {"$GMObjectProperty":"v2","%Name":"onlyCountWhenActivated","filters":[],"listItems":[],"multiselect":false,"name":"onlyCountWhenActivated","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
+    {"$GMObjectProperty":"v2","%Name":"onlyCountWhenActivated","filters":[],"listItems":[],"multiselect":false,"name":"onlyCountWhenActivated","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"True","varType":3,},
   ],
   "resourceType":"GMObject",
   "resourceVersion":"2.0",
