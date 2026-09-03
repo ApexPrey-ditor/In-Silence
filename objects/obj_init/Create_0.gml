@@ -88,7 +88,7 @@ global.knockbackMult = 1
 global.knockback = {
 	shotgun : 7,
 	revolver : 3,
-	grenadeLauncher : 1,
+	grenadeLauncher : 0.7,
 	energyRifle : 1,
 	railcannon : 15,
 	blaster : 0
@@ -101,6 +101,11 @@ global.weaponDistance = {
 	energyRifle : 32,
 	railcannon : 32,
 	blaster : 32
+}
+
+global.augments = {
+	grenadeExplosionRadius : 1,
+	grenadeSize : 1
 }
 
 enum initAlarms {

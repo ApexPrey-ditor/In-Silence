@@ -1,14 +1,11 @@
-upgrades = {damage : 0.1,
-			attackSpeed : 1.1,
-			hitPower : 0.2,
-			moveSpeed : 0.1}
-
 upgradeDescKey = {damage : "+10% Damage",
 			attackSpeed : "+10% Attack Speed",
 			hitPower : "+20% Recoil and Knockback",
-			moveSpeed : "+10% Move Speed"}
+			moveSpeed : "+10% Move Speed",
+			blockRevolver : "Block Revolver: +100% damage, -30% attack speed",
+			bignade : "bignade: Increases grenade size (+50%) and explosion radius (+25%)"}
 			
-modifiers = {easy : "Easy: Enemies level up every 5 rooms, JimBob gets an upgrade every 3 rooms.",
+modifiers = {simple : "Simple: Endless rooms, endless rooms.",
 			normal : "Default: Enemies level up every 3 rooms, JimBob gets an upgrade every 5 rooms.",
 			chaos : "Chaos: Enemies level up every room, Jimbob gets an upgrade every room.",
 			hardcore : "Hardcore: Enemies level up every 3 rooms, JimBob gets no upgrades."}
@@ -23,21 +20,30 @@ else {
 function scr_apply_upgrade(upgrade) {
 	switch (upgrade) {
 		case "damage":
-			global.damageMult += struct_get(upgrades, upgrade)
+			global.damageMult += 0.1
 			break
 		case "attackSpeed":
-			global.cooldownsMult /= struct_get(upgrades, upgrade)
-			global.durationsMult /= struct_get(upgrades, upgrade)
+			global.cooldownsMult /= 1.1
+			global.durationsMult /= 1.1
 			break
 		case "hitPower":
-			global.recoilMult += struct_get(upgrades, upgrade)
-			global.knockbackMult += struct_get(upgrades, upgrade)
+			global.recoilMult += 0.2
+			global.knockbackMult += 0.2
 			break
 		case "moveSpeed":
 			if (instance_exists(obj_player)) {
-				obj_player.moveSpeedMult += struct_get(upgrades, upgrade)
+				obj_player.moveSpeedMult += 0.1
 				obj_player.scr_recalc_stats()
 			}
+			break
+		case "blockRevolver":
+			global.weaponDamage.revolver += 1
+			global.cooldownsMult += 1.3
+			global.durationsMult += 1.3
+			break
+		case "bignade":
+			global.augments.grenadeExplosionRadius += 0.25
+			global.augments.grenadeSize += 0.5
 			break
 	}
 	
@@ -48,9 +54,9 @@ function scr_apply_upgrade(upgrade) {
 
 function scr_apply_modifier(modifier) {
 	switch (modifier) {
-		case "easy":
-			obj_prison_manager.enemyLevelUpRoom = 5
-			obj_prison_manager.playerLevelUpRoom = 3
+		case "simple":
+			obj_prison_manager.enemyLevelUpRoom = infinity
+			obj_prison_manager.playerLevelUpRoom = infinity
 			break
 		case "normal":
 			obj_prison_manager.enemyLevelUpRoom = 3
