@@ -3,7 +3,7 @@ upgradeDescKey = {damage : "+10% Damage",
 			hitPower : "+20% Recoil and Knockback",
 			moveSpeed : "+10% Move Speed",
 			blockRevolver : "Block Revolver: +100% damage, -30% attack speed",
-			bignade : "bignade: Increases grenade size (+50%) and explosion radius (+25%)"}
+			bignade : "Bignade: Increases grenade size (+50%) and explosion radius (+25%)"}
 			
 modifiers = {simple : "Simple: Endless rooms, endless rooms.",
 			normal : "Default: Enemies level up every 3 rooms, JimBob gets an upgrade every 5 rooms.",
