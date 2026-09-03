@@ -2,10 +2,10 @@ enum grenadeAlarms {
 	detonate
 }
 
-image_xscale *= global.augments.grenadeSize
-image_yscale *= global.augments.grenadeSize
+image_xscale *= global.augments.grenadeSizeMultiplier
+image_yscale *= global.augments.grenadeSizeMultiplier
 
-radius *= global.augments.grenadeExplosionRadius
+radius *= global.augments.grenadeExplosionRadiusMultiplier
 
 xVelocity = dcos(direction) * speed
 grav = -dsin(direction) * speed

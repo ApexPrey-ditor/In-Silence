@@ -1,9 +1,10 @@
-upgradeDescKey = {damage : "+10% Damage",
+upgrades = {damage : "+10% Damage",
 			attackSpeed : "+10% Attack Speed",
 			hitPower : "+20% Recoil and Knockback",
 			moveSpeed : "+10% Move Speed",
 			blockRevolver : "Block Revolver: +100% damage, -30% attack speed",
-			bignade : "Bignade: Increases grenade size (+50%) and explosion radius (+25%)"}
+			bignade : "Bignade: Increases grenade size (+50%) and explosion radius (+25%)",
+			erraticRifle : "Erratic Rifle: Increases energy rifle spread (+2) and damage (+25%)"}
 			
 modifiers = {simple : "Simple: Endless rooms, endless rooms.",
 			normal : "Default: Enemies level up every 3 rooms, JimBob gets an upgrade every 5 rooms.",
@@ -42,8 +43,12 @@ function scr_apply_upgrade(upgrade) {
 			global.durationsMult += 1.3
 			break
 		case "bignade":
-			global.augments.grenadeExplosionRadius += 0.25
-			global.augments.grenadeSize += 0.5
+			global.augments.grenadeExplosionRadiusMultiplier += 0.25
+			global.augments.grenadeSizeMultiplier += 0.5
+			break
+		case "erraticRifle":
+			global.weaponDamage.energyRifle +=
+			global.augments.energyRifleSpreadIncrement += 2
 			break
 	}
 	

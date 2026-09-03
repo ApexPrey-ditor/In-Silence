@@ -54,6 +54,8 @@ global.weaponDamage = {
 	blaster : 0
 }
 
+enum 
+
 global.durationsMult = 1
 global.attackDurations = {
 	shotgun : 10,
@@ -104,8 +106,9 @@ global.weaponDistance = {
 }
 
 global.augments = {
-	grenadeExplosionRadius : 1,
-	grenadeSize : 1
+	grenadeExplosionRadiusMultiplier : 1,
+	grenadeSizeMultiplier : 1,
+	energyRifleSpreadIncrement: 0
 }
 
 enum initAlarms {
