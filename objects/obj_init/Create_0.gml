@@ -1,7 +1,7 @@
 randomise()
 
+room_goto(rm_prison_init)
 //room_goto(rm_temp_tutorial)
-room_goto(rm_temp_tutorial)
 
 //audio_group_load(Music)
 
