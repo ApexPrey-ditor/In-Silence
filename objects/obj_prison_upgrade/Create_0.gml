@@ -2,7 +2,7 @@ upgrades = {damage : "+10% Damage",
 			attackSpeed : "+10% Attack Speed",
 			hitPower : "+20% Recoil and Knockback",
 			moveSpeed : "+10% Move Speed",
-			sawedOff : "Sawed Off: +25% attack speed, -15% range",
+			sawedOff : "Sawed Off: +25% shotgun attack speed, -15% shotgun range",
 			blockRevolver : "Block Revolver: +100% damage, -30% attack speed",
 			bignade : "Bignade: Increases grenade size (+50%) and explosion radius (+25%)",
 			erraticRifle : "Erratic Rifle: Increases energy rifle spread (+2) and damage (+25%)",
@@ -41,6 +41,7 @@ function scr_apply_upgrade(upgrade) {
 			break
 		case "sawedOff":
 			global.attackCooldowns.shotgun /= 1.25
+			global.attackDurations.shotgun /= 1.25
 			global.augments.shotgunRangeMultiplier /= 1.15
 			break
 		case "blockRevolver":
@@ -63,6 +64,9 @@ function scr_apply_upgrade(upgrade) {
 	
 	if (instance_exists(obj_weapon)) {
 		obj_weapon.scr_update_weapon()
+	}
+	if (instance_exists(obj_shotgun)) {
+		obj_shotgun.scr_update_shotgun()
 	}
 }
 

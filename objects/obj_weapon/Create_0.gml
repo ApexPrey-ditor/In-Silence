@@ -96,6 +96,8 @@ function scr_update_weapon() {
 			recoil = global.recoil.energyRifle * global.recoilMult
 			holdShoot = true
 			
+			energyRifleShotWidth = 3 + global.augments.energyRifleSpreadIncrement
+			
 			currentWeapon = 2
 			sprite_index = spr_energy_rifle
 			distanceFromPlayer = global.weaponDistance.energyRifle
