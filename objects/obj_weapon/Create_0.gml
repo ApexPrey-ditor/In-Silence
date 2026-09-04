@@ -12,8 +12,8 @@ grenadeSpeedDivisor = 20
 
 energyRifleChargeAdd = 0.2
 energyRifleSpeedAdd = 2
-energyRifleSpread = 3
-energyRifleShotWidth = 3 + global.augments.energyRifleSpreadIncrement
+energyRifleSpread = 3 + global.augments.energyRifleSpreadIncrement
+energyRifleShotWidth = 3
 
 railcannonRadiusMultiply = 2
 railcannonShotWidth = 15
