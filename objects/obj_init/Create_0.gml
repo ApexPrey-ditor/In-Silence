@@ -112,7 +112,7 @@ global.knockbackMult = 1
 enum baseWeaponKnockback {
 	shotgun = 7,
 	revolver = 3,
-	grenadeLauncher = 0.7,
+	grenadeLauncher = 1,
 	energyRifle = 1,
 	railcannon = 15
 }
