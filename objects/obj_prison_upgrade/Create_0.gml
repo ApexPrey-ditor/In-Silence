@@ -2,9 +2,11 @@ upgrades = {damage : "+10% Damage",
 			attackSpeed : "+10% Attack Speed",
 			hitPower : "+20% Recoil and Knockback",
 			moveSpeed : "+10% Move Speed",
+			sawedOff : "Sawed Off: +25% attack speed, -15% range",
 			blockRevolver : "Block Revolver: +100% damage, -30% attack speed",
 			bignade : "Bignade: Increases grenade size (+50%) and explosion radius (+25%)",
-			erraticRifle : "Erratic Rifle: Increases energy rifle spread (+2) and damage (+25%)"}
+			erraticRifle : "Erratic Rifle: Increases energy rifle spread (+2) and damage (+25%)",
+			lowEnergyCannon : "Low Energy Cannon: Decrease railcannon charge requirement (-10%)"}
 			
 modifiers = {simple : "Simple: Endless rooms, endless rooms.",
 			normal : "Default: Enemies level up every 3 rooms, JimBob gets an upgrade every 5 rooms.",
@@ -37,18 +39,25 @@ function scr_apply_upgrade(upgrade) {
 				obj_player.scr_recalc_stats()
 			}
 			break
+		case "sawedOff":
+			global.attackCooldowns.shotgun /= 1.25
+			global.augments.shotgunRangeMultiplier /= 1.15
+			break
 		case "blockRevolver":
-			global.weaponDamage.revolver += 1
-			global.cooldownsMult += 1.3
-			global.durationsMult += 1.3
+			global.weaponDamage.revolver *= 2
+			global.attackCooldowns.revolver *= 1.3
+			global.attackDurations.revolver *= 1.3
 			break
 		case "bignade":
 			global.augments.grenadeExplosionRadiusMultiplier += 0.25
 			global.augments.grenadeSizeMultiplier += 0.5
 			break
 		case "erraticRifle":
-			global.weaponDamage.energyRifle +=
+			global.weaponDamage.energyRifle *= 1.25
 			global.augments.energyRifleSpreadIncrement += 2
+			break
+		case "lowEnergyCannon":
+			global.railcannonChargeRequirement -= 1
 			break
 	}
 	

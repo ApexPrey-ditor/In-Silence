@@ -45,15 +45,6 @@ removeFromRoom = {}
 pausedObjects = []
 
 global.damageMult = 1
-global.weaponDamage = {
-	shotgun : 5,
-	revolver : 3,
-	grenadeLauncher : 5,
-	energyRifle : 1,
-	railcannon : 40,
-	blaster : 0
-}
-
 enum baseWeaponDamage {
 	shotgun = 5,
 	revolver = 3,
@@ -61,45 +52,76 @@ enum baseWeaponDamage {
 	energyRifle = 1,
 	railcannon = 40
 }
+global.weaponDamage = {
+	shotgun : baseWeaponDamage.shotgun,
+	revolver : baseWeaponDamage.revolver,
+	grenadeLauncher : baseWeaponDamage.grenadeLauncher,
+	energyRifle : baseWeaponDamage.energyRifle,
+	railcannon : baseWeaponDamage.railcannon
+}
 
 global.durationsMult = 1
+enum baseWeaponDuration {
+	shotgun = 10,
+	revolver = 3,
+	grenadeLauncher = 6,
+	energyRifle = 3,
+	railcannon = 1
+}
 global.attackDurations = {
-	shotgun : 10,
-	revolver : 3,
-	grenadeLauncher : 6, // 6
-	energyRifle : 3,
-	railcannon : 1,
-	blaster : 3
+	shotgun : baseWeaponDuration.shotgun,
+	revolver : baseWeaponDuration.revolver,
+	grenadeLauncher : baseWeaponDuration.grenadeLauncher,
+	energyRifle : baseWeaponDuration.energyRifle,
+	railcannon : baseWeaponDuration.railcannon
 }
 
 global.cooldownsMult = 1
+enum baseWeaponCooldown {
+	shotgun = 30,
+	revolver = 20,
+	grenadeLauncher = 60,
+	energyRifle = 7,
+	railcannon = 1
+}
 global.attackCooldowns = {
-	shotgun : 30,
-	revolver : 20,
-	grenadeLauncher : 60, // 60
-	energyRifle : 7,
-	railcannon : 1,
-	blaster : 3
+	shotgun : baseWeaponCooldown.shotgun,
+	revolver : baseWeaponCooldown.revolver,
+	grenadeLauncher : baseWeaponCooldown.grenadeLauncher,
+	energyRifle : baseWeaponCooldown.energyRifle,
+	railcannon : baseWeaponCooldown.railcannon
 }
 
 global.recoilMult = 1
+enum baseWeaponRecoil {
+	shotgun = 4,
+	revolver = 2,
+	grenadeLauncher = 4,
+	energyRifle = 1,
+	railcannon = 5
+}
 global.recoil = {
-	shotgun : 4,
-	revolver : 2,
-	grenadeLauncher : 4,
-	energyRifle : 1,
-	railcannon : 5,
-	baster : 0
+	shotgun : baseWeaponRecoil.shotgun,
+	revolver : baseWeaponRecoil.revolver,
+	grenadeLauncher : baseWeaponRecoil.grenadeLauncher,
+	energyRifle : baseWeaponRecoil.energyRifle,
+	railcannon : baseWeaponRecoil.railcannon
 }
 
 global.knockbackMult = 1
+enum baseWeaponKnockback {
+	shotgun = 7,
+	revolver = 3,
+	grenadeLauncher = 0.7,
+	energyRifle = 1,
+	railcannon = 15
+}
 global.knockback = {
-	shotgun : 7,
-	revolver : 3,
-	grenadeLauncher : 0.7,
-	energyRifle : 1,
-	railcannon : 15,
-	blaster : 0
+	shotgun : baseWeaponKnockback.shotgun,
+	revolver : baseWeaponKnockback.revolver,
+	grenadeLauncher : baseWeaponKnockback.grenadeLauncher,
+	energyRifle : baseWeaponKnockback.energyRifle,
+	railcannon : baseWeaponKnockback.railcannon,
 }
 
 global.weaponDistance = {
@@ -111,10 +133,17 @@ global.weaponDistance = {
 	blaster : 32
 }
 
+enum baseAugments {
+	shotgunRangeMultiplier = 1,
+	grenadeExplosionRadiusMultiplier = 1,
+	grenadeSizeMultiplier = 1,
+	energyRifleSpreadIncrement = 0
+}
 global.augments = {
-	grenadeExplosionRadiusMultiplier : 1,
-	grenadeSizeMultiplier : 1,
-	energyRifleSpreadIncrement: 0
+	shotgunRangeMultiplier : baseAugments.shotgunRangeMultiplier,
+	grenadeExplosionRadiusMultiplier : baseAugments.grenadeExplosionRadiusMultiplier,
+	grenadeSizeMultiplier : baseAugments.grenadeSizeMultiplier,
+	energyRifleSpreadIncrement : baseAugments.energyRifleSpreadIncrement
 }
 
 enum initAlarms {
