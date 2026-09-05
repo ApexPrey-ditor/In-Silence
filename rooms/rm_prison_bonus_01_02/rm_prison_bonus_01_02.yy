@@ -91,7 +91,23 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_spawner","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"propertyId":{"name":"onlyCountWhenActivated","path":"objects/obj_enemy_spawner/obj_enemy_spawner.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":5184.0,"y":7680.0,},
       ],"layers":[],"name":"Enemies","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Interactables","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
+    {"$GMRTileLayer":"","%Name":"BackgroundTileset","depth":400,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"BackgroundTileset","properties":[],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":500,"SerialiseWidth":430,"TileCompressedData":[
+          -8600,-2147483648,-49,6,1,3,-380,-2147483648,-49,8,1,15,-380,-2147483648,-49,8,1,15,-380,-2147483648,
+          -49,8,1,15,-380,-2147483648,-49,8,1,15,-380,-2147483648,-49,7,1,10,-187092,-2147483648,1,1,-244,6,1,
+          3,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,
+          -184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,
+          -2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,
+          1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,
+          9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,
+          -244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,
+          8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,
+          1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,
+          15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,
+          -184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-184,
+          -2147483648,1,9,-244,8,1,15,-184,-2147483648,1,9,-244,8,1,15,-92,-2147483648,-92,6,1,0,-244,8,1,0,-92,
+          6,-2150,8,
+        ],"TileDataFormat":1,},"tilesetId":{"name":"ts_dimensional_prison","path":"tilesets/ts_dimensional_prison/ts_dimensional_prison.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
+    {"$GMRInstanceLayer":"","%Name":"Interactables","depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_4AF3231E2_1_1_1_2_1_1_1_2_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4AF3231E2_1_1_1_2_1_1_1_2_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":215.0,"scaleY":3.0,"x":0.0,"y":7904.0,},
         {"$GMRInstance":"v4","%Name":"inst_3E9AAAE7_2_1_1_1_2_1_1_1_2_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_3E9AAAE7_2_1_1_1_2_1_1_1_2_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":4.0,"scaleY":250.0,"x":6880.0,"y":0.0,},
         {"$GMRInstance":"v4","%Name":"inst_80C14EE2_1_1_1_2_1_1_1_2_2","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_80C14EE2_1_1_1_2_1_1_1_2_2","objectId":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},"properties":[],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":225.0,"scaleY":4.0,"x":-192.0,"y":-128.0,},
@@ -199,7 +215,7 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_bouncer","path":"objects/obj_bouncer/obj_bouncer.yy",},"propertyId":{"name":"x_vel","path":"objects/obj_bouncer/obj_bouncer.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"0",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":10.0,"scaleY":1.0,"x":3328.0,"y":7328.0,},
       ],"layers":[],"name":"Interactables","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4293256677,"depth":500,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
+    {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4293256677,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],
   "name":"rm_prison_bonus_01_02",
   "parent":{

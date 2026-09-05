@@ -4,7 +4,7 @@
   "bboxMode":0,
   "bbox_bottom":47,
   "bbox_left":0,
-  "bbox_right":127,
+  "bbox_right":95,
   "bbox_top":0,
   "collisionKind":1,
   "collisionTolerance":0,
@@ -12,27 +12,27 @@
   "edgeFiltering":false,
   "For3D":false,
   "frames":[
-    {"$GMSpriteFrame":"v1","%Name":"9ac36104-e630-450c-b2df-5da94256acf4","name":"9ac36104-e630-450c-b2df-5da94256acf4","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
+    {"$GMSpriteFrame":"v1","%Name":"8b4616d5-2244-4aad-8f54-bd03053ff0ee","name":"8b4616d5-2244-4aad-8f54-bd03053ff0ee","resourceType":"GMSpriteFrame","resourceVersion":"2.0",},
   ],
   "gridX":0,
   "gridY":0,
   "height":48,
   "HTile":false,
   "layers":[
-    {"$GMImageLayer":"","%Name":"584519b0-28de-4dc4-b142-b2af3d4e681a","blendMode":0,"displayName":"default","isLocked":false,"name":"584519b0-28de-4dc4-b142-b2af3d4e681a","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
+    {"$GMImageLayer":"","%Name":"97657bd8-3b22-4c1b-a1ff-9453eb823a89","blendMode":0,"displayName":"default","isLocked":false,"name":"97657bd8-3b22-4c1b-a1ff-9453eb823a89","opacity":100.0,"resourceType":"GMImageLayer","resourceVersion":"2.0","visible":true,},
   ],
   "name":"spr_dimensional_prison_tileset",
   "nineSlice":{
     "$GMNineSliceData":"",
-    "bottom":16,
+    "bottom":21,
     "enabled":false,
     "guideColour":[4294902015,4294902015,4294902015,4294902015,],
     "highlightColour":1728023040,
     "highlightStyle":0,
-    "left":80,
+    "left":60,
     "resourceType":"GMNineSliceData",
     "resourceVersion":"2.0",
-    "right":16,
+    "right":12,
     "tileMode":[
       0,
       0,
@@ -40,7 +40,7 @@
       0,
       0,
     ],
-    "top":16,
+    "top":21,
   },
   "origin":0,
   "parent":{
@@ -88,8 +88,8 @@
     "tracks":[
       {"$GMSpriteFramesTrack":"","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"$KeyframeStore<SpriteFrameKeyframe>":"","Keyframes":[
             {"$Keyframe<SpriteFrameKeyframe>":"","Channels":{
-                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"9ac36104-e630-450c-b2df-5da94256acf4","path":"sprites/spr_dimensional_prison_tileset/spr_dimensional_prison_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
-              },"Disabled":false,"id":"e530d70d-3e95-4e2f-9e88-6274b360a399","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
+                "0":{"$SpriteFrameKeyframe":"","Id":{"name":"8b4616d5-2244-4aad-8f54-bd03053ff0ee","path":"sprites/spr_dimensional_prison_tileset/spr_dimensional_prison_tileset.yy",},"resourceType":"SpriteFrameKeyframe","resourceVersion":"2.0",},
+              },"Disabled":false,"id":"e40f8b5a-b3da-44e4-8092-089009df7e15","IsCreationKey":false,"Key":0.0,"Length":1.0,"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"2.0","Stretch":false,},
           ],"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"2.0",},"modifiers":[],"name":"frames","resourceType":"GMSpriteFramesTrack","resourceVersion":"2.0","spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
     ],
     "visibleRange":null,
@@ -105,5 +105,5 @@
   },
   "type":0,
   "VTile":false,
-  "width":128,
+  "width":96,
 }
