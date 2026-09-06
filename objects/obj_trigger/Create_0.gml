@@ -99,7 +99,7 @@ function scr_trigger_effect() {
 			}
 		}
 		else {
-			if (waiting) {
+			if (not waiting) {
 				waiting = true
 				alarm[0] = delay
 			}
