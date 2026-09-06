@@ -99,8 +99,10 @@ function scr_trigger_effect() {
 			}
 		}
 		else {
-			waiting = true
-			alarm[0] = delay
+			if (waiting) {
+				waiting = true
+				alarm[0] = delay
+			}
 		}
 	}
 }

@@ -1,4 +1,4 @@
-if (place_meeting(x + xVelocity, y, solids)) {
+if (place_meeting(x + xVelocity, y, nonpassables)) {
 	while (!place_meeting(x + sign(xVelocity), y, solids)) {
 		x += sign(xVelocity)
 	}
@@ -14,7 +14,7 @@ if (place_meeting(x + xVelocity, y, solids)) {
 	xVelocity = -xVelocity * bounceEfficiency
 }
 
-if (place_meeting(x, y + grav, solids)) {
+if (place_meeting(x, y + grav, solids) and (grav > 0 or place_meeting(x, y + grav, nonpassables))) {
 	while (!place_meeting(x, y + sign(grav), solids)) {
 		y += sign(grav)
 	}
@@ -34,5 +34,5 @@ if (place_meeting(x, y, shootables)) {
 	scr_detonate_grenade()
 }
 
-grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, , true)
-xVelocity = scr_apply_x_velocity(xVelocity, solids, , , , , true)
+grav = scr_apply_gravity(grav, gravIntensity, gravLimit, solids, nonpassables, true)
+xVelocity = scr_apply_x_velocity(xVelocity, nonpassables, , , , , true)

@@ -14,6 +14,7 @@ speed = 0
 
 solids = scr_get_objects_of_tag("solid")
 array_push(solids, obj_grenade)
+nonpassables = scr_get_objects_of_tag("nonpassable")
 shootables = scr_get_objects_of_tag("shootable")
 effected = [obj_player, obj_enemy_parent, obj_grenade, obj_destructable, obj_target]
 
