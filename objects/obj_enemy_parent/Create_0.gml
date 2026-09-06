@@ -27,6 +27,9 @@ bounceHeight = 10
 soundDetectionRange = 2400
 visualDetectionRange = 1600
 
+invulnerable = false
+environmentImmune = false
+
 global.enemiesLeft += 1
 
 function scr_test_sound_detection(originX, originY, detectionMultiplier=1) {

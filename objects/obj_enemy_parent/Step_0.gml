@@ -5,7 +5,7 @@ if (hitpoints <= 0) {
 	instance_destroy()
 }
 
-if (place_meeting(x, y, obj_hurtbox)) {
+if (place_meeting(x, y, obj_hurtbox) and not invulnerable and not environmentImmune) {
 	global.comboKills += 1
 	scr_add_combo("envirokill")
 	instance_destroy()

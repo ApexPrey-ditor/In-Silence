@@ -44,7 +44,9 @@ weapons = global.weaponsObtained
 scr_update_weapon()
 
 function scr_process_hit(enemy, addedCharge, addedCombo) {
-	enemy.hitpoints -= damage
+	if (not enemy.invulnerable) {
+		enemy.hitpoints -= damage
+	}
 						
 	// knockback
 	enemy.xVelocity += knockback * dcos(directionPointing)

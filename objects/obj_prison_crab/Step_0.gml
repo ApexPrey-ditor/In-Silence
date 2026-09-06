@@ -62,6 +62,7 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 					}
 					break
 				case 1:
+				// jump slam attack
 					if (attackPhase == 0) {
 						if (place_meeting(obj_player.x, obj_player.bbox_bottom - sprite_height / 2, solids)) {
 							attack = attackOptions[irandom_range(0, array_length(attackOptions) - 1)]
@@ -75,6 +76,7 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 					else if (attackPhase == 1) {
 						applyFriction = true
 						calculateMovement = false
+						environmentImmune = true
 						y -= flightSpeed
 					
 						if (bbox_bottom < 0) {
@@ -97,6 +99,8 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 					}
 					else {
 						if (place_meeting(x, y + 1, solids)) {
+							environmentImmune = false
+							
 							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xAcceleration : shockwaveAcceleration, creator : id, friendlyDamage : friendlyShockwaveDamage})
 							instance_create_layer(x, bbox_bottom, layer, obj_enemy_shockwave, {xAcceleration : -shockwaveAcceleration, creator : id, friendlyDamage : friendlyShockwaveDamage})
 							
