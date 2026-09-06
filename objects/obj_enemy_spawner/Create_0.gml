@@ -7,7 +7,7 @@ for (var i = 0; i < array_length(inheritKeys); i++) {
 }
 
 function scr_start_spawner() {
-	if (onlyCountWhenActivated) {
+	if (onlyCountWhenActivated and countAsEnemy) {
 		global.enemiesLeft += 1
 	}
 	
@@ -23,7 +23,9 @@ function scr_start_spawner() {
 				instance_create_layer(x, y, layer, enemy, inherit)
 			}
 			
-			global.enemiesLeft -= 1
+			if (countAsEnemy) {
+				global.enemiesLeft -= 1
+			}
 	
 			if (permaDestroy) {
 				scr_permanant_destroy()

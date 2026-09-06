@@ -7,7 +7,9 @@ if (amount > 0) {
 	alarm[0] = repeatDelay
 }
 else {
-	global.enemiesLeft -= 1
+	if (countAsEnemy) {
+		global.enemiesLeft -= 1
+	}
 	
 	if (permaDestroy) {
 		scr_permanant_destroy()

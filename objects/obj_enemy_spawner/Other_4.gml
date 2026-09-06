@@ -1,4 +1,4 @@
-if (not onlyCountWhenActivated) {
+if (not onlyCountWhenActivated and countAsEnemy) {
 	global.enemiesLeft += 1
 }
 
