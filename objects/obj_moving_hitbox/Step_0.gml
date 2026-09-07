@@ -9,6 +9,7 @@ for (var i = 0; i < array_length(wasTouching); i++) {
 x += xSpeed
 
 var _onPlatform = ds_list_create()
+show_debug_message(y)
 instance_place_list(x, y, effected, _onPlatform, false)
 
 for (var i = 0; i < ds_list_size(_onPlatform); i++) {
