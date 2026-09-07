@@ -32,6 +32,7 @@
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":400,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_6CAB228C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6CAB228C","objectId":{"name":"obj_prison_crab","path":"objects/obj_prison_crab/obj_prison_crab.yy",},"properties":[
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_prison_crab","path":"objects/obj_prison_crab/obj_prison_crab.yy",},"propertyId":{"name":"extraPower","path":"objects/obj_prison_crab/obj_prison_crab.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_enemy_parent","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"propertyId":{"name":"permakill","path":"objects/obj_enemy_parent/obj_enemy_parent.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":2.0,"scaleY":2.0,"x":960.0,"y":1344.0,},
       ],"layers":[],"name":"Enemies","properties":[
         {"name":"g_TintCol","type":1,"value":"#FF000000",},
