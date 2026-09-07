@@ -6,55 +6,58 @@ for (var i = 0; i < array_length(wasTouching); i++) {
 	}
 }
 
-x += xSpeed
-
 var _onPlatform = ds_list_create()
-show_debug_message(y)
-instance_place_list(x, y, effected, _onPlatform, false)
+if (xSpeed != 0) {
+	x += xSpeed
 
-for (var i = 0; i < ds_list_size(_onPlatform); i++) {
-	var _target = ds_list_find_value(_onPlatform, i)
-	wasTouching = array_union(wasTouching, [_target])
+	instance_place_list(x, y, effected, _onPlatform, false)
+
+	for (var i = 0; i < ds_list_size(_onPlatform); i++) {
+		var _target = ds_list_find_value(_onPlatform, i)
+		wasTouching = array_union(wasTouching, [_target])
 	
-	while (place_meeting(x, y, _target)) {
-		_target.x += scr_plus_minus(xSpeed)
+		while (place_meeting(x, y, _target)) {
+			_target.x += scr_plus_minus(xSpeed)
+		}
+	
+		scr_squish_object(_target)
 	}
-	
-	scr_squish_object(_target)
 }
 
-ds_list_clear(_onPlatform)
-instance_place_list(x, y - 1, effected, _onPlatform, false)
+if (ySpeed != 0) {
+	ds_list_clear(_onPlatform)
+	instance_place_list(x, y - 1, effected, _onPlatform, false)
 
-y += ySpeed
+	y += ySpeed
 
-for (var i = 0; i < ds_list_size(_onPlatform); i++) {
-	var _target = ds_list_find_value(_onPlatform, i)
+	for (var i = 0; i < ds_list_size(_onPlatform); i++) {
+		var _target = ds_list_find_value(_onPlatform, i)
 	
-	with (_target) {
-		while (not place_meeting(x, y + 1, solids)) {
-			y += scr_plus_minus(other.ySpeed)
+		with (_target) {
+			while (not place_meeting(x, y + 1, solids)) {
+				y += scr_plus_minus(other.ySpeed)
+			}
 		}
 	}
-}
 
-ds_list_clear(_onPlatform)
-instance_place_list(x, y - 1, effected, _onPlatform, false)
-instance_place_list(x, y + 1, effected, _onPlatform, false)
+	ds_list_clear(_onPlatform)
+	instance_place_list(x, y - 1, effected, _onPlatform, false)
+	instance_place_list(x, y + 1, effected, _onPlatform, false)
 
-for (var i = 0; i < ds_list_size(_onPlatform); i++) {
-	var _target = ds_list_find_value(_onPlatform, i)
-	wasTouching = array_union(wasTouching, [_target])
+	for (var i = 0; i < ds_list_size(_onPlatform); i++) {
+		var _target = ds_list_find_value(_onPlatform, i)
+		wasTouching = array_union(wasTouching, [_target])
 	
-	while (place_meeting(x, y, _target)) {
-		_target.y += scr_plus_minus(ySpeed)
+		while (place_meeting(x, y, _target)) {
+			_target.y += scr_plus_minus(ySpeed)
+		}
+	
+		with (_target) {
+			scr_place_move(other.xSpeed, 0, solids)
+		}
+	
+		scr_squish_object(_target)
 	}
-	
-	with (_target) {
-		scr_place_move(other.xSpeed, 0, solids)
-	}
-	
-	scr_squish_object(_target)
 }
 
 for (var i = 0; i < array_length(wasTouching); i++) {

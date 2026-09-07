@@ -135,6 +135,8 @@
     {"id":{"name":"ColdWinterSteve","path":"sounds/ColdWinterSteve/ColdWinterSteve.yy",},},
     {"id":{"name":"FuzzyPiano","path":"sounds/FuzzyPiano/FuzzyPiano.yy",},},
     {"id":{"name":"ItsTurtle","path":"sounds/ItsTurtle/ItsTurtle.yy",},},
+    {"id":{"name":"sfx_rain","path":"sounds/sfx_rain/sfx_rain.yy",},},
+    {"id":{"name":"sfx_thunder","path":"sounds/sfx_thunder/sfx_thunder.yy",},},
     {"id":{"name":"SinisterDogTheme","path":"sounds/SinisterDogTheme/SinisterDogTheme.yy",},},
     {"id":{"name":"TheBeginningOfTheEnd","path":"sounds/TheBeginningOfTheEnd/TheBeginningOfTheEnd.yy",},},
     {"id":{"name":"spr_bouncer","path":"sprites/spr_bouncer/spr_bouncer.yy",},},

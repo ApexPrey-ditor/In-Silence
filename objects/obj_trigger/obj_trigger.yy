@@ -34,6 +34,7 @@
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"action","filters":[],"listItems":[
         "\"playSound\"",
+        "\"stopSound\"",
         "\"setCameraZoom\"",
         "\"setCameraOffset\"",
         "\"triggerSpawner\"",

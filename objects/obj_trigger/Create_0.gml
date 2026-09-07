@@ -36,8 +36,10 @@ function scr_trigger_effect() {
 			
 				switch action[i] {
 					case "playSound":
-						audio_play_sound(assetId, 0, true)
+						audio_play_sound(assetId, 0, value1)
 						break
+					case "stopSound":
+						audio_stop_sound(assetId)
 					case "setCameraZoom":
 						obj_camera.scr_camera_scale(value1, value2)
 						break
