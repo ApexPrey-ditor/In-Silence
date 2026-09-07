@@ -154,6 +154,7 @@
     {"id":{"name":"spr_grenade","path":"sprites/spr_grenade/spr_grenade.yy",},},
     {"id":{"name":"spr_hurt","path":"sprites/spr_hurt/spr_hurt.yy",},},
     {"id":{"name":"spr_invisible","path":"sprites/spr_invisible/spr_invisible.yy",},},
+    {"id":{"name":"spr_jimBob_running","path":"sprites/spr_jimBob_running/spr_jimBob_running.yy",},},
     {"id":{"name":"spr_jimBob_sliding","path":"sprites/spr_jimBob_sliding/spr_jimBob_sliding.yy",},},
     {"id":{"name":"spr_jimBob","path":"sprites/spr_jimBob/spr_jimBob.yy",},},
     {"id":{"name":"spr_jimmy_gaming_setup","path":"sprites/spr_jimmy_gaming_setup/spr_jimmy_gaming_setup.yy",},},
