@@ -33,7 +33,7 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"action","filters":[],"listItems":[
-        "\"playSong\"",
+        "\"playSound\"",
         "\"setCameraZoom\"",
         "\"setCameraOffset\"",
         "\"triggerSpawner\"",

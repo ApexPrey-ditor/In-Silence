@@ -35,7 +35,7 @@ function scr_trigger_effect() {
 				targetObjects = []
 			
 				switch action[i] {
-					case "playSong":
+					case "playSound":
 						audio_play_sound(assetId, 0, true)
 						break
 					case "setCameraZoom":
