@@ -36,7 +36,7 @@ function scr_move_to_node(time) {
 function scr_squish_object(target) {
 	with (target) {
 		if (object_is_ancestor(object_index, obj_enemy_parent)) {
-			if (place_meeting(x, y, nonpassable)) {
+			if (place_meeting(x, y, nonpassable) and not environmentImmune) {
 				instance_destroy()
 			}
 		}
