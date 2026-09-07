@@ -1,8 +1,10 @@
 // Inherit the parent event
 event_inherited()
 
-xAcceleration = 0.5 * obj_prison_manager.enemyPower
-topXSpeed = 15 * obj_prison_manager.enemyPower
+extraPower += obj_prison_manager.enemyPower
+
+xAcceleration = 0.5 * extraPower
+topXSpeed = 15 * extraPower
 applyFriction = false
 weight = 4
 
@@ -10,16 +12,16 @@ calculateMovement = true
 
 walkSpeed = 2
 
-hitpoints = 20 * obj_prison_manager.enemyPower
+hitpoints = 20 * extraPower
 
-jumpHeight = 16 * obj_prison_manager.enemyPower
+jumpHeight = 16 * extraPower
 solidJumpRange = 17
 
 jumpRange = 60
 
-flightSpeed = 30 * obj_prison_manager.enemyPower
+flightSpeed = 30 * extraPower
 slamTimer = 15
-shockwaveAcceleration = 0.1 * obj_prison_manager.enemyPower
+shockwaveAcceleration = 0.1 * extraPower
 friendlyShockwaveDamage = 1
 targetY = 0
 targetX = 0
@@ -40,6 +42,6 @@ attackPhase = 0
 
 attackOptions = [0, 1, 2]
 // 0 = slam at you, 1 = shockwave, 2 = punch
-attackCooldown = 30 / obj_prison_manager.enemyPower
+attackCooldown = 30 / extraPower
 
 // this guy is named greg
