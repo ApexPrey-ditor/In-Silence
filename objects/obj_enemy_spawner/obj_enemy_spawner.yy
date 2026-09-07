@@ -33,8 +33,16 @@
   "physicsStartAwake":true,
   "properties":[
     {"$GMObjectProperty":"v2","%Name":"enemy","filters":[],"listItems":[],"multiselect":false,"name":"enemy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":5,},
-    {"$GMObjectProperty":"v2","%Name":"inheritKeys","filters":[],"listItems":[],"multiselect":true,"name":"inheritKeys","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
-    {"$GMObjectProperty":"v2","%Name":"inheritValues","filters":[],"listItems":[],"multiselect":true,"name":"inheritValues","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"inheritKeys","filters":[],"listItems":[
+        "\"extraPower\"",
+        "\"image_xscale\"",
+        "\"image_yscale\"",
+      ],"multiselect":true,"name":"inheritKeys","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
+    {"$GMObjectProperty":"v2","%Name":"inheritValues","filters":[],"listItems":[
+        "3",
+        "2",
+        "2",
+      ],"multiselect":true,"name":"inheritValues","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"spawnerId","filters":[],"listItems":[],"multiselect":false,"name":"spawnerId","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"0","varType":1,},
     {"$GMObjectProperty":"v2","%Name":"triggered","filters":[],"listItems":[],"multiselect":false,"name":"triggered","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
     {"$GMObjectProperty":"v2","%Name":"permaDestroy","filters":[],"listItems":[],"multiselect":false,"name":"permaDestroy","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"False","varType":3,},
