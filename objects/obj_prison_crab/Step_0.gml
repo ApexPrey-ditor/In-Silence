@@ -79,7 +79,7 @@ if (not doBasicWalk and instance_exists(obj_player)) {
 						environmentImmune = true
 						y -= flightSpeed
 					
-						if (bbox_bottom < 0) {
+						if (bbox_bottom < camera_get_view_y(obj_camera.camera) - camera_get_view_height(obj_camera.camera)) {
 							attackPhase += 1
 							x = targetX
 						}
