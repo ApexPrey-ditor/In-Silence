@@ -1,4 +1,13 @@
 if (instance_exists(obj_player)) {
+	if (energyRifleOverheat > 0) {
+		energyRifleOverheat -= evergyRifleOverheatRecharge
+	}
+	
+	if (weaponSelected == "energy_rifle") {
+		var _overheatColour = (1 - min(energyRifleOverheat / energyRifleOverheatThreshold, 1)) * 255
+		image_blend = make_colour_rgb(255, _overheatColour, _overheatColour)
+	}
+	
 	if (!attacking) {
 		directionPointing = point_direction(obj_player.x, obj_player.y, mouse_x, mouse_y)
 		image_angle = directionPointing
@@ -48,7 +57,8 @@ if (instance_exists(obj_player)) {
 	
 	if ((scr_input_check_pressed(obj_player.keybinds.shoot) or (scr_input_check(obj_player.keybinds.shoot) and holdShoot))
 			and canAttack
-			and (weaponSelected != "railcannon" or global.railcannonCharge >= global.railcannonChargeRequirement)) {
+			and (weaponSelected != "railcannon" or global.railcannonCharge >= global.railcannonChargeRequirement)
+			and (weaponSelected != "energy_rifle" or energyRifleOverheat < energyRifleOverheatThreshold)) {
 		canAttack = false
 		attacking = true
 		
@@ -125,6 +135,8 @@ if (instance_exists(obj_player)) {
 			case "energy_rifle":
 				alarm[weaponAlarms.notAttacking] = attackDuration
 				alarm[weaponAlarms.takeOffCooldown] = attackCooldown
+				
+				energyRifleOverheat += 1
 				
 				directionPointing += random_range(-energyRifleSpread, energyRifleSpread)
 				

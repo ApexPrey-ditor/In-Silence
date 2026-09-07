@@ -14,6 +14,9 @@ energyRifleChargeAdd = 0.2
 energyRifleSpeedAdd = 2
 energyRifleSpread = 3 + global.augments.energyRifleSpreadIncrement
 energyRifleShotWidth = 3
+energyRifleOverheat = 0
+energyRifleOverheatThreshold = 20
+evergyRifleOverheatRecharge = 0.07
 
 railcannonRadiusMultiply = 2
 railcannonShotWidth = 15
@@ -62,6 +65,7 @@ function scr_process_hit(enemy, addedCharge, addedCombo) {
 
 function scr_update_weapon() {
 	canAttack = false
+	image_blend = c_white
 	
 	switch (weaponSelected) {
 		case "revolver":
@@ -99,6 +103,7 @@ function scr_update_weapon() {
 			holdShoot = true
 			
 			energyRifleShotWidth = 3 + global.augments.energyRifleSpreadIncrement
+			image_blend = make_colour_rgb(255, (1 - (energyRifleOverheat / energyRifleOverheatThreshold)) * 255, (1 - (energyRifleOverheat / energyRifleOverheatThreshold)) * 255)
 			
 			currentWeapon = 2
 			sprite_index = spr_energy_rifle
