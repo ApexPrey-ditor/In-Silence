@@ -1,1 +1,0 @@
-global.enemiesLeft += 1

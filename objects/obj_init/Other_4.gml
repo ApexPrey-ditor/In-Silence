@@ -15,5 +15,3 @@ for (var i = 0; i < array_length(structKeysList); i++) {
 		break
 	}
 }
-
-global.enemiesLeft = 0
