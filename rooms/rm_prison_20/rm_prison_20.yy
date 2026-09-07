@@ -45,8 +45,14 @@
     {"$GMRAssetLayer":"","%Name":"ForgroundDecals","assets":[
         {"$GMRParticleSystem":"v1","%Name":"particle_3297A0A4","colour":4294967295,"frozen":false,"ignore":false,"inheritedItemId":null,"inheritItemSettings":false,"name":"particle_3297A0A4","particleSystemId":{"name":"ps_dp20_rain","path":"particles/ps_dp20_rain/ps_dp20_rain.yy",},"resourceType":"GMRParticleSystem","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2592.0,"y":0.0,},
       ],"depth":100,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"ForgroundDecals","properties":[],"resourceType":"GMRAssetLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
-    {"$GMRInstanceLayer":"","%Name":"Weapons","depth":200,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Weapons","properties":[
-        {"name":"g_TintCol","type":1,"value":"#FFFFFFFF",},
+    {"$GMRInstanceLayer":"","%Name":"Weapons","depth":200,"effectEnabled":true,"effectType":"_filter_gradient","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Weapons","properties":[
+        {"name":"g_GradientColour1","type":1,"value":"#FFFFFFFF",},
+        {"name":"g_GradientColour2","type":1,"value":"#FFFFFFFF",},
+        {"name":"g_GradientPosition1","type":0,"value":"0",},
+        {"name":"g_GradientPosition1","type":0,"value":"0",},
+        {"name":"g_GradientPosition2","type":0,"value":"1",},
+        {"name":"g_GradientPosition2","type":0,"value":"1",},
+        {"name":"g_GradientMode","type":0,"value":"0",},
       ],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRInstanceLayer":"","%Name":"Player","depth":300,"effectEnabled":true,"effectType":"_filter_gradient","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[],"layers":[],"name":"Player","properties":[
         {"name":"g_GradientColour1","type":1,"value":"#FFFFFFFF",},
@@ -59,7 +65,7 @@
       ],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRTileLayer":"","%Name":"BackgroundTileset","depth":400,"effectEnabled":true,"effectType":"_filter_tintfilter","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"BackgroundTileset","properties":[
         {"name":"g_TintCol","type":1,"value":"#FF000000",},
-      ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":204,"SerialiseWidth":360,"TileCompressedData":[
+      ],"resourceType":"GMRTileLayer","resourceVersion":"2.0","tiles":{"SerialiseHeight":206,"SerialiseWidth":360,"TileCompressedData":[
           -62774,-2147483648,1,1,-43,6,1,3,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,
           -2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,
           1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,
@@ -69,7 +75,7 @@
           -2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,
           1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,
           -43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,8,1,15,-315,-2147483648,1,9,-43,
-          8,1,15,-315,-2147483648,1,9,-43,8,1,15,-181,-2147483648,
+          8,1,15,-315,-2147483648,1,9,-43,8,1,15,-901,-2147483648,
         ],"TileDataFormat":1,},"tilesetId":{"name":"ts_dimensional_prison","path":"tilesets/ts_dimensional_prison/ts_dimensional_prison.yy",},"userdefinedDepth":false,"visible":true,"x":0,"y":0,},
     {"$GMRInstanceLayer":"","%Name":"Enemies","depth":500,"effectEnabled":true,"effectType":"_filter_gradient","gridX":32,"gridY":32,"hierarchyFrozen":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"instances":[
         {"$GMRInstance":"v4","%Name":"inst_6CAB228C","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_6CAB228C","objectId":{"name":"obj_prison_crab","path":"objects/obj_prison_crab/obj_prison_crab.yy",},"properties":[
@@ -169,7 +175,7 @@
   "resourceType":"GMRoom",
   "resourceVersion":"2.0",
   "roomSettings":{
-    "Height":3264,
+    "Height":3296,
     "inheritRoomSettings":false,
     "persistent":false,
     "Width":5760,
