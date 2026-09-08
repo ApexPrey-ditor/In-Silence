@@ -32,6 +32,7 @@ if (!place_meeting(x, y + 1, solids)) {
 		if (scr_input_check(array_union(keybinds.left, keybinds.right))) {
 			// pressing keys counts as movement
 			_movement = true
+			sprite_index = spr_jimBob_running
 		}
 		// moves if not over walk speed
 		if (scr_input_check(keybinds.left) and xVelocity > -walkSpeed) {
@@ -97,16 +98,17 @@ else {
 		isSliding = true
 		_movement = true
 		sprite_index = spr_jimBob_sliding
+		image_speed = abs(xVelocity / 13)
 	}
 	else if (isSliding) {
 		// if sliding stopped
 		canWalk = true
-		sprite_index = spr_jimBob
 		image_yscale = 1
 		if (place_meeting(x, y, solids)) {
 			sprite_index = spr_jimBob_sliding
 		}
 		else {
+			image_speed = 1
 			isSliding = false
 		}
 	}
@@ -116,6 +118,7 @@ else {
 		if (scr_input_check(array_union(keybinds.left, keybinds.right))) {
 			// pressing keys counts as movement
 			_movement = true
+			sprite_index = spr_jimBob_running
 		}
 		// increases velocity, direction, and did movement
 		if (scr_input_check(keybinds.left) and xVelocity > -walkSpeed) {
@@ -171,6 +174,7 @@ if (scr_input_check_pressed(keybinds.jump)) {
 // jumping
 if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 	cayoteFrames = 0
+	jumpBuffer = 0
 	grav = -jumpHeight
 	_applyFriction = false
 	
@@ -187,7 +191,7 @@ if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 		else {
 			isSliding = false
 			canWalk = true
-		
+			image_speed = 1
 
 			// jumping out gives speed
 			xVelocity += scr_plus_minus(image_xscale) * baseSlideBoost
@@ -278,6 +282,10 @@ if (global.comboTimeout == 0) {
 
 if (place_meeting(x, y, solids)) {
 	show_debug_message("inside solid")
+}
+
+if (not _movement) {
+	sprite_index = spr_jimBob
 }
 
 xVelocity = scr_apply_x_velocity(xVelocity, solids, _applyFriction, nonpassable, xVelocityFrictionless, _movement)
