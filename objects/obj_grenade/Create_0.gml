@@ -46,17 +46,17 @@ function scr_detonate_grenade() {
 	collision_circle_list(x, y, radius, effected, false, true, _targets, false)
 
 	var _target = noone
-	var _distanceToObject = 0
+	var _blastStrength = 0
 
 	for (var i = 0; i < ds_list_size(_targets); i++) {
 		_target = ds_list_find_value(_targets, i)
 		
 		if (object_is_ancestor(_target.object_index, obj_enemy_parent)) {
-			_distanceToObject = distance_to_object(_target) + 1
+			_blastStrength = (1 - (distance_to_object(_target) / radius)) * (sqrt(damage) * blastKnockback / _target.weight)
 			direction = point_direction(x, y, _target.x, _target.y)
 			
-			_target.xVelocity += dcos(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
-			_target.grav -= dsin(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
+			_target.xVelocity += dcos(direction) *_blastStrength
+			_target.grav -= dsin(direction) * _blastStrength
 			
 			_target.hitpoints -= damage
 			
@@ -70,18 +70,18 @@ function scr_detonate_grenade() {
 		else {
 			switch (_target.object_index) {
 				case obj_player:
-					_distanceToObject = distance_to_object(_target) + 1
+					_blastStrength = (1 - (distance_to_object(_target) / radius)) * (sqrt(damage) * blastKnockback / _target.weight)
 					direction = point_direction(x, y, _target.x, _target.y)
 			
-					_target.xVelocity += dcos(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
-					_target.grav -= dsin(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
+					_target.xVelocity += dcos(direction) * _blastStrength
+					_target.grav -= dsin(direction) * _blastStrength
 					break
 				case obj_grenade:
-					_distanceToObject = distance_to_point(_target.x, _target.y) + 1
+					_blastStrength = (1 - (distance_to_object(_target) / radius)) * (sqrt(damage) * blastKnockback / _target.weight)
 					direction = point_direction(x, y, _target.x, _target.y)
 			
-					_target.xVelocity += dcos(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
-					_target.grav -= dsin(direction) * (radius / _distanceToObject) * (sqrt(damage) * blastKnockback / _target.weight)
+					_target.xVelocity += dcos(direction) * _blastStrength
+					_target.grav -= dsin(direction) * _blastStrength
 					break
 				case obj_destructable:
 					instance_destroy(_target)

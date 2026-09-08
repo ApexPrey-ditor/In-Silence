@@ -32,7 +32,10 @@ if (!place_meeting(x, y + 1, solids)) {
 		if (scr_input_check(array_union(keybinds.left, keybinds.right))) {
 			// pressing keys counts as movement
 			_movement = true
-			sprite_index = spr_jimBob_running
+			
+			if (not isSliding) {
+				sprite_index = spr_jimBob_running
+			}
 		}
 		// moves if not over walk speed
 		if (scr_input_check(keybinds.left) and xVelocity > -walkSpeed) {
@@ -103,7 +106,7 @@ else {
 	else if (isSliding) {
 		// if sliding stopped
 		canWalk = true
-		image_yscale = 1
+
 		if (place_meeting(x, y, solids)) {
 			sprite_index = spr_jimBob_sliding
 		}
@@ -118,7 +121,10 @@ else {
 		if (scr_input_check(array_union(keybinds.left, keybinds.right))) {
 			// pressing keys counts as movement
 			_movement = true
-			sprite_index = spr_jimBob_running
+			
+			if (not isSliding) {
+				sprite_index = spr_jimBob_running
+			}
 		}
 		// increases velocity, direction, and did movement
 		if (scr_input_check(keybinds.left) and xVelocity > -walkSpeed) {
@@ -284,7 +290,7 @@ if (place_meeting(x, y, solids)) {
 	show_debug_message("inside solid")
 }
 
-if (not _movement) {
+if (not _movement and not isSliding) {
 	sprite_index = spr_jimBob
 }
 

@@ -8,3 +8,6 @@ playerLevelUpRoom = 5
 normalRooms = scr_get_objects_of_tag("normalPrison")
 previousRoom = noone
 roomNumber = 1
+
+randomizeRooms = false
+previousRoomReal = rm_prison_init
