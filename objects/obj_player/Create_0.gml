@@ -54,6 +54,7 @@ canMove = true
 isSlamming = false
 isDiving = false
 isSliding = false
+isInAnimation = false
 
 #macro baseLadderSpeed 7
 ladderSpeed = baseLadderSpeed * moveSpeedMult
@@ -79,6 +80,8 @@ spawnPointID = 0
 spawnPointOffset = 1
 
 function scr_reset_player() {
+	sprite_index = spr_jimBob
+	
 	grav = 0
 	gravIntensity = baseIntensity
 	gravLimit = 35
@@ -104,6 +107,7 @@ function scr_reset_player() {
 	isSlamming = false
 	isDiving = false
 	isSliding = false
+	isInAnimation = false
 
 	ladderSpeed = baseLadderSpeed * moveSpeedMult
 	climbing = false

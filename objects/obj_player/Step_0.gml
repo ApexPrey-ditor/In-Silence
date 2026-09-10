@@ -33,7 +33,7 @@ if (!place_meeting(x, y + 1, solids)) {
 			// pressing keys counts as movement
 			_movement = true
 			
-			if (not isSliding) {
+			if (not isInAnimation) {
 				sprite_index = spr_jimBob_running
 			}
 		}
@@ -69,6 +69,11 @@ else {
 	// if on the ground
 	cayoteFrames = cayoteFrameLimit
 	
+	if (sprite_index == spr_jimBob_jump) {
+		sprite_index = spr_jimBob_land
+		image_speed = 1
+	}
+	
 	if (isDiving) {
 		// un-dive if diving
 		isDiving = false
@@ -100,6 +105,7 @@ else {
 		canWalk = false
 		isSliding = true
 		_movement = true
+		isInAnimation = true
 		sprite_index = spr_jimBob_sliding
 		image_speed = abs(xVelocity / 13)
 	}
@@ -113,6 +119,7 @@ else {
 		else {
 			image_speed = 1
 			isSliding = false
+			isInAnimation = false
 		}
 	}
 	
@@ -122,7 +129,7 @@ else {
 			// pressing keys counts as movement
 			_movement = true
 			
-			if (not isSliding) {
+			if (not isInAnimation) {
 				sprite_index = spr_jimBob_running
 			}
 		}
@@ -184,14 +191,17 @@ if (jumpBuffer > 0 and cayoteFrames > 0 and canMove) {
 	grav = -jumpHeight
 	_applyFriction = false
 	
+	sprite_index = spr_jimBob_jump
+	image_index = 0
+	isInAnimation = true
+	
 	if (isDashing) {
 		alarm[playerAlarms.cancelDash] = -1
 		scr_dash_cancel()
 	}
 	if (isSliding) {
-		sprite_index = spr_jimBob
-		
 		if (place_meeting(x, y, solids)) {
+			isInAnimation = true
 			sprite_index = spr_jimBob_sliding
 		}
 		else {
@@ -290,7 +300,7 @@ if (place_meeting(x, y, solids)) {
 	show_debug_message("inside solid")
 }
 
-if (not _movement and not isSliding) {
+if (not _movement and not isInAnimation) {
 	sprite_index = spr_jimBob
 }
 
