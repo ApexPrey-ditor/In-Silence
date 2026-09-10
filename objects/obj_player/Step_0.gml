@@ -107,11 +107,13 @@ else {
 		_movement = true
 		isInAnimation = true
 		sprite_index = spr_jimBob_sliding
-		image_speed = abs(xVelocity / 13)
+		image_speed = abs(xVelocity / baseSlideSpeed)
 	}
 	else if (isSliding) {
 		// if sliding stopped
 		canWalk = true
+		
+		sprite_index = spr_jimBob
 
 		if (place_meeting(x, y, solids)) {
 			sprite_index = spr_jimBob_sliding
