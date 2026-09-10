@@ -85,6 +85,7 @@
     {"id":{"name":"obj_shotgun","path":"objects/obj_shotgun/obj_shotgun.yy",},},
     {"id":{"name":"obj_solid_hitbox","path":"objects/obj_solid_hitbox/obj_solid_hitbox.yy",},},
     {"id":{"name":"obj_target","path":"objects/obj_target/obj_target.yy",},},
+    {"id":{"name":"obj_textbox_manager","path":"objects/obj_textbox_manager/obj_textbox_manager.yy",},},
     {"id":{"name":"obj_trigger","path":"objects/obj_trigger/obj_trigger.yy",},},
     {"id":{"name":"obj_visual_projectile","path":"objects/obj_visual_projectile/obj_visual_projectile.yy",},},
     {"id":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},},
