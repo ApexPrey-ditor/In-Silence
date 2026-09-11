@@ -1,6 +1,6 @@
 randomise()
 
-room_goto(rm_tutorial_01)
+room_goto(rm_01_prelude_00)
 //room_goto(rm_temp_tutorial)
 
 //audio_group_load(Music)
