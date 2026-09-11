@@ -19,3 +19,5 @@ if (drawTextbox) {
 
 	draw_rectangle(_textboxLeft, _textboxTop, _textboxLeft + textboxWidth, _textboxTop + textboxHeight, true)
 }
+
+scr_reset_draw()

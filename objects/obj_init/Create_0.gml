@@ -1,15 +1,16 @@
 randomise()
 
-room_goto(rm_01_prelude_00)
+room_goto(rm_tutorial_01)
 //room_goto(rm_temp_tutorial)
 
 //audio_group_load(Music)
 
 //game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
+global.weaponsObtained = []
+//global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
-global.shotgunObtained = true
+global.shotgunObtained = false
 
 global.railcannonCharge = 0
 global.railcannonChargeRequirement = 10

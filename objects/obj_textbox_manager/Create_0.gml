@@ -1,7 +1,11 @@
 #macro textboxSpacing 16
+#macro baseTextboxWidth 512
+#macro baseTextboxHeight 128
 
 dialogue = load_csv("dialogue.csv")
-dialogueCharacters = []
+dialogueCharacters = ["turtle", "jimbob"]
+
+show_debug_message(dialogue)
 
 textboxWidth = 0
 textboxHeight = 0

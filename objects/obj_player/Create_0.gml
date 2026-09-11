@@ -218,4 +218,5 @@ keybinds = {left : [ord("A")],
 			switchRevolver : [ord("1")],
 			switchGrenadeLauncher : [ord("2")],
 			switchEnergyRifle : [ord("3")],
-			switchRailcannon : [ord("4")],}
+			switchRailcannon : [ord("4")],
+			interact : [ord("F")]}
