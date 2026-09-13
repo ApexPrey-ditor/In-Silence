@@ -4,7 +4,7 @@ if (instance_exists(obj_player)) {
 			and talkable) {
 		if (talking) {
 			if (obj_textbox_manager.textboxTextOn < string_length(obj_textbox_manager.textboxText)) {
-				obj_textbox_manager.scr_draw_textbox(obj_textbox_manager.scr_get_dialogue(dialogueKeys[dialogueOn].character, dialogueKeys[dialogueOn].key), baseTextboxWidth, baseTextboxHeight, 0, dialogueKeys[dialogueOn].portrait)
+				scr_show_dialogue(dialogueOn, 0)
 			}
 			else {
 				obj_textbox_manager.drawTextbox = false
@@ -12,7 +12,7 @@ if (instance_exists(obj_player)) {
 			}
 		}
 		else {
-			obj_textbox_manager.scr_draw_textbox(obj_textbox_manager.scr_get_dialogue(dialogueKeys[dialogueOn].character, dialogueKeys[dialogueOn].key), baseTextboxWidth, baseTextboxHeight, dialogueDrawSpeed, dialogueKeys[dialogueOn].portrait)
+			scr_show_dialogue(dialogueOn, dialogueDrawSpeed)
 			obj_player.canMove = false
 			talking = true
 		}
