@@ -17,8 +17,17 @@ function scr_draw_text_coloured(drawX, drawY, text, xScale, yScale, sep, width){
 			
 			if (charOn == "§") {
 				w++
-			
+				
 				charOn = string_char_at(splitText[i], w)
+				
+				switch (charOn) {
+					case "r":
+						draw_set_colour(c_red)
+						break
+					case "B":
+						draw_set_font(font_bolded)
+						break
+				}
 			}
 			else {
 				draw_text_transformed(currentX, currenyY, charOn, xScale, yScale, 0)

@@ -90,6 +90,18 @@ function scr_trigger_effect() {
 							targetObjects[m].scr_trigger_effect()
 						}
 						break
+					case "triggerNPCDialogue":
+						with (obj_npc_parent) {
+							if (NPCId == other.targetId) {
+								array_push(other.targetObjects, id)
+							}
+						}
+					
+						for (var m = 0; m < array_length(targetObjects); m++) {
+							targetObjects[m].scr_show_dialogue(targetObjects[m].dialogueOn, targetObjects[m].dialogueDrawSpeed)
+							scr_trigger_user_event(targetObjects[m], NPCUserEvents.initiatedTalking)
+						}
+						break
 				}
 			}
 	

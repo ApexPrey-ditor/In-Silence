@@ -14,9 +14,11 @@ if (drawTextbox) {
 		_textDrawX += sprite_get_width(textboxPortrait) + textboxSpacing
 	}
 	
+	draw_set_font(font_default)
 	draw_set_colour(c_white)
 	scr_draw_text_coloured(_textDrawX, _textboxTop + textboxSpacing, string_copy(textboxText, 0, textboxTextOn), 1, 1, string_height("|"), textboxWidth - (_textDrawX - _textboxLeft) - textboxSpacing)
-
+	
+	draw_set_colour(c_white)
 	draw_rectangle(_textboxLeft, _textboxTop, _textboxLeft + textboxWidth, _textboxTop + textboxHeight, true)
 }
 

@@ -5,6 +5,7 @@ if (instance_exists(obj_player)) {
 		if (talking) {
 			if (obj_textbox_manager.textboxTextOn < string_length(obj_textbox_manager.textboxText)) {
 				scr_show_dialogue(dialogueOn, 0)
+				event_user(NPCUserEvents.initiatedTalking)
 			}
 			else {
 				obj_textbox_manager.drawTextbox = false
@@ -13,8 +14,7 @@ if (instance_exists(obj_player)) {
 		}
 		else {
 			scr_show_dialogue(dialogueOn, dialogueDrawSpeed)
-			obj_player.canMove = false
-			talking = true
+			event_user(NPCUserEvents.initiatedTalking)
 		}
 	}
 }

@@ -59,6 +59,8 @@
   },
   "name":"In Silence",
   "resources":[
+    {"id":{"name":"font_bolded","path":"fonts/font_bolded/font_bolded.yy",},},
+    {"id":{"name":"font_default","path":"fonts/font_default/font_default.yy",},},
     {"id":{"name":"tempFont","path":"fonts/tempFont/tempFont.yy",},},
     {"id":{"name":"obj_bouncer","path":"objects/obj_bouncer/obj_bouncer.yy",},},
     {"id":{"name":"obj_camera","path":"objects/obj_camera/obj_camera.yy",},},

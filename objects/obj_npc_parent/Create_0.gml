@@ -1,5 +1,6 @@
 enum NPCUserEvents {
-	talked = 0
+	talked = 0,
+	initiatedTalking = 1
 }
 
 dialogueKeys = [{character : "", key : 1, portrait : noone}]
