@@ -23,13 +23,13 @@ gravLimit = 35
 jumpHeight = 17 * jumpHeightMult
 
 // macros are constants
-#macro cayoteFrameLimit 6
+#macro cayoteFrameLimit 5
 cayoteFrames = cayoteFrameLimit
 #macro baseFrictionlessFrames 3
 frictionlessFrames = 0
 
-#macro baseJumpBuffer 3
-#macro baseDashBuffer 3
+#macro baseJumpBuffer 5
+#macro baseDashBuffer 5
 jumpBuffer = 0
 dashBuffer = 0
 

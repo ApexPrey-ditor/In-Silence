@@ -10,8 +10,8 @@ if (drawTextbox) {
 	draw_rectangle(_textboxLeft, _textboxTop, _textboxLeft + textboxWidth, _textboxTop + textboxHeight, false)
 	
 	if (textboxPortrait != noone) {
-		draw_sprite(textboxPortrait, 0, _textDrawX, _textboxTop + textboxSpacing)
-		_textDrawX += sprite_get_width(textboxPortrait) + textboxSpacing
+		draw_sprite(textboxPortrait, 0, _textDrawX + portraitSpacing, _textboxTop + portraitSpacing)
+		_textDrawX += (sprite_get_width(textboxPortrait) / 2) + portraitSpacing + textboxSpacing
 	}
 	
 	draw_set_font(font_default)

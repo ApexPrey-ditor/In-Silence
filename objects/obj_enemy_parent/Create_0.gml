@@ -33,7 +33,7 @@ environmentImmune = false
 global.enemiesLeft += 1
 
 function scr_test_sound_detection(originX, originY, detectionMultiplier=1) {
-	if (point_distance(x, y, originX, originY) < visualDetectionRange * detectionMultiplier) {
+	if (point_distance(x, y, originX, originY) < soundDetectionRange * detectionMultiplier) {
 		event_user(enemyUserEvents.globalDetect)
 	}
 }

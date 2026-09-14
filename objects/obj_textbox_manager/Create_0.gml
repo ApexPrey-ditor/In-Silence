@@ -1,3 +1,4 @@
+#macro portraitSpacing 56
 #macro textboxSpacing 16
 #macro baseTextboxWidth 512
 #macro baseTextboxHeight 128
