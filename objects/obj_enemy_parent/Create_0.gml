@@ -40,3 +40,7 @@ function scr_test_sound_detection(originX, originY, detectionMultiplier=1) {
 
 solids = scr_get_objects_of_tag("solid")
 nonpassable = scr_get_objects_of_tag("nonpassable")
+
+deathSprite = noone
+bitsXVarience = 7
+bitsYVarience = 7

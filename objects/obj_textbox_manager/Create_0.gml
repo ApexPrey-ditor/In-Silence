@@ -14,6 +14,7 @@ textboxTextOn = 0
 textboxPortrait = noone
 textboxDrawSpeed = 0
 drawTextbox = false
+portraitFrame = 0
 
 function scr_get_dialogue(character, dialogueNumber) {
 	return ds_grid_get(dialogue, array_get_index(dialogueCharacters, character), dialogueNumber)
@@ -28,6 +29,7 @@ function scr_draw_textbox(text, width, height, drawSpeed, characterPortrait) {
 	
 	textboxDrawSpeed = drawSpeed
 	textboxPortrait = characterPortrait
+	portraitFrame = 0
 	
 	drawTextbox = true
 	

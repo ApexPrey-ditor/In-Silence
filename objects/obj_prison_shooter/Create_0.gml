@@ -29,3 +29,5 @@ friendlyDamage = 2
 projectileSpeed = 7
 
 lineOfSightBlockers = [obj_solid_hitbox, obj_moving_hitbox]
+
+deathSprite = spr_prison_shooter_bits
