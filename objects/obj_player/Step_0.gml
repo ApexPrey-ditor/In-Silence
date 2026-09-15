@@ -163,7 +163,7 @@ if (scr_input_check_pressed(keybinds.dash)) {
 }
 
 // dashing
-if (scr_input_check_pressed(keybinds.dash) and canWalk and stamina >= 1) {
+if (scr_input_check_pressed(keybinds.dash) and canWalk and canMove and stamina >= 1) {
 	alarm[playerAlarms.cancelDash] = baseDashDuration
 	isDashing = true
 	stamina -= 1

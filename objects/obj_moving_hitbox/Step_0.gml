@@ -41,22 +41,26 @@ if (ySpeed != 0) {
 	}
 
 	ds_list_clear(_onPlatform)
+	var _alreadyApplied = []
 	instance_place_list(x, y - 1, effected, _onPlatform, false)
 	instance_place_list(x, y + 1, effected, _onPlatform, false)
 
 	for (var i = 0; i < ds_list_size(_onPlatform); i++) {
 		var _target = ds_list_find_value(_onPlatform, i)
-		wasTouching = array_union(wasTouching, [_target])
+		if (not array_contains(_alreadyApplied, _target)) {
+			array_push(_alreadyApplied, _target)
+			wasTouching = array_union(wasTouching, [_target])
 	
-		while (place_meeting(x, y, _target)) {
-			_target.y += scr_plus_minus(ySpeed)
+			while (place_meeting(x, y, _target)) {
+				_target.y += scr_plus_minus(ySpeed)
+			}
+	
+			with (_target) {
+				scr_place_move(other.xSpeed, 0, solids)
+			}
+	
+			scr_squish_object(_target)
 		}
-	
-		with (_target) {
-			scr_place_move(other.xSpeed, 0, solids)
-		}
-	
-		scr_squish_object(_target)
 	}
 }
 

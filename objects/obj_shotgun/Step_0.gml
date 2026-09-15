@@ -18,7 +18,7 @@ if (attacking) {
 	}
 }
 
-if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack) {
+if (scr_input_check_pressed(obj_player.keybinds.quickShotgun) and canAttack and obj_player.canMove) {
 	canAttack = false
 	attacking = true
 	

@@ -56,7 +56,7 @@ if (instance_exists(obj_player)) {
 	y = obj_player.y - (dsin(directionPointing) * distanceFromPlayer)
 	
 	if ((scr_input_check_pressed(obj_player.keybinds.shoot) or (scr_input_check(obj_player.keybinds.shoot) and holdShoot))
-			and canAttack
+			and canAttack and obj_player.canMove
 			and (weaponSelected != "railcannon" or global.railcannonCharge >= global.railcannonChargeRequirement)
 			and (weaponSelected != "energy_rifle" or energyRifleOverheat < energyRifleOverheatThreshold)) {
 		canAttack = false

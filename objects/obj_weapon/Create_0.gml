@@ -43,7 +43,6 @@ nonpiercables = scr_get_objects_of_tag("nonpiercable")
 
 currentWeapon = 0
 weapons = global.weaponsObtained
-weaponSelected = weapons[0]
 
 scr_update_weapon()
 
