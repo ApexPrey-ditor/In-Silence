@@ -1,13 +1,13 @@
 randomise()
 
-room_goto(rm_01_prelude_00)
+room_goto(rm_01_prelude_dp_room)
 //room_goto(rm_prison_init)
 
 //audio_group_load(Music)
 
 //game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = []
+global.weaponsObtained = ["revolver", "debug_gun"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
 global.shotgunObtained = true

@@ -9,7 +9,7 @@ walkSpeed = 2
 
 weight = 3
 
-hitpoints = 4
+hitpoints = 3
 
 topXSpeed = 4
 

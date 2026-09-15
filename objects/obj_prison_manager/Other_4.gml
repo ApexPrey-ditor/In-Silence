@@ -1,5 +1,5 @@
 if (room == rm_prison_init) {
-	room_goto(rm_prison_07)
+	//room_goto(rm_prison_07)
 }
 if (room == rm_prison_normal) {
 	if (randomizeRooms) {

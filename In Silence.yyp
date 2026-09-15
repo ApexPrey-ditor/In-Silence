@@ -46,6 +46,7 @@
     {"link":"io.gamemaker.gm_filter_colourise-1.0.0","name":"io.gamemaker.gm_filter_colourise-1.0.0","path":"io.gamemaker.gm_filter_colourise-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_mask-1.0.0","name":"io.gamemaker.gm_filter_mask-1.0.0","path":"io.gamemaker.gm_filter_mask-1.0.0.yyp",},
     {"link":"io.gamemaker.gm_filter_gradient-1.0.0","name":"io.gamemaker.gm_filter_gradient-1.0.0","path":"io.gamemaker.gm_filter_gradient-1.0.0.yyp",},
+    {"link":"io.gamemaker.gm_filter_vignette-1.0.0","name":"io.gamemaker.gm_filter_vignette-1.0.0","path":"io.gamemaker.gm_filter_vignette-1.0.0.yyp",},
   ],
   "IncludedFiles":[
     {"$GMIncludedFile":"","%Name":"dialogue.csv","CopyToMask":-1,"filePath":"datafiles","name":"dialogue.csv","resourceType":"GMIncludedFile","resourceVersion":"2.0",},
@@ -78,7 +79,6 @@
     {"id":{"name":"obj_invisible","path":"objects/obj_invisible/obj_invisible.yy",},},
     {"id":{"name":"obj_ladder","path":"objects/obj_ladder/obj_ladder.yy",},},
     {"id":{"name":"obj_moving_hitbox","path":"objects/obj_moving_hitbox/obj_moving_hitbox.yy",},},
-    {"id":{"name":"obj_mr_stinky","path":"objects/obj_mr_stinky/obj_mr_stinky.yy",},},
     {"id":{"name":"obj_node","path":"objects/obj_node/obj_node.yy",},},
     {"id":{"name":"obj_npc_parent","path":"objects/obj_npc_parent/obj_npc_parent.yy",},},
     {"id":{"name":"obj_passable","path":"objects/obj_passable/obj_passable.yy",},},
@@ -101,6 +101,7 @@
     {"id":{"name":"obj_visual_projectile","path":"objects/obj_visual_projectile/obj_visual_projectile.yy",},},
     {"id":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},},
     {"id":{"name":"obj_weapon","path":"objects/obj_weapon/obj_weapon.yy",},},
+    {"id":{"name":"ps_dp_vortex","path":"particles/ps_dp_vortex/ps_dp_vortex.yy",},},
     {"id":{"name":"ps_dp20_rain","path":"particles/ps_dp20_rain/ps_dp20_rain.yy",},},
     {"id":{"name":"rm_01_prelude_00","path":"rooms/rm_01_prelude_00/rm_01_prelude_00.yy",},},
     {"id":{"name":"rm_01_prelude_01","path":"rooms/rm_01_prelude_01/rm_01_prelude_01.yy",},},

@@ -7,6 +7,7 @@
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":2,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
     {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":5,"eventType":7,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
+    {"$GMEvent":"v1","%Name":"","collisionObjectId":null,"eventNum":0,"eventType":8,"isDnD":false,"name":"","resourceType":"GMEvent","resourceVersion":"2.0",},
   ],
   "managed":true,
   "name":"obj_trigger",
@@ -42,6 +43,7 @@
         "\"triggerMovingPlatform\"",
         "\"triggerTrigger\"",
         "\"triggerNPCDialogue\"",
+        "\"gotoRoom\"",
       ],"multiselect":true,"name":"action","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"trigger","filters":[],"listItems":[
         "\"touch\"",
@@ -50,6 +52,7 @@
         "\"always\"",
         "\"touchEnemy\"",
         "\"roomEnd\"",
+        "\"interact\"",
       ],"multiselect":false,"name":"trigger","rangeEnabled":false,"rangeMax":10.0,"rangeMin":0.0,"resourceType":"GMObjectProperty","resourceVersion":"2.0","value":"\"touch\"","varType":6,},
     {"$GMObjectProperty":"v2","%Name":"requirements","filters":[],"listItems":[
         "\"triggeredBefore\"",

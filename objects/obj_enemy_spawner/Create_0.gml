@@ -14,22 +14,21 @@ function scr_start_spawner() {
 	if (amount == -1) {
 		amount = infinity
 	}
+
+	if (repeatDelay > 0) {
+		alarm[0] = repeatDelay
+	}
 	else {
-		if (repeatDelay > 0) {
-			alarm[0] = repeatDelay
+		repeat (amount) {
+			instance_create_layer(x, y, layer, enemy, inherit)
 		}
-		else {
-			repeat (amount) {
-				instance_create_layer(x, y, layer, enemy, inherit)
-			}
 			
-			if (countAsEnemy) {
-				global.enemiesLeft -= 1
-			}
+		if (countAsEnemy) {
+			global.enemiesLeft -= 1
+		}
 	
-			if (permaDestroy) {
-				scr_permanant_destroy()
-			}
+		if (permaDestroy) {
+			scr_permanant_destroy()
 		}
 	}
 }

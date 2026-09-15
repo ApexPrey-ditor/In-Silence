@@ -102,6 +102,13 @@ function scr_trigger_effect() {
 							scr_trigger_user_event(targetObjects[m], NPCUserEvents.initiatedTalking)
 						}
 						break
+					case "gotoRoom":
+						if (instance_exists(obj_player)) {
+							obj_player.spawnPointID = 0
+						}
+						
+						room_goto(assetId)
+						break
 				}
 			}
 	

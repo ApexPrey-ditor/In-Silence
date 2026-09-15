@@ -14,3 +14,8 @@ if (trigger == "touchEnemy") {
 if (trigger == "always" and not (oneTime and waiting)) {
 	scr_trigger_effect()
 }
+if (trigger == "interact") {
+	if (scr_input_check_pressed(obj_player.keybinds.interact) and place_meeting(x, y, obj_player)) {
+		scr_trigger_effect()
+	}
+}

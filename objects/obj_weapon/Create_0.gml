@@ -43,6 +43,7 @@ nonpiercables = scr_get_objects_of_tag("nonpiercable")
 
 currentWeapon = 0
 weapons = global.weaponsObtained
+weaponSelected = weapons[0]
 
 scr_update_weapon()
 
@@ -66,6 +67,7 @@ function scr_process_hit(enemy, addedCharge, addedCombo) {
 function scr_update_weapon() {
 	canAttack = false
 	image_blend = c_white
+	currentWeapon = array_get_index(weapons, weaponSelected)
 	
 	switch (weaponSelected) {
 		case "revolver":
@@ -76,7 +78,6 @@ function scr_update_weapon() {
 			recoil = global.recoil.revolver * global.recoilMult
 			holdShoot = false
 		
-			currentWeapon = 0
 			sprite_index = spr_revolver
 			distanceFromPlayer = global.weaponDistance.revolver
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
@@ -89,7 +90,6 @@ function scr_update_weapon() {
 			recoil = global.recoil.grenadeLauncher * global.recoilMult
 			holdShoot = false // false
 			
-			currentWeapon = 1
 			sprite_index = spr_grenade_launcher
 			distanceFromPlayer = global.weaponDistance.grenadeLauncher
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
@@ -105,7 +105,6 @@ function scr_update_weapon() {
 			energyRifleShotWidth = 3 + global.augments.energyRifleSpreadIncrement
 			image_blend = make_colour_rgb(255, (1 - (energyRifleOverheat / energyRifleOverheatThreshold)) * 255, (1 - (energyRifleOverheat / energyRifleOverheatThreshold)) * 255)
 			
-			currentWeapon = 2
 			sprite_index = spr_energy_rifle
 			distanceFromPlayer = global.weaponDistance.energyRifle
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
@@ -118,7 +117,6 @@ function scr_update_weapon() {
 			recoil = global.recoil.railcannon * global.recoilMult
 			holdShoot = false
 			
-			currentWeapon = 3
 			sprite_index = spr_railcannon
 			distanceFromPlayer = global.weaponDistance.railcannon
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration
@@ -128,10 +126,9 @@ function scr_update_weapon() {
 			knockback = 10
 			attackDuration = 1
 			attackCooldown = 1
-			recoil =3
+			recoil = 3
 			holdShoot = true
 			
-			currentWeapon = 4
 			sprite_index = spr_dubug_gun
 			distanceFromPlayer = 48
 			alarm[weaponAlarms.takeOffCooldown] = attackDuration

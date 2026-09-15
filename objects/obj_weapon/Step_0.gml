@@ -34,19 +34,19 @@ if (instance_exists(obj_player)) {
 			
 			scr_update_weapon()
 		}
-		if (scr_input_check_pressed(obj_player.keybinds.switchRevolver)) {
+		if (scr_input_check_pressed(obj_player.keybinds.switchRevolver) and array_contains(weapons, "revolver")) {
 			weaponSelected = weapons[0]
 			scr_update_weapon()
 		}
-		if (scr_input_check_pressed(obj_player.keybinds.switchGrenadeLauncher)) {
+		if (scr_input_check_pressed(obj_player.keybinds.switchGrenadeLauncher) and array_contains(weapons, "grenade_launcher")) {
 			weaponSelected = weapons[1]
 			scr_update_weapon()
 		}
-		if (scr_input_check_pressed(obj_player.keybinds.switchEnergyRifle)) {
+		if (scr_input_check_pressed(obj_player.keybinds.switchEnergyRifle) and array_contains(weapons, "energy_rifle")) {
 			weaponSelected = weapons[2]
 			scr_update_weapon()
 		}
-		if (scr_input_check_pressed(obj_player.keybinds.switchRailcannon)) {
+		if (scr_input_check_pressed(obj_player.keybinds.switchRailcannon) and array_contains(weapons, "railcannon")) {
 			weaponSelected = weapons[3]
 			scr_update_weapon()
 		}
