@@ -12,7 +12,7 @@ grav = 0
 terminalVelocity = 35
 
 xVelocity = 0
-doBasicWalk = true
+doBasicWalk = detected
 walkSpeed = 0
 
 activated = false

@@ -1,4 +1,4 @@
-if (y > room_height / 2) {
+if (y > room_height) {
 	instance_destroy()
 	
 	global.comboKills += 1

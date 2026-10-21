@@ -18,6 +18,10 @@
     {"name":"inst_44F5EF2D","path":"rooms/rm_prison_init/rm_prison_init.yy",},
     {"name":"inst_21B22471","path":"rooms/rm_prison_init/rm_prison_init.yy",},
     {"name":"inst_67C4DDFA","path":"rooms/rm_prison_init/rm_prison_init.yy",},
+    {"name":"inst_4EB69451","path":"rooms/rm_prison_init/rm_prison_init.yy",},
+    {"name":"inst_1C457E7A","path":"rooms/rm_prison_init/rm_prison_init.yy",},
+    {"name":"inst_5DA2E826","path":"rooms/rm_prison_init/rm_prison_init.yy",},
+    {"name":"inst_441634E9","path":"rooms/rm_prison_init/rm_prison_init.yy",},
   ],
   "isDnd":false,
   "layers":[
@@ -55,6 +59,19 @@
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_prison_upgrade","path":"objects/obj_prison_upgrade/obj_prison_upgrade.yy",},"propertyId":{"name":"upgrade","path":"objects/obj_prison_upgrade/obj_prison_upgrade.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"False",},
             {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_prison_upgrade","path":"objects/obj_prison_upgrade/obj_prison_upgrade.yy",},"propertyId":{"name":"modifier","path":"objects/obj_prison_upgrade/obj_prison_upgrade.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"3",},
           ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2144.0,"y":704.0,},
+        {"$GMRInstance":"v4","%Name":"inst_4EB69451","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_4EB69451","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"propertyId":{"name":"weapon","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"grenade_launcher",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2432.0,"y":1472.0,},
+        {"$GMRInstance":"v4","%Name":"inst_1C457E7A","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_1C457E7A","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"propertyId":{"name":"weapon","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"energy_rifle",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2496.0,"y":1472.0,},
+        {"$GMRInstance":"v4","%Name":"inst_5DA2E826","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_5DA2E826","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"propertyId":{"name":"weapon","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"railcannon",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2560.0,"y":1472.0,},
+        {"$GMRInstance":"v4","%Name":"inst_441634E9","colour":4294967295,"frozen":false,"hasCreationCode":false,"ignore":false,"imageIndex":0,"imageSpeed":1.0,"inheritCode":false,"inheritedItemId":null,"inheritItemSettings":false,"isDnd":false,"name":"inst_441634E9","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"properties":[
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"propertyId":{"name":"weapon","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"revolver",},
+            {"$GMOverriddenProperty":"v1","%Name":"","name":"","objectId":{"name":"obj_weapon_pickups","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"propertyId":{"name":"pickup_spr","path":"objects/obj_weapon_pickups/obj_weapon_pickups.yy",},"resource":{"name":"spr_revolver_pickup","path":"sprites/spr_revolver_pickup/spr_revolver_pickup.yy",},"resourceType":"GMOverriddenProperty","resourceVersion":"2.0","value":"spr_revolver_pickup",},
+          ],"resourceType":"GMRInstance","resourceVersion":"2.0","rotation":0.0,"scaleX":1.0,"scaleY":1.0,"x":2368.0,"y":1472.0,},
       ],"layers":[],"name":"Interactables","properties":[],"resourceType":"GMRInstanceLayer","resourceVersion":"2.0","userdefinedDepth":false,"visible":true,},
     {"$GMRBackgroundLayer":"","%Name":"Background","animationFPS":15.0,"animationSpeedType":0,"colour":4293256677,"depth":600,"effectEnabled":true,"effectType":null,"gridX":32,"gridY":32,"hierarchyFrozen":false,"hspeed":0.0,"htiled":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritSubLayers":true,"inheritVisibility":true,"layers":[],"name":"Background","properties":[],"resourceType":"GMRBackgroundLayer","resourceVersion":"2.0","spriteId":null,"stretch":false,"userdefinedAnimFPS":false,"userdefinedDepth":false,"visible":true,"vspeed":0.0,"vtiled":false,"x":0,"y":0,},
   ],

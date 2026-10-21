@@ -5,3 +5,9 @@ if (sprite_index == spr_jimBob_jump) {
 if (sprite_index == spr_jimBob_land) {
 	isInAnimation = false
 }
+if (sprite_index == spr_jimBob_crouch_down) {
+	sprite_index = spr_jimBob_sliding
+}
+if (sprite_index == spr_jimBob_crouch_up) {
+	isInAnimation = false
+}

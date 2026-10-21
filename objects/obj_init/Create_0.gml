@@ -1,16 +1,19 @@
 randomise()
 
-room_goto(rm_tutorial_01)
+room_goto(rm_02_scraps_00)
 //room_goto(rm_prison_init)
 
-//audio_group_load(Music)
+audio_group_load(Music)
+
+audio_sound_loop_end(DimentionalPrison1, 205.747)
+audio_sound_loop_end(DimentionalPrison1Ending, 46.646)
 
 //game_set_speed(6, gamespeed_fps)
 
-global.weaponsObtained = []
+global.weaponsObtained = ["revolver"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon"]
 //global.weaponsObtained = ["revolver", "grenade_launcher", "energy_rifle", "railcannon", "debug_gun"]
-global.shotgunObtained = false
+global.shotgunObtained = true
 
 global.railcannonCharge = 0
 global.railcannonChargeRequirement = 10
@@ -42,6 +45,7 @@ global.comboTimeout = comboTimer
 global.enemiesLeft = 0
 
 removeFromRoom = {}
+roomData = {}
 				
 pausedObjects = []
 

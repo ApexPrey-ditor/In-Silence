@@ -38,18 +38,27 @@ if (!place_meeting(x, y + 1, solids)) {
 			}
 		}
 		// moves if not over walk speed
-		if (scr_input_check(keybinds.left) and xVelocity > -walkSpeed) {
-			xVelocity -= walkSpeed / airControlFactor
+		if (scr_input_check(keybinds.left)) {
+			if (xVelocity > -walkSpeed) {
+				xVelocity -= walkSpeed / airControlFactor
+			}
 			image_xscale = -1
 		}
-		if (scr_input_check(keybinds.right) and xVelocity < walkSpeed) {
-			xVelocity += walkSpeed / airControlFactor
+		if (scr_input_check(keybinds.right)) {
+			if (xVelocity < walkSpeed) {
+				xVelocity += walkSpeed / airControlFactor
+			}
 			image_xscale = 1
 		}
 	}
 	
+	slamBuffer -= 1
+	if (scr_input_check_pressed(keybinds.slam)) {
+		slamBuffer = baseSlamBuffer
+	}
+	
 	// slamming and diving
-	if (scr_input_check_pressed(keybinds.slam) and !scr_input_check(keybinds.jump) and canWalk and canMove) {
+	if (slamBuffer > 0 and !scr_input_check(keybinds.jump) and canWalk and canMove) {
 		if (_movement and abs(xVelocity) >= walkSpeed) {
 			// diving
 			isDiving = true
@@ -62,6 +71,10 @@ if (!place_meeting(x, y + 1, solids)) {
 			grav = gravLimit
 			xVelocity = 0
 			canWalk = false
+			
+			isInAnimation = true
+			sprite_index = spr_jimBob_slamming
+			image_speed = 1
 		}
 	}
 }
@@ -69,7 +82,7 @@ else {
 	// if on the ground
 	cayoteFrames = cayoteFrameLimit
 	
-	if (sprite_index == spr_jimBob_jump) {
+	if (sprite_index == spr_jimBob_jump or sprite_index == spr_jimBob_slamming) {
 		sprite_index = spr_jimBob_land
 		image_speed = 1
 	}
@@ -106,22 +119,27 @@ else {
 		isSliding = true
 		_movement = true
 		isInAnimation = true
-		sprite_index = spr_jimBob_sliding
+		if (sprite_index != spr_jimBob_sliding) {
+			if (sprite_index != spr_jimBob_crouch_down) {
+				image_index = 0
+			}
+			sprite_index = spr_jimBob_crouch_down
+		}
+		
 		image_speed = abs(xVelocity / baseSlideSpeed)
 	}
 	else if (isSliding) {
 		// if sliding stopped
 		canWalk = true
 		
-		sprite_index = spr_jimBob
+		sprite_index = spr_jimBob_crouch_up
 
 		if (place_meeting(x, y, solids)) {
 			sprite_index = spr_jimBob_sliding
 		}
 		else {
-			image_speed = 1
 			isSliding = false
-			isInAnimation = false
+			image_index = 0
 		}
 	}
 	
@@ -163,7 +181,7 @@ if (scr_input_check_pressed(keybinds.dash)) {
 }
 
 // dashing
-if (scr_input_check_pressed(keybinds.dash) and canWalk and canMove and stamina >= 1) {
+if (dashBuffer > 0 and canWalk and canMove and stamina >= 1) {
 	alarm[playerAlarms.cancelDash] = baseDashDuration
 	isDashing = true
 	stamina -= 1
@@ -176,6 +194,11 @@ if (scr_input_check_pressed(keybinds.dash) and canWalk and canMove and stamina >
 	}
 	
 	canWalk = false
+	
+	image_speed = 1
+	sprite_index = spr_jimBob_dashing
+	image_index = 0
+	isInAnimation = true
 	
 	grav = 0
 	gravIntensity = 0
@@ -306,7 +329,18 @@ if (not _movement and not isInAnimation) {
 	sprite_index = spr_jimBob
 }
 
+xVelocityRetained = xVelocity
+
 xVelocity = scr_apply_x_velocity(xVelocity, solids, _applyFriction, nonpassable, xVelocityFrictionless, _movement)
+
+if (xVelocity == 0 and retainmentFrames > 0 and abs(xVelocityRetained - xVelocity) > 1) {
+	xVelocity = xVelocityRetained
+	retainmentFrames -= 1
+}
+else {
+	xVelocityRetained = 0
+	retainmentFrames = baseRetainmentFrames
+}
 
 if (place_meeting(x, y, solids)) {
 	show_debug_message("x Failed")

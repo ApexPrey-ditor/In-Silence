@@ -1,6 +1,6 @@
 if (instance_exists(obj_player)) {
 	if ((distance_to_object(obj_player) < requiredProximity or talking)
-			and scr_input_check_pressed(obj_player.keybinds.interact)
+			and (scr_input_check_pressed(obj_player.keybinds.interact) or scr_input_check(obj_player.keybinds.skipDialogue))
 			and talkable) {
 		if (talking) {
 			if (obj_textbox_manager.textboxTextOn < string_length(obj_textbox_manager.textboxText)) {

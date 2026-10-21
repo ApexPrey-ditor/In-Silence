@@ -30,8 +30,10 @@ frictionlessFrames = 0
 
 #macro baseJumpBuffer 5
 #macro baseDashBuffer 5
+#macro baseSlamBuffer 4
 jumpBuffer = 0
 dashBuffer = 0
+slamBuffer = 0
 
 #macro airControlFactor 10
 #macro baseWalkSpeed 7
@@ -64,6 +66,9 @@ climbing = false
 #macro groundResistance 0.7
 #macro stepUpHeight 8
 xVelocity = 0
+xVelocityRetained = 0
+#macro baseRetainmentFrames 4
+retainmentFrames = 0
 xVelocityFrictionless = 0
 
 #macro afterImageDissapearRate 0.05
@@ -93,6 +98,7 @@ function scr_reset_player() {
 
 	jumpBuffer = 0
 	dashBuffer = 0
+	slamBuffer = 0
 
 	walkSpeed = baseWalkSpeed * moveSpeedMult
 	slideSpeed = baseSlideSpeed * moveSpeedMult
@@ -113,6 +119,8 @@ function scr_reset_player() {
 	climbing = false
 
 	xVelocity = 0
+	xVelocityRetained = 0
+	retainmentFrames = 0
 	xVelocityFrictionless = 0
 
 	afterImages = []
@@ -219,4 +227,5 @@ keybinds = {left : [ord("A")],
 			switchGrenadeLauncher : [ord("2")],
 			switchEnergyRifle : [ord("3")],
 			switchRailcannon : [ord("4")],
-			interact : [ord("F")]}
+			interact : [ord("F")],
+			skipDialogue : [ord("C")]}

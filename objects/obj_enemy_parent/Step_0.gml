@@ -22,7 +22,7 @@ if (_collidingEnemy != noone) {
 
 
 if (instance_exists(obj_player)) {
-	if (distance_to_object(obj_player) < visualDetectionRange and collision_line(x, y, obj_player.x, obj_player.y, solids, false, true) == noone) {
+	if (distance_to_object(obj_player) < visualDetectionRange and collision_line(x, y, obj_player.x, obj_player.y, solids, false, true) == noone and doBasicWalk) {
 		event_user(enemyUserEvents.globalDetect)
 	}
 }

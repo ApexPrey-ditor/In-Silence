@@ -14,4 +14,4 @@ jumpHeight = 13
 jumpRange = 2
 solidJumpRange = 15
 
-soundDetectionRange = 3200
+soundDetectionRange = 0

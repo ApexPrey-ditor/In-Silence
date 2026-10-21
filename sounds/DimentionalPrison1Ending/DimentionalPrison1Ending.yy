@@ -1,0 +1,26 @@
+{
+  "$GMSound":"v2",
+  "%Name":"DimentionalPrison1Ending",
+  "audioGroupId":{
+    "name":"Music",
+    "path":"audiogroups/Music",
+  },
+  "bitDepth":1,
+  "channelFormat":0,
+  "compression":0,
+  "compressionQuality":4,
+  "conversionMode":0,
+  "duration":48.97136,
+  "exportDir":"",
+  "name":"DimentionalPrison1Ending",
+  "parent":{
+    "name":"Sounds",
+    "path":"folders/Sounds.yy",
+  },
+  "preload":false,
+  "resourceType":"GMSound",
+  "resourceVersion":"2.0",
+  "sampleRate":44100,
+  "soundFile":"DimentionalPrison1Ending.mp3",
+  "volume":1.0,
+}

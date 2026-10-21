@@ -28,4 +28,4 @@ projectileSpeed = 7
 
 lineOfSightBlockers = [obj_solid_hitbox, obj_moving_hitbox]
 
-soundDetectionRange = 3200
+soundDetectionRange = 0
